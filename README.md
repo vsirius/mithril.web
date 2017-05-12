@@ -1,6 +1,6 @@
 # Authentication and role management service.
 
-[![Build Status](https://travis-ci.org/Nebo15/nhs.admin.web.svg?branch=master)](https://travis-ci.org/Nebo15/nhs.admin.web)
+[![Build Status](https://travis-ci.org/Nebo15/mithril.web.svg?branch=master)](https://travis-ci.org/Nebo15/mithril.web)
 
 Demo (dev): http://mithril-web.herokuapp.com/
 
