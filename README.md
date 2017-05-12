@@ -1,5 +1,7 @@
 # Authentication and role management service.
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/Nebo15/mithril.web.svg)](https://greenkeeper.io/)
+
 [![Build Status](https://travis-ci.org/Nebo15/nhs.admin.web.svg?branch=master)](https://travis-ci.org/Nebo15/nhs.admin.web)
 
 Demo (dev): http://nhs-admin-web.herokuapp.com/
