@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/Nebo15/nhs.admin.web.svg?branch=master)](https://travis-ci.org/Nebo15/nhs.admin.web)
 
-Demo (dev): http://nhs-admin-web.herokuapp.com/
+Demo (dev): http://mithril-web.herokuapp.com/
 
 ## Technologies
 
