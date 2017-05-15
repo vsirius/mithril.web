@@ -36,7 +36,7 @@ Application supports these environment variables:
 
 ## Docs
 
-Dashboard works on top of [Man management API](http://docs.mithril1.apiary.io/).
+Dashboard works on top of [Mithril management API](http://docs.mithril1.apiary.io/).
 
 ## Technologies
 
