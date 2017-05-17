@@ -1,3 +1,4 @@
+#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: i18next-conv\n"
@@ -5,8 +6,11 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1)\n"
-"POT-Creation-Date: 2017-04-28T08:19:04.087Z\n"
-"PO-Revision-Date: 2017-04-28T08:19:04.087Z\n"
+"POT-Creation-Date: 2017-05-17 14:30+0300\n"
+"PO-Revision-Date: 2017-05-17T11:30:16.615Z\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"X-Generator: Poedit 1.8.11\n"
 
 msgid "Required field"
 msgstr ""
@@ -53,112 +57,16 @@ msgstr ""
 msgid "region"
 msgstr ""
 
+msgid "Mithril"
+msgstr ""
+
 msgid "You have unsaved changes"
 msgstr ""
 
 msgid "Are you sure want to leave this page?"
 msgstr ""
 
-msgid "Declaration"
-msgstr ""
-
-msgid "Dates"
-msgstr ""
-
-msgid "Active"
-msgstr ""
-
-msgid "scope"
-msgstr ""
-
-msgid "Division"
-msgstr ""
-
-msgid "Contacts"
-msgstr ""
-
-msgid "Phones"
-msgstr ""
-
-msgid "Addresses"
-msgstr ""
-
-msgid "Other"
-msgstr ""
-
-msgid "Type"
-msgstr ""
-
-msgid "Mountain"
-msgstr ""
-
-msgid "Clinic Detail"
-msgstr ""
-
-msgid "Employee"
-msgstr ""
-
-msgid "Position"
-msgstr ""
-
-msgid "Person"
-msgstr ""
-
-msgid "Birth"
-msgstr ""
-
-msgid "in"
-msgstr ""
-
-msgid "Documents"
-msgstr ""
-
-msgid "Authentication methods"
-msgstr ""
-
-msgid "Process data consent"
-msgstr ""
-
-msgid "Renewal consent"
-msgstr ""
-
-msgid "Patient signed"
-msgstr ""
-
-msgid "Disclosure consent"
-msgstr ""
-
-msgid "Closed"
-msgstr ""
-
-msgid "Open"
-msgstr ""
-
-msgid "Total"
-msgstr ""
-
-msgid "Loading..."
-msgstr ""
-
-msgid "Dashboard"
-msgstr ""
-
-msgid "Clinics"
-msgstr ""
-
-msgid "Declarations"
-msgstr ""
-
-msgid "Pending declarations"
-msgstr ""
-
-msgid "Employees"
-msgstr ""
-
-msgid "Dictionaries"
-msgstr ""
-
-msgid "System configuration"
+msgid "Roles"
 msgstr ""
 
 msgid "Documentation"
@@ -203,6 +111,27 @@ msgstr ""
 msgid "You have not unique values in key: <%= params %>"
 msgstr ""
 
+msgid "Role name"
+msgstr ""
+
+msgid "Choose roles"
+msgstr ""
+
+msgid "app:authorize"
+msgstr ""
+
+msgid "Update Role"
+msgstr ""
+
+msgid "Deleting..."
+msgstr ""
+
+msgid "Delete Role"
+msgstr ""
+
+msgid "Save New Role"
+msgstr ""
+
 msgid "Declaration term"
 msgstr ""
 
@@ -224,139 +153,7 @@ msgstr ""
 msgid "Save config"
 msgstr ""
 
-msgid "edrpou"
-msgstr ""
-
-msgid "KVEDs"
-msgstr ""
-
-msgid "Accreditation"
-msgstr ""
-
-msgid "Order No."
-msgstr ""
-
-msgid "Category"
-msgstr ""
-
-msgid "Expiry date"
-msgstr ""
-
-msgid "Issued date"
-msgstr ""
-
-msgid "Order date"
-msgstr ""
-
-msgid "Status"
-msgstr ""
-
-msgid "Licenses"
-msgstr ""
-
-msgid "Issued"
-msgstr ""
-
-msgid "Inserted"
-msgstr ""
-
-msgid "User"
-msgstr ""
-
-msgid "Date"
-msgstr ""
-
-msgid "Updated"
-msgstr ""
-
-msgid "Select dictionary to edit"
-msgstr ""
-
-msgid "Name"
-msgstr ""
-
-msgid "Action"
-msgstr ""
-
-msgid "Details"
-msgstr ""
-
-msgid "Declarations signed"
-msgstr ""
-
-msgid "Declarations terminated"
-msgstr ""
-
-msgid "Doctors"
-msgstr ""
-
-msgid "Medical system providers"
-msgstr ""
-
-msgid "By regions"
-msgstr ""
-
-msgid "Region"
-msgstr ""
-
-msgid "Select declaration to edit"
-msgstr ""
-
-msgid "Legal entity"
-msgstr ""
-
-msgid "EDRPOU"
-msgstr ""
-
-msgid "Dictionary Name"
-msgstr ""
-
-msgid "Edit"
-msgstr ""
-
-msgid "View Dictionary"
-msgstr ""
-
-msgid "Edit {{name}} dictionary"
-msgstr ""
-
-msgid "status"
-msgstr ""
-
-msgid "Birth date"
-msgstr ""
-
-msgid "Educations"
-msgstr ""
-
-msgid "diploma"
-msgstr ""
-
-msgid "Qualifications"
-msgstr ""
-
-msgid "certificate"
-msgstr ""
-
-msgid "Specialities"
-msgstr ""
-
-msgid "Speciality officio"
-msgstr ""
-
-msgid "Science degree"
-msgstr ""
-
-msgid "Degree"
-msgstr ""
-
-msgid "Diploma"
-msgstr ""
-
-msgid "Location"
-msgstr ""
-
-msgid "Speciality"
+msgid "Create role"
 msgstr ""
 
 msgid "Page Not Found"
@@ -368,11 +165,43 @@ msgstr ""
 msgid "Go to dashboard"
 msgstr ""
 
-msgid "Scans"
+msgid "Id"
 msgstr ""
 
-msgid "Accept"
+msgid "Name"
 msgstr ""
 
-msgid "Reject"
+msgid "Scope"
+msgstr ""
+
+msgid "Edit"
+msgstr ""
+
+msgid "Edit role"
+msgstr ""
+
+msgid "Create new"
+msgstr ""
+
+msgid "Edit {{name}} role"
+msgstr ""
+
+msgctxt "api:read"
+msgid "some"
+msgstr ""
+
+msgctxt "api:write"
+msgid "some"
+msgstr ""
+
+msgctxt "entity:read"
+msgid "legal"
+msgstr ""
+
+msgctxt "entity:write"
+msgid "legal"
+msgstr ""
+
+msgctxt "request:write"
+msgid "employee"
 msgstr ""

@@ -1,4 +1,4 @@
-FROM node:alpine
+FROM nebo15/alpine-node:6.9.5
 
 EXPOSE 8080
 
@@ -8,10 +8,8 @@ ENV NODE_ENV production
 RUN apk add --update \
     python
 
-RUN npm i -g pm2 --quiet
-
 COPY package.json /tmp/package.json
-RUN cd /tmp && npm install --production --quiet || { exit 1; } && mkdir -p /opt/app && cp -a /tmp/node_modules /opt/app/
+RUN cd /tmp && npm install --production && mkdir -p /opt/app && cp -a /tmp/node_modules /opt/app/
 
 WORKDIR /opt/app
 
@@ -26,4 +24,4 @@ RUN rm -rf ./app/client \
 # Clear deps and caches
 RUN apk --purge del python && rm -rf /var/cache/apk/*
 
-CMD pm2 start --log-type json --no-daemon static/server.js
+CMD ["pm2-docker", "pm2.process.yml"]

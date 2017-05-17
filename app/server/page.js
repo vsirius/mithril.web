@@ -89,8 +89,7 @@ export default () => (req, res, next) => {
           </I18nextProvider>
         );
       } catch (e) {
-        console.log('render error');
-        console.error(e);
+        console.error(e.stack);
         html = null;
       }
 

@@ -5,7 +5,7 @@ module.exports = {
   },
   elements: {
     main: {
-      selector: 'body',
+      selector: '#roles-page',
     },
   },
   commands: [{

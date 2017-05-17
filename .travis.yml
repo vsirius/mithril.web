@@ -31,5 +31,7 @@ script:
   --since 5h; exit 1; fi;
 - npm run nightwatch -- -e travis
 - sleep 5
+after_failure:
+- docker logs mithril.web
 after_success:
 - ./bin/ci/push.sh

@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: i18next-conv\n"
-"POT-Creation-Date: 2017-05-03 15:38+0300\n"
-"PO-Revision-Date: 2017-05-03 15:40+0300\n"
+"POT-Creation-Date: 2017-05-17 14:31+0300\n"
+"PO-Revision-Date: 2017-05-17 14:37+0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: uk\n"
@@ -58,113 +58,17 @@ msgstr "Зона"
 msgid "region"
 msgstr "область"
 
+msgid "Mithril"
+msgstr ""
+
 msgid "You have unsaved changes"
 msgstr "У вас є незбережені зміни"
 
 msgid "Are you sure want to leave this page?"
 msgstr "Ви впевнені, що хочете залишити цю сторінку?"
 
-msgid "Declaration"
-msgstr "Декларація"
-
-msgid "Dates"
-msgstr "Дати"
-
-msgid "Active"
-msgstr "Активно"
-
-msgid "scope"
-msgstr "можливості"
-
-msgid "Division"
-msgstr "Відділення"
-
-msgid "Contacts"
-msgstr "Контакти"
-
-msgid "Phones"
-msgstr "Телефони"
-
-msgid "Addresses"
-msgstr "Адреси"
-
-msgid "Other"
-msgstr "Інше"
-
-msgid "Type"
-msgstr "Тип"
-
-msgid "Mountain"
-msgstr "Гірська група"
-
-msgid "Clinic Detail"
-msgstr "Детально про клініку"
-
-msgid "Employee"
-msgstr "Співробітник"
-
-msgid "Position"
-msgstr "Позиція"
-
-msgid "Person"
-msgstr "Людина"
-
-msgid "Birth"
-msgstr "Народжений"
-
-msgid "in"
-msgstr "в"
-
-msgid "Documents"
-msgstr "Документи"
-
-msgid "Authentication methods"
-msgstr "Методи перевірки"
-
-msgid "Process data consent"
-msgstr "Процес погодження данних"
-
-msgid "Renewal consent"
-msgstr "Погодження поновлення"
-
-msgid "Patient signed"
-msgstr "Пацієнт підписав"
-
-msgid "Disclosure consent"
-msgstr "Погодження розкриття"
-
-msgid "Closed"
-msgstr "Закрито"
-
-msgid "Open"
-msgstr "Відкрито"
-
-msgid "Total"
-msgstr "Всього"
-
-msgid "Loading..."
-msgstr "Завантаження..."
-
-msgid "Dashboard"
-msgstr "Статистика"
-
-msgid "Clinics"
-msgstr "Клініки"
-
-msgid "Declarations"
-msgstr "Декларації"
-
-msgid "Pending declarations"
-msgstr "Декларації на розгляді"
-
-msgid "Employees"
-msgstr "Співробітники"
-
-msgid "Dictionaries"
-msgstr "Словники"
-
-msgid "System configuration"
-msgstr "Конфігурація системи"
+msgid "Roles"
+msgstr "Ролі"
 
 msgid "Documentation"
 msgstr "Документація"
@@ -208,6 +112,27 @@ msgstr "Додати"
 msgid "You have not unique values in key: <%= params %>"
 msgstr "Не унікальні значення в ключі: <%= params %>"
 
+msgid "Role name"
+msgstr "Назва ролі"
+
+msgid "Choose roles"
+msgstr "Оберіть ролі серед можливих"
+
+msgid "app:authorize"
+msgstr ""
+
+msgid "Update Role"
+msgstr "Змінити роль"
+
+msgid "Deleting..."
+msgstr "Видалення"
+
+msgid "Delete Role"
+msgstr "Видатити роль"
+
+msgid "Save New Role"
+msgstr "Зберегти нову роль"
+
 msgid "Declaration term"
 msgstr "Термін декларації"
 
@@ -229,140 +154,8 @@ msgstr "Дата розрахунку"
 msgid "Save config"
 msgstr "Зберегти конфігурацію"
 
-msgid "edrpou"
-msgstr "ЕДРПОУ"
-
-msgid "KVEDs"
-msgstr "КВЕДи"
-
-msgid "Accreditation"
-msgstr "Акредитація"
-
-msgid "Order No."
-msgstr "Номер замовлення"
-
-msgid "Category"
-msgstr "Категорія"
-
-msgid "Expiry date"
-msgstr "Термін придатності"
-
-msgid "Issued date"
-msgstr "Випущено"
-
-msgid "Order date"
-msgstr "Дата замовлення"
-
-msgid "Status"
-msgstr "Статус"
-
-msgid "Licenses"
-msgstr "Ліцензії"
-
-msgid "Issued"
-msgstr "Виданий"
-
-msgid "Inserted"
-msgstr "Вставлений"
-
-msgid "User"
-msgstr "Користувач"
-
-msgid "Date"
-msgstr "Дата"
-
-msgid "Updated"
-msgstr "Оновлено"
-
-msgid "Select dictionary to edit"
-msgstr "Виберіть словник для редагування"
-
-msgid "Name"
-msgstr "Назва"
-
-msgid "Action"
-msgstr "Дії"
-
-msgid "Details"
-msgstr "Детально"
-
-msgid "Declarations signed"
-msgstr "Підписані декларації"
-
-msgid "Declarations terminated"
-msgstr "Припинені декларації"
-
-msgid "Doctors"
-msgstr "Лікарі"
-
-msgid "Medical system providers"
-msgstr "Провайдери медичної системи"
-
-msgid "By regions"
-msgstr "По областям"
-
-msgid "Region"
-msgstr "Область"
-
-msgid "Select declaration to edit"
-msgstr "Виберіть декларацію для редагування"
-
-msgid "Legal entity"
-msgstr "Юридична особа"
-
-msgid "EDRPOU"
-msgstr "ЕДРПОУ"
-
-msgid "Dictionary Name"
-msgstr "Назва словника"
-
-msgid "Edit"
-msgstr "Редагувати"
-
-msgid "View Dictionary"
-msgstr "Переглянути словник"
-
-msgid "Edit {{name}} dictionary"
-msgstr "Редагувати {{name}} словник"
-
-msgid "status"
-msgstr "статус"
-
-msgid "Birth date"
-msgstr "Дата народження"
-
-msgid "Educations"
-msgstr "Освіта"
-
-msgid "diploma"
-msgstr "диплом"
-
-msgid "Qualifications"
-msgstr "Кваліфікація"
-
-msgid "certificate"
-msgstr "сертифікат"
-
-msgid "Specialities"
-msgstr "Спеціальність"
-
-msgid "Speciality officio"
-msgstr "Посада"
-
-msgid "Science degree"
-msgstr "Науковий ступінь"
-
-msgid "Degree"
-msgstr "ступінь"
-
-msgid "Diploma"
-msgstr "Диплом"
-
-msgid "Location"
-msgstr "Місцезнаходження"
-
-msgid "Speciality"
-msgstr "Спеціальність"
+msgid "Create role"
+msgstr "створити роль"
 
 msgid "Page Not Found"
 msgstr "Сторінка не знайдена"
@@ -373,14 +166,283 @@ msgstr "Запитувана сторінка не знайдена."
 msgid "Go to dashboard"
 msgstr "Перейти на головну"
 
-msgid "Scans"
-msgstr "Скани документів"
+msgid "Id"
+msgstr ""
 
-msgid "Accept"
-msgstr "Прийняти"
+msgid "Name"
+msgstr "Назва"
 
-msgid "Reject"
-msgstr "Відхилити"
+msgid "Scope"
+msgstr ""
 
-#~ msgid "dictionary"
-#~ msgstr "словник"
+msgid "Edit"
+msgstr "Редагувати"
+
+msgid "Edit role"
+msgstr ""
+
+msgid "Create new"
+msgstr "створити нову"
+
+msgid "Edit {{name}} role"
+msgstr "Редагувати {{name}} ролі"
+
+msgctxt "api:read"
+msgid "some"
+msgstr ""
+
+msgctxt "api:write"
+msgid "some"
+msgstr ""
+
+msgctxt "entity:read"
+msgid "legal"
+msgstr ""
+
+msgctxt "entity:write"
+msgid "legal"
+msgstr ""
+
+msgctxt "request:write"
+msgid "employee"
+msgstr ""
+
+#~ msgid "Declaration"
+#~ msgstr "Декларація"
+
+#~ msgid "Dates"
+#~ msgstr "Дати"
+
+#~ msgid "Active"
+#~ msgstr "Активно"
+
+#~ msgid "scope"
+#~ msgstr "можливості"
+
+#~ msgid "Division"
+#~ msgstr "Відділення"
+
+#~ msgid "Contacts"
+#~ msgstr "Контакти"
+
+#~ msgid "Phones"
+#~ msgstr "Телефони"
+
+#~ msgid "Addresses"
+#~ msgstr "Адреси"
+
+#~ msgid "Other"
+#~ msgstr "Інше"
+
+#~ msgid "Type"
+#~ msgstr "Тип"
+
+#~ msgid "Mountain"
+#~ msgstr "Гірська група"
+
+#~ msgid "Clinic Detail"
+#~ msgstr "Детально про клініку"
+
+#~ msgid "Employee"
+#~ msgstr "Співробітник"
+
+#~ msgid "Position"
+#~ msgstr "Позиція"
+
+#~ msgid "Person"
+#~ msgstr "Людина"
+
+#~ msgid "Birth"
+#~ msgstr "Народжений"
+
+#~ msgid "in"
+#~ msgstr "в"
+
+#~ msgid "Documents"
+#~ msgstr "Документи"
+
+#~ msgid "Authentication methods"
+#~ msgstr "Методи перевірки"
+
+#~ msgid "Process data consent"
+#~ msgstr "Процес погодження данних"
+
+#~ msgid "Renewal consent"
+#~ msgstr "Погодження поновлення"
+
+#~ msgid "Patient signed"
+#~ msgstr "Пацієнт підписав"
+
+#~ msgid "Disclosure consent"
+#~ msgstr "Погодження розкриття"
+
+#~ msgid "Closed"
+#~ msgstr "Закрито"
+
+#~ msgid "Open"
+#~ msgstr "Відкрито"
+
+#~ msgid "Total"
+#~ msgstr "Всього"
+
+#~ msgid "Loading..."
+#~ msgstr "Завантаження..."
+
+#~ msgid "Dashboard"
+#~ msgstr "Статистика"
+
+#~ msgid "Clinics"
+#~ msgstr "Клініки"
+
+#~ msgid "Declarations"
+#~ msgstr "Декларації"
+
+#~ msgid "Pending declarations"
+#~ msgstr "Декларації на розгляді"
+
+#~ msgid "Employees"
+#~ msgstr "Співробітники"
+
+#~ msgid "Dictionaries"
+#~ msgstr "Словники"
+
+#~ msgid "System configuration"
+#~ msgstr "Конфігурація системи"
+
+#~ msgid "edrpou"
+#~ msgstr "ЕДРПОУ"
+
+#~ msgid "KVEDs"
+#~ msgstr "КВЕДи"
+
+#~ msgid "Accreditation"
+#~ msgstr "Акредитація"
+
+#~ msgid "Order No."
+#~ msgstr "Номер замовлення"
+
+#~ msgid "Category"
+#~ msgstr "Категорія"
+
+#~ msgid "Expiry date"
+#~ msgstr "Термін придатності"
+
+#~ msgid "Issued date"
+#~ msgstr "Випущено"
+
+#~ msgid "Order date"
+#~ msgstr "Дата замовлення"
+
+#~ msgid "Status"
+#~ msgstr "Статус"
+
+#~ msgid "Licenses"
+#~ msgstr "Ліцензії"
+
+#~ msgid "Issued"
+#~ msgstr "Виданий"
+
+#~ msgid "Inserted"
+#~ msgstr "Вставлений"
+
+#~ msgid "User"
+#~ msgstr "Користувач"
+
+#~ msgid "Date"
+#~ msgstr "Дата"
+
+#~ msgid "Updated"
+#~ msgstr "Оновлено"
+
+#~ msgid "Select dictionary to edit"
+#~ msgstr "Виберіть словник для редагування"
+
+#~ msgid "Action"
+#~ msgstr "Дії"
+
+#~ msgid "Details"
+#~ msgstr "Детально"
+
+#~ msgid "Declarations signed"
+#~ msgstr "Підписані декларації"
+
+#~ msgid "Declarations terminated"
+#~ msgstr "Припинені декларації"
+
+#~ msgid "Doctors"
+#~ msgstr "Лікарі"
+
+#~ msgid "Medical system providers"
+#~ msgstr "Провайдери медичної системи"
+
+#~ msgid "By regions"
+#~ msgstr "По областям"
+
+#~ msgid "Region"
+#~ msgstr "Область"
+
+#~ msgid "Select declaration to edit"
+#~ msgstr "Виберіть декларацію для редагування"
+
+#~ msgid "Legal entity"
+#~ msgstr "Юридична особа"
+
+#~ msgid "EDRPOU"
+#~ msgstr "ЕДРПОУ"
+
+#~ msgid "Dictionary Name"
+#~ msgstr "Назва словника"
+
+#~ msgid "View Dictionary"
+#~ msgstr "Переглянути словник"
+
+#~ msgid "Edit {{name}} dictionary"
+#~ msgstr "Редагувати {{name}} словник"
+
+#~ msgid "status"
+#~ msgstr "статус"
+
+#~ msgid "Birth date"
+#~ msgstr "Дата народження"
+
+#~ msgid "Educations"
+#~ msgstr "Освіта"
+
+#~ msgid "diploma"
+#~ msgstr "диплом"
+
+#~ msgid "Qualifications"
+#~ msgstr "Кваліфікація"
+
+#~ msgid "certificate"
+#~ msgstr "сертифікат"
+
+#~ msgid "Specialities"
+#~ msgstr "Спеціальність"
+
+#~ msgid "Speciality officio"
+#~ msgstr "Посада"
+
+#~ msgid "Science degree"
+#~ msgstr "Науковий ступінь"
+
+#~ msgid "Degree"
+#~ msgstr "ступінь"
+
+#~ msgid "Diploma"
+#~ msgstr "Диплом"
+
+#~ msgid "Location"
+#~ msgstr "Місцезнаходження"
+
+#~ msgid "Speciality"
+#~ msgstr "Спеціальність"
+
+#~ msgid "Scans"
+#~ msgstr "Скани документів"
+
+#~ msgid "Reject"
+#~ msgstr "Відхилити"
+
+#~ msgid "Accept"
+#~ msgstr "Прийняти"
