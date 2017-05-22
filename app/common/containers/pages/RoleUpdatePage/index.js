@@ -21,12 +21,12 @@ import styles from './styles.scss';
 }), { updateRole, deleteRole })
 @withStyles(styles)
 @translate()
-export default class CreateRolePage extends React.Component {
+export default class RoleUpdatePage extends React.Component {
   render() {
     const { t, role, updateRole, deleteRole } = this.props;
 
     return (
-      <FormPageWrapper id="update-roles-page" title={t('Edit {{name}} role', { name: role.name })} back="/roles">
+      <FormPageWrapper id="update-roles-page" title={t('Edit role: {{name}}', { name: role.name })} back="/roles">
         <div className={styles.block}>
           <RoleForm
             initialValues={role}

@@ -13,7 +13,7 @@ import styles from './styles.scss';
 @withStyles(styles)
 @translate()
 @connect(null, ({ onCreateRole }))
-export default class CreateRolePage extends React.Component {
+export default class RoleCreatePage extends React.Component {
   render() {
     const { onCreateRole, t } = this.props;
 

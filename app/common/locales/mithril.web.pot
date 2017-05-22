@@ -6,8 +6,8 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1)\n"
-"POT-Creation-Date: 2017-05-17 14:30+0300\n"
-"PO-Revision-Date: 2017-05-17T11:30:16.615Z\n"
+"POT-Creation-Date: 2017-05-22 14:55+0300\n"
+"PO-Revision-Date: 2017-05-22T11:55:36.651Z\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "X-Generator: Poedit 1.8.11\n"
@@ -69,61 +69,52 @@ msgstr ""
 msgid "Roles"
 msgstr ""
 
+msgid "Client Types"
+msgstr ""
+
+msgid "Tokens"
+msgstr ""
+
 msgid "Documentation"
-msgstr ""
-
-msgid "General"
-msgstr ""
-
-msgid "Is active"
-msgstr ""
-
-msgid "Saving..."
-msgstr ""
-
-msgid "Save Dictionary"
-msgstr ""
-
-msgid "Saved"
-msgstr ""
-
-msgid "Values"
-msgstr ""
-
-msgid "Key"
-msgstr ""
-
-msgid "Item key"
-msgstr ""
-
-msgid "Description"
-msgstr ""
-
-msgid "Item description"
-msgstr ""
-
-msgid "Remove"
-msgstr ""
-
-msgid "Add Item"
-msgstr ""
-
-msgid "You have not unique values in key: <%= params %>"
-msgstr ""
-
-msgid "Role name"
-msgstr ""
-
-msgid "Choose roles"
 msgstr ""
 
 msgid "app:authorize"
 msgstr ""
 
-msgid "Update Role"
+msgid "Client Type name"
+msgstr ""
+
+msgid "Choose scopes"
+msgstr ""
+
+msgid "Saving..."
+msgstr ""
+
+msgid "Update Client Type"
+msgstr ""
+
+msgid "Saved"
 msgstr ""
 
 msgid "Deleting..."
+msgstr ""
+
+msgid "Delete Client Type"
+msgstr ""
+
+msgid "Save New Client Type"
+msgstr ""
+
+msgid "Are you sure?"
+msgstr ""
+
+msgid "Are you sure want to delete this client type?"
+msgstr ""
+
+msgid "Role name"
+msgstr ""
+
+msgid "Update Role"
 msgstr ""
 
 msgid "Delete Role"
@@ -132,28 +123,79 @@ msgstr ""
 msgid "Save New Role"
 msgstr ""
 
-msgid "Declaration term"
+msgid "Are you sure want to delete this role?"
 msgstr ""
 
-msgid "Declaration request expiration"
+msgid "ID"
 msgstr ""
 
-msgid "Employ request expiration"
+msgid "b5e3318e-2192-4676"
 msgstr ""
 
-msgid "Verification request expiration"
+msgid "Name"
 msgstr ""
 
-msgid "Adult age"
+msgid "Value"
 msgstr ""
 
-msgid "Billing date"
+msgid "bkZ2b3BsND"
 msgstr ""
 
-msgid "Save config"
+msgid "22/01/2018"
 msgstr ""
 
-msgid "Create role"
+msgid "Scope"
+msgstr ""
+
+msgid "Client ID"
+msgstr ""
+
+msgid "Grant type"
+msgstr ""
+
+msgid "password"
+msgstr ""
+
+msgid "Redirect uri"
+msgstr ""
+
+msgid "http://example.com/resource"
+msgstr ""
+
+msgid "User ID"
+msgstr ""
+
+msgid "8d3c0349-353e-48ef"
+msgstr ""
+
+msgid "Delete token"
+msgstr ""
+
+msgid "Save New Token"
+msgstr ""
+
+msgid "Failed"
+msgstr ""
+
+msgid "Are you sure want to delete this token?"
+msgstr ""
+
+msgid "Create client type"
+msgstr ""
+
+msgid "Id"
+msgstr ""
+
+msgid "Action"
+msgstr ""
+
+msgid "Edit client type"
+msgstr ""
+
+msgid "Create new client type"
+msgstr ""
+
+msgid "Edit client type: {{name}}"
 msgstr ""
 
 msgid "Page Not Found"
@@ -165,16 +207,7 @@ msgstr ""
 msgid "Go to dashboard"
 msgstr ""
 
-msgid "Id"
-msgstr ""
-
-msgid "Name"
-msgstr ""
-
-msgid "Scope"
-msgstr ""
-
-msgid "Edit"
+msgid "Create role"
 msgstr ""
 
 msgid "Edit role"
@@ -183,7 +216,19 @@ msgstr ""
 msgid "Create new"
 msgstr ""
 
-msgid "Edit {{name}} role"
+msgid "Edit role: {{name}}"
+msgstr ""
+
+msgid "Create token"
+msgstr ""
+
+msgid "Token details"
+msgstr ""
+
+msgid "Show token details"
+msgstr ""
+
+msgid "Create new token"
 msgstr ""
 
 msgctxt "api:read"
@@ -204,4 +249,12 @@ msgstr ""
 
 msgctxt "request:write"
 msgid "employee"
+msgstr ""
+
+msgctxt "token"
+msgid "access"
+msgstr ""
+
+msgctxt "at"
+msgid "Expires"
 msgstr ""

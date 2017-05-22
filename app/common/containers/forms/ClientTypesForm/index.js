@@ -14,12 +14,12 @@ import ScopeCheckboxes from 'containers/blocks/ScopeCheckboxes';
 
 import styles from './styles.scss';
 
-const getValues = getFormValues('role-form');
+const getValues = getFormValues('client-types-form');
 
 @translate()
 @withStyles(styles)
 @reduxForm({
-  form: 'role-form',
+  form: 'client-types-form',
   validate: reduxFormValidate({
     name: {
       required: true,
@@ -32,7 +32,7 @@ const getValues = getFormValues('role-form');
 @connect(state => ({
   values: getValues(state),
 }))
-export default class RoleForm extends React.Component {
+export default class ClientTypesForm extends React.Component {
   constructor(props) {
     super(props);
     this.onSubmit = this.onSubmit.bind(this);
@@ -84,8 +84,8 @@ export default class RoleForm extends React.Component {
               <Field
                 name="name"
                 component={FieldInput}
-                labelText={t('Role name')}
-                placeholder={t('Role name')}
+                labelText={t('Client Type name')}
+                placeholder={t('Client Type name')}
               />
             </FormColumn>
           </FormRow>
@@ -100,16 +100,16 @@ export default class RoleForm extends React.Component {
           {
             edit && (<ButtonsGroup>
               <Button type="submit" disabled={!this.isChanged}>{
-                submitting ? t('Saving...') : (this.isChanged ? t('Update Role') : t('Saved'))
+                submitting ? t('Saving...') : (this.isChanged ? t('Update Client Type') : t('Saved'))
               }</Button>
-              <Button color="red" onClick={() => this.setState({ onDelete: true })}>{submitting ? t('Deleting...') : t('Delete Role')
+              <Button color="red" onClick={() => this.setState({ onDelete: true })}>{submitting ? t('Deleting...') : t('Delete Client Type')
               }</Button>
             </ButtonsGroup>)
           }
           {
             !edit && (<ButtonsGroup>
               <Button type="submit" disabled={!this.isChanged}>{
-                submitting ? t('Saving...') : (this.isChanged ? t('Save New Role') : t('Saved'))
+                submitting ? t('Saving...') : (this.isChanged ? t('Save New Client Type') : t('Saved'))
               }</Button>
             </ButtonsGroup>)
           }
@@ -123,7 +123,7 @@ export default class RoleForm extends React.Component {
           id="confirm-delete"
           onCancel={() => this.setState({ onDelete: false })}
           onConfirm={() => onDelete(this.state.savedValues.id)}
-        >{ t('Are you sure want to delete this role?') }</Confirm>
+        >{ t('Are you sure want to delete this client type?') }</Confirm>
       </Form>
     );
   }

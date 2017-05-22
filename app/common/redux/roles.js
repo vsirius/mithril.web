@@ -86,6 +86,7 @@ export default handleAction(
     'roles/FETCH_ROLES_SUCCESS',
     'roles/FETCH_ROLE_BY_ID_SUCCESS',
     'roles/CREATE_ROLE_SUCCESS',
+    'roles/UPDATE_ROLE_SUCCESS'
   ),
   (state, action) => ({
     ...state,

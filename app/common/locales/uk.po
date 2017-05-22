@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: i18next-conv\n"
-"POT-Creation-Date: 2017-05-17 14:31+0300\n"
-"PO-Revision-Date: 2017-05-17 14:37+0300\n"
+"POT-Creation-Date: 2017-05-22 14:55+0300\n"
+"PO-Revision-Date: 2017-05-22 14:56+0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: uk\n"
@@ -70,62 +70,53 @@ msgstr "Ви впевнені, що хочете залишити цю стор�
 msgid "Roles"
 msgstr "Ролі"
 
+msgid "Client Types"
+msgstr "Типи клієнтів"
+
+msgid "Tokens"
+msgstr "Токени"
+
 msgid "Documentation"
 msgstr "Документація"
-
-msgid "General"
-msgstr "Загальне"
-
-msgid "Is active"
-msgstr "Активний"
-
-msgid "Saving..."
-msgstr "Збереження…"
-
-msgid "Save Dictionary"
-msgstr "Зберегти словник"
-
-msgid "Saved"
-msgstr "Збережено"
-
-msgid "Values"
-msgstr "Значення"
-
-msgid "Key"
-msgstr "Ключ"
-
-msgid "Item key"
-msgstr "Ключ елемента"
-
-msgid "Description"
-msgstr "Опис"
-
-msgid "Item description"
-msgstr "Опис елемента"
-
-msgid "Remove"
-msgstr "Видалити"
-
-msgid "Add Item"
-msgstr "Додати"
-
-msgid "You have not unique values in key: <%= params %>"
-msgstr "Не унікальні значення в ключі: <%= params %>"
-
-msgid "Role name"
-msgstr "Назва ролі"
-
-msgid "Choose roles"
-msgstr "Оберіть ролі серед можливих"
 
 msgid "app:authorize"
 msgstr ""
 
-msgid "Update Role"
-msgstr "Змінити роль"
+msgid "Client Type name"
+msgstr "Назва типу клінєнта"
+
+msgid "Choose scopes"
+msgstr "Оберіть доступні дії"
+
+msgid "Saving..."
+msgstr "Збереження…"
+
+msgid "Update Client Type"
+msgstr "Оновити тип клієнта"
+
+msgid "Saved"
+msgstr "Збережено"
 
 msgid "Deleting..."
 msgstr "Видалення"
+
+msgid "Delete Client Type"
+msgstr "Видалити тип клієнта"
+
+msgid "Save New Client Type"
+msgstr "Зберерегти тип клієнта"
+
+msgid "Are you sure?"
+msgstr "Ви впевнені?"
+
+msgid "Are you sure want to delete this client type?"
+msgstr "Ви впевнені, що хочете видалити тип клієнта?"
+
+msgid "Role name"
+msgstr "Назва ролі"
+
+msgid "Update Role"
+msgstr "Змінити роль"
 
 msgid "Delete Role"
 msgstr "Видатити роль"
@@ -133,29 +124,80 @@ msgstr "Видатити роль"
 msgid "Save New Role"
 msgstr "Зберегти нову роль"
 
-msgid "Declaration term"
-msgstr "Термін декларації"
+msgid "Are you sure want to delete this role?"
+msgstr "В впевнені, що хочете видалити цю роль?"
 
-msgid "Declaration request expiration"
-msgstr "Термін дії запиту декларації"
+msgid "ID"
+msgstr "Ідентифікатор"
 
-msgid "Employ request expiration"
-msgstr "Термін дії запиту співробітників"
+msgid "b5e3318e-2192-4676"
+msgstr ""
 
-msgid "Verification request expiration"
-msgstr "Термін дії запиту перевірки"
+msgid "Name"
+msgstr "Назва"
 
-msgid "Adult age"
-msgstr "Дорослий вік"
+msgid "Value"
+msgstr "Значення"
 
-msgid "Billing date"
-msgstr "Дата розрахунку"
+msgid "bkZ2b3BsND"
+msgstr ""
 
-msgid "Save config"
-msgstr "Зберегти конфігурацію"
+msgid "22/01/2018"
+msgstr ""
 
-msgid "Create role"
-msgstr "створити роль"
+msgid "Scope"
+msgstr "Доступні дії"
+
+msgid "Client ID"
+msgstr "Ідентифікатор кліента"
+
+msgid "Grant type"
+msgstr "Тип авторизаційного токену"
+
+msgid "password"
+msgstr ""
+
+msgid "Redirect uri"
+msgstr "Адреса зворотнього виклику"
+
+msgid "http://example.com/resource"
+msgstr ""
+
+msgid "User ID"
+msgstr "Ідентифікатор користувача"
+
+msgid "8d3c0349-353e-48ef"
+msgstr ""
+
+msgid "Delete token"
+msgstr "Видалити токен"
+
+msgid "Save New Token"
+msgstr "Зберегти новий токен"
+
+msgid "Failed"
+msgstr "Невдало"
+
+msgid "Are you sure want to delete this token?"
+msgstr "Ви впевненні, що хочете видалити цей токен?"
+
+msgid "Create client type"
+msgstr "Створити тип клієнта"
+
+msgid "Id"
+msgstr "Ідентифікатор"
+
+msgid "Action"
+msgstr "Дії"
+
+msgid "Edit client type"
+msgstr "Редагувати тип клієнта"
+
+msgid "Create new client type"
+msgstr "Cтворити новий тип клієнта"
+
+msgid "Edit client type: {{name}}"
+msgstr "Редагувати тип клієнта: {{name}}"
 
 msgid "Page Not Found"
 msgstr "Сторінка не знайдена"
@@ -166,26 +208,29 @@ msgstr "Запитувана сторінка не знайдена."
 msgid "Go to dashboard"
 msgstr "Перейти на головну"
 
-msgid "Id"
-msgstr ""
-
-msgid "Name"
-msgstr "Назва"
-
-msgid "Scope"
-msgstr ""
-
-msgid "Edit"
-msgstr "Редагувати"
+msgid "Create role"
+msgstr "Створити роль"
 
 msgid "Edit role"
-msgstr ""
+msgstr "Редагувати роль"
 
 msgid "Create new"
 msgstr "створити нову"
 
-msgid "Edit {{name}} role"
-msgstr "Редагувати {{name}} ролі"
+msgid "Edit role: {{name}}"
+msgstr "Редагування ролі  {{name}}"
+
+msgid "Create token"
+msgstr "Створити токен"
+
+msgid "Token details"
+msgstr "Деталі токена"
+
+msgid "Show token details"
+msgstr "Показати деталі токена"
+
+msgid "Create new token"
+msgstr "Створити новий токен"
 
 msgctxt "api:read"
 msgid "some"
@@ -207,242 +252,25 @@ msgctxt "request:write"
 msgid "employee"
 msgstr ""
 
-#~ msgid "Declaration"
-#~ msgstr "Декларація"
+msgctxt "token"
+msgid "access"
+msgstr ""
 
-#~ msgid "Dates"
-#~ msgstr "Дати"
+msgctxt "at"
+msgid "Expires"
+msgstr "Дійсний до"
 
-#~ msgid "Active"
-#~ msgstr "Активно"
+#~ msgid "Expires at"
+#~ msgstr "Дійсний до"
 
 #~ msgid "scope"
-#~ msgstr "можливості"
+#~ msgstr "доступні дії"
 
-#~ msgid "Division"
-#~ msgstr "Відділення"
+#~ msgid "grant type"
+#~ msgstr "тип авторизаційного токену"
 
-#~ msgid "Contacts"
-#~ msgstr "Контакти"
+#~ msgid "redirect uri"
+#~ msgstr "адреса зворотнього виклику"
 
-#~ msgid "Phones"
-#~ msgstr "Телефони"
-
-#~ msgid "Addresses"
-#~ msgstr "Адреси"
-
-#~ msgid "Other"
-#~ msgstr "Інше"
-
-#~ msgid "Type"
-#~ msgstr "Тип"
-
-#~ msgid "Mountain"
-#~ msgstr "Гірська група"
-
-#~ msgid "Clinic Detail"
-#~ msgstr "Детально про клініку"
-
-#~ msgid "Employee"
-#~ msgstr "Співробітник"
-
-#~ msgid "Position"
-#~ msgstr "Позиція"
-
-#~ msgid "Person"
-#~ msgstr "Людина"
-
-#~ msgid "Birth"
-#~ msgstr "Народжений"
-
-#~ msgid "in"
-#~ msgstr "в"
-
-#~ msgid "Documents"
-#~ msgstr "Документи"
-
-#~ msgid "Authentication methods"
-#~ msgstr "Методи перевірки"
-
-#~ msgid "Process data consent"
-#~ msgstr "Процес погодження данних"
-
-#~ msgid "Renewal consent"
-#~ msgstr "Погодження поновлення"
-
-#~ msgid "Patient signed"
-#~ msgstr "Пацієнт підписав"
-
-#~ msgid "Disclosure consent"
-#~ msgstr "Погодження розкриття"
-
-#~ msgid "Closed"
-#~ msgstr "Закрито"
-
-#~ msgid "Open"
-#~ msgstr "Відкрито"
-
-#~ msgid "Total"
-#~ msgstr "Всього"
-
-#~ msgid "Loading..."
-#~ msgstr "Завантаження..."
-
-#~ msgid "Dashboard"
-#~ msgstr "Статистика"
-
-#~ msgid "Clinics"
-#~ msgstr "Клініки"
-
-#~ msgid "Declarations"
-#~ msgstr "Декларації"
-
-#~ msgid "Pending declarations"
-#~ msgstr "Декларації на розгляді"
-
-#~ msgid "Employees"
-#~ msgstr "Співробітники"
-
-#~ msgid "Dictionaries"
-#~ msgstr "Словники"
-
-#~ msgid "System configuration"
-#~ msgstr "Конфігурація системи"
-
-#~ msgid "edrpou"
-#~ msgstr "ЕДРПОУ"
-
-#~ msgid "KVEDs"
-#~ msgstr "КВЕДи"
-
-#~ msgid "Accreditation"
-#~ msgstr "Акредитація"
-
-#~ msgid "Order No."
-#~ msgstr "Номер замовлення"
-
-#~ msgid "Category"
-#~ msgstr "Категорія"
-
-#~ msgid "Expiry date"
-#~ msgstr "Термін придатності"
-
-#~ msgid "Issued date"
-#~ msgstr "Випущено"
-
-#~ msgid "Order date"
-#~ msgstr "Дата замовлення"
-
-#~ msgid "Status"
-#~ msgstr "Статус"
-
-#~ msgid "Licenses"
-#~ msgstr "Ліцензії"
-
-#~ msgid "Issued"
-#~ msgstr "Виданий"
-
-#~ msgid "Inserted"
-#~ msgstr "Вставлений"
-
-#~ msgid "User"
-#~ msgstr "Користувач"
-
-#~ msgid "Date"
-#~ msgstr "Дата"
-
-#~ msgid "Updated"
-#~ msgstr "Оновлено"
-
-#~ msgid "Select dictionary to edit"
-#~ msgstr "Виберіть словник для редагування"
-
-#~ msgid "Action"
-#~ msgstr "Дії"
-
-#~ msgid "Details"
-#~ msgstr "Детально"
-
-#~ msgid "Declarations signed"
-#~ msgstr "Підписані декларації"
-
-#~ msgid "Declarations terminated"
-#~ msgstr "Припинені декларації"
-
-#~ msgid "Doctors"
-#~ msgstr "Лікарі"
-
-#~ msgid "Medical system providers"
-#~ msgstr "Провайдери медичної системи"
-
-#~ msgid "By regions"
-#~ msgstr "По областям"
-
-#~ msgid "Region"
-#~ msgstr "Область"
-
-#~ msgid "Select declaration to edit"
-#~ msgstr "Виберіть декларацію для редагування"
-
-#~ msgid "Legal entity"
-#~ msgstr "Юридична особа"
-
-#~ msgid "EDRPOU"
-#~ msgstr "ЕДРПОУ"
-
-#~ msgid "Dictionary Name"
-#~ msgstr "Назва словника"
-
-#~ msgid "View Dictionary"
-#~ msgstr "Переглянути словник"
-
-#~ msgid "Edit {{name}} dictionary"
-#~ msgstr "Редагувати {{name}} словник"
-
-#~ msgid "status"
-#~ msgstr "статус"
-
-#~ msgid "Birth date"
-#~ msgstr "Дата народження"
-
-#~ msgid "Educations"
-#~ msgstr "Освіта"
-
-#~ msgid "diploma"
-#~ msgstr "диплом"
-
-#~ msgid "Qualifications"
-#~ msgstr "Кваліфікація"
-
-#~ msgid "certificate"
-#~ msgstr "сертифікат"
-
-#~ msgid "Specialities"
-#~ msgstr "Спеціальність"
-
-#~ msgid "Speciality officio"
-#~ msgstr "Посада"
-
-#~ msgid "Science degree"
-#~ msgstr "Науковий ступінь"
-
-#~ msgid "Degree"
-#~ msgstr "ступінь"
-
-#~ msgid "Diploma"
-#~ msgstr "Диплом"
-
-#~ msgid "Location"
-#~ msgstr "Місцезнаходження"
-
-#~ msgid "Speciality"
-#~ msgstr "Спеціальність"
-
-#~ msgid "Scans"
-#~ msgstr "Скани документів"
-
-#~ msgid "Reject"
-#~ msgstr "Відхилити"
-
-#~ msgid "Accept"
-#~ msgstr "Прийняти"
+#~ msgid "Token Name"
+#~ msgstr "Назва токена"

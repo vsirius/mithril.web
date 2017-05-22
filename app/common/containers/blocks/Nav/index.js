@@ -32,6 +32,12 @@ export default class Nav extends React.Component {
           <NavItem to="roles" activeClassName={styles.active}>
             <Link id="roles-nav" to="/roles">{ t('Roles') }</Link>
           </NavItem>
+          <NavItem to="client_types" activeClassName={styles.active}>
+            <Link id="client_types-nav" to="/client_types">{ t('Client Types') }</Link>
+          </NavItem>
+          <NavItem to="tokens" activeClassName={styles.active}>
+            <Link id="tokens-nav" to="/tokens">{ t('Tokens') }</Link>
+          </NavItem>
         </ul>
         <ul className={styles.down}>
           <li>

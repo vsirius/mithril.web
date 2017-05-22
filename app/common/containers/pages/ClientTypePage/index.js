@@ -8,27 +8,27 @@ import { H1 } from 'components/Title';
 import Table from 'components/Table';
 import Button from 'components/Button';
 
-import { getRoles } from 'reducers';
-import { fetchRoles } from './redux';
+import { getClientTypes } from 'reducers';
+import { fetchClientsTypes } from './redux';
 
 import styles from './styles.scss';
 
 @withStyles(styles)
 @translate()
 @provideHooks({
-  fetch: ({ dispatch }) => dispatch(fetchRoles()),
+  fetch: ({ dispatch }) => dispatch(fetchClientsTypes()),
 })
 @connect(state => ({
-  roles: getRoles(state, state.pages.RolesPage.roles),
+  clientTypes: getClientTypes(state, state.pages.ClientTypePage.clientTypes),
 }))
-export default class RolesPage extends React.Component {
+export default class ClientTypePage extends React.Component {
   render() {
-    const { roles = [], t } = this.props;
+    const { clientTypes = [], t } = this.props;
 
     return (
-      <div id="roles-page">
-        <H1>{ t('Roles') }</H1>
-        <div id="roles-table" className={styles.table}>
+      <div id="client-types-page">
+        <H1>{ t('Client Types') }</H1>
+        <div id="client-types-table" className={styles.table}>
           <Table
             columns={[
               { key: 'id', title: t('Id') },
@@ -36,24 +36,24 @@ export default class RolesPage extends React.Component {
               { key: 'scope', title: t('Scope') },
               { key: 'edit', title: t('Action') },
             ]}
-            data={roles.map(item => ({
+            data={clientTypes.map(item => ({
               id: item.id,
               name: <div className={styles.name}>
                 {item.name}
               </div>,
               scope: item.scope,
               edit: (<Button
-                id={`edit-template-button-${item.id}`}
+                id={`edit-client-type-button-${item.id}`}
                 theme="link"
-                to={`/roles/${item.id}`}
+                to={`/client_types/${item.id}`}
               >
-                { t('Edit role') }
+                { t('Edit client type') }
               </Button>),
             }))}
           />
         </div>
         <div className={styles.block}>
-          <Button to="/roles/create">{t('Create new')}</Button>
+          <Button to="/client_types/create">{t('Create new client type')}</Button>
         </div>
       </div>
     );
