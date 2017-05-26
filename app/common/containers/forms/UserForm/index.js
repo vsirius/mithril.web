@@ -10,29 +10,29 @@ import Form, { FormRow, FormBlock, FormButtons, FormColumn } from 'components/Fo
 import FieldInput from 'components/reduxForm/FieldInput';
 import Button, { ButtonsGroup } from 'components/Button';
 import ConfirmFormChanges from 'containers/blocks/ConfirmFormChanges';
-import ScopeCheckboxes from 'containers/blocks/ScopeCheckboxes';
 
 import styles from './styles.scss';
 
-const getValues = getFormValues('role-form');
+const getValues = getFormValues('user-form');
 
 @translate()
 @withStyles(styles)
 @reduxForm({
-  form: 'role-form',
+  form: 'user-form',
   validate: reduxFormValidate({
-    name: {
+    email: {
+      required: true,
+      email: true,
+    },
+    password: {
       required: true,
     },
   }),
-  initialValues: {
-    scope: '',
-  },
 })
 @connect(state => ({
   values: getValues(state),
 }))
-export default class RoleForm extends React.Component {
+export default class UserForm extends React.Component {
   constructor(props) {
     super(props);
     this.onSubmit = this.onSubmit.bind(this);
@@ -51,6 +51,7 @@ export default class RoleForm extends React.Component {
       return action;
     });
   }
+
   onDelete() {
     return this.props.onDelete(this.state.savedValues.id);
   }
@@ -59,42 +60,50 @@ export default class RoleForm extends React.Component {
     return JSON.stringify(values) !== JSON.stringify(this.state.savedValues);
   }
   render() {
-    const { handleSubmit, submitting, onDelete, edit, t } = this.props;
+    const { handleSubmit, submitting, onDelete, create, update, t, submitFailed } = this.props;
+    const is_changed = this.isChanged;
     return (
       <Form onSubmit={handleSubmit(this.onSubmit)}>
         <FormBlock>
           <FormRow>
             <FormColumn>
               <Field
-                name="name"
+                name="email"
                 component={FieldInput}
-                labelText={t('Role name')}
-                placeholder={t('Role name')}
+                labelText={t('User email')}
+                placeholder={t('example@gmail.com')}
               />
             </FormColumn>
-          </FormRow>
-          <FormRow>
             <FormColumn>
-              <div className={styles.row}>{t('Choose scopes')}</div>
-              <ScopeCheckboxes />
+              <Field
+                name="password"
+                type="password"
+                placeholder="*********"
+                component={FieldInput}
+                labelText={t('Password')}
+              />
             </FormColumn>
           </FormRow>
         </FormBlock>
         <FormButtons>
           {
-            edit && (<ButtonsGroup>
-              <Button type="submit" disabled={!this.isChanged}>{
-                submitting ? t('Saving...') : (this.isChanged ? t('Update Role') : t('Saved'))
-              }</Button>
-              <Button color="red" onClick={() => this.setState({ onDelete: true })}>{submitting ? t('Deleting...') : t('Delete Role')
-              }</Button>
+            create && (<ButtonsGroup>
+              <Button type="submit" disabled={!is_changed}>
+                { submitting ? t('Saving...') : (is_changed ? t('Create New User') : (submitFailed ? t('Failed') : t('Saved'))) }
+              </Button>
             </ButtonsGroup>)
           }
           {
-            !edit && (<ButtonsGroup>
-              <Button type="submit" disabled={!this.isChanged}>{
-                submitting ? t('Saving...') : (this.isChanged ? t('Save New Role') : t('Saved'))
-              }</Button>
+            update && (<ButtonsGroup>
+              <Button type="submit" disabled={!is_changed}>
+                { submitting ? t('Saving...') : (is_changed ? t('Update User') : (submitFailed ? t('Failed') : t('Saved'))) }
+              </Button>
+              <Button
+                color="red"
+                onClick={() => this.setState({ onDelete: true })}
+              >
+                {submitting ? t('Deleting...') : t('Delete user')}
+              </Button>
             </ButtonsGroup>)
           }
         </FormButtons>
@@ -107,7 +116,7 @@ export default class RoleForm extends React.Component {
           id="confirm-delete"
           onCancel={() => this.setState({ onDelete: false })}
           onConfirm={() => onDelete(this.state.savedValues.id)}
-        >{ t('Are you sure want to delete this role?') }</Confirm>
+        >{ t('Are you sure want to delete this user?') }</Confirm>
       </Form>
     );
   }

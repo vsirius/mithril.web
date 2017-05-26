@@ -43,29 +43,13 @@ export default class ClientTypesForm extends React.Component {
     };
   }
   onSubmit(values, ...args) {
-    if (typeof this.props.onSubmit !== 'function') {
-      this.setState({
-        savedValues: values,
-      });
-      return true;
-    }
-    const submitRes = this.props.onSubmit(values, ...args);
-    if (typeof submitRes !== 'function') {
-      this.setState({
-        savedValues: values,
-      });
-      return submitRes;
-    }
-
-    submitRes.then((action) => {
+    return this.props.onSubmit(values, ...args).then((action) => {
       if (action.error) return action;
       this.setState({
         savedValues: values,
       });
-      return submitRes;
+      return action;
     });
-
-    return submitRes;
   }
   onDelete() {
     return this.props.onDelete(this.state.savedValues.id);

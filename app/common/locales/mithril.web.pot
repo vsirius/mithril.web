@@ -6,8 +6,8 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1)\n"
-"POT-Creation-Date: 2017-05-22 14:55+0300\n"
-"PO-Revision-Date: 2017-05-22T11:55:36.651Z\n"
+"POT-Creation-Date: 2017-05-24 15:48+0300\n"
+"PO-Revision-Date: 2017-05-24T12:48:48.877Z\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "X-Generator: Poedit 1.8.11\n"
@@ -66,13 +66,19 @@ msgstr ""
 msgid "Are you sure want to leave this page?"
 msgstr ""
 
+msgid "Tokens"
+msgstr ""
+
+msgid "Users"
+msgstr ""
+
 msgid "Roles"
 msgstr ""
 
 msgid "Client Types"
 msgstr ""
 
-msgid "Tokens"
+msgid "Clients"
 msgstr ""
 
 msgid "Documentation"
@@ -81,31 +87,61 @@ msgstr ""
 msgid "app:authorize"
 msgstr ""
 
+msgid "Client name"
+msgstr ""
+
+msgid "eHealth portal"
+msgstr ""
+
+msgid "Redirect uri"
+msgstr ""
+
+msgid "User ID"
+msgstr ""
+
+msgid "Client type id"
+msgstr ""
+
+msgid "Saving..."
+msgstr ""
+
+msgid "Create New Client"
+msgstr ""
+
+msgid "Failed"
+msgstr ""
+
+msgid "Saved"
+msgstr ""
+
+msgid "Update Client"
+msgstr ""
+
+msgid "Deleting..."
+msgstr ""
+
+msgid "Delete client"
+msgstr ""
+
+msgid "Are you sure?"
+msgstr ""
+
+msgid "Are you sure want to delete this client?"
+msgstr ""
+
 msgid "Client Type name"
 msgstr ""
 
 msgid "Choose scopes"
 msgstr ""
 
-msgid "Saving..."
-msgstr ""
-
 msgid "Update Client Type"
-msgstr ""
-
-msgid "Saved"
-msgstr ""
-
-msgid "Deleting..."
 msgstr ""
 
 msgid "Delete Client Type"
 msgstr ""
 
 msgid "Save New Client Type"
-msgstr ""
-
-msgid "Are you sure?"
 msgstr ""
 
 msgid "Are you sure want to delete this client type?"
@@ -156,13 +192,7 @@ msgstr ""
 msgid "password"
 msgstr ""
 
-msgid "Redirect uri"
-msgstr ""
-
 msgid "http://example.com/resource"
-msgstr ""
-
-msgid "User ID"
 msgstr ""
 
 msgid "8d3c0349-353e-48ef"
@@ -174,16 +204,46 @@ msgstr ""
 msgid "Save New Token"
 msgstr ""
 
-msgid "Failed"
-msgstr ""
-
 msgid "Are you sure want to delete this token?"
 msgstr ""
 
-msgid "Create client type"
+msgid "User email"
+msgstr ""
+
+msgid "example@gmail.com"
+msgstr ""
+
+msgid "Password"
+msgstr ""
+
+msgid "Create New User"
+msgstr ""
+
+msgid "Update User"
+msgstr ""
+
+msgid "Delete user"
+msgstr ""
+
+msgid "Are you sure want to delete this user?"
+msgstr ""
+
+msgid "Create client"
 msgstr ""
 
 msgid "Id"
+msgstr ""
+
+msgid "Details"
+msgstr ""
+
+msgid "Show client details"
+msgstr ""
+
+msgid "Create new client"
+msgstr ""
+
+msgid "Create client type"
 msgstr ""
 
 msgid "Action"
@@ -196,6 +256,9 @@ msgid "Create new client type"
 msgstr ""
 
 msgid "Edit client type: {{name}}"
+msgstr ""
+
+msgid "Update client"
 msgstr ""
 
 msgid "Page Not Found"
@@ -229,6 +292,24 @@ msgid "Show token details"
 msgstr ""
 
 msgid "Create new token"
+msgstr ""
+
+msgid "Create user"
+msgstr ""
+
+msgid "Email"
+msgstr ""
+
+msgid "Settings"
+msgstr ""
+
+msgid "Show user details"
+msgstr ""
+
+msgid "Create new user"
+msgstr ""
+
+msgid "Update user"
 msgstr ""
 
 msgctxt "api:read"

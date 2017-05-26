@@ -29,14 +29,20 @@ export default class Nav extends React.Component {
     return (
       <nav className={classnames(styles.nav, isOpen && styles.open)}>
         <ul>
+          <NavItem to="tokens" activeClassName={styles.active}>
+            <Link id="tokens-nav" to="/tokens">{ t('Tokens') }</Link>
+          </NavItem>
+          <NavItem to="users" activeClassName={styles.active}>
+            <Link id="users-nav" to="/users">{ t('Users') }</Link>
+          </NavItem>
           <NavItem to="roles" activeClassName={styles.active}>
             <Link id="roles-nav" to="/roles">{ t('Roles') }</Link>
           </NavItem>
           <NavItem to="client_types" activeClassName={styles.active}>
             <Link id="client_types-nav" to="/client_types">{ t('Client Types') }</Link>
           </NavItem>
-          <NavItem to="tokens" activeClassName={styles.active}>
-            <Link id="tokens-nav" to="/tokens">{ t('Tokens') }</Link>
+          <NavItem to="clients" activeClassName={styles.active}>
+            <Link id="users-nav" to="/clients">{ t('Clients') }</Link>
           </NavItem>
         </ul>
         <ul className={styles.down}>

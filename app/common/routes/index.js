@@ -17,6 +17,14 @@ import TokensPage from 'containers/pages/TokensPage';
 import TokenCreatePage from 'containers/pages/TokenCreatePage';
 import TokenDetailsPage from 'containers/pages/TokenDetailsPage';
 
+import UsersPage from 'containers/pages/UsersPage';
+import UserCreatePage from 'containers/pages/UserCreatePage';
+import UserUpdatePage from 'containers/pages/UserUpdatePage';
+
+import ClientsPage from 'containers/pages/ClientsPage';
+import ClientCreatePage from 'containers/pages/ClientCreatePage';
+import ClientUpdatePage from 'containers/pages/ClientUpdatePage';
+
 import NotFoundPage from 'containers/pages/NotFoundPage';
 
 export const configureRoutes = ({ store }) => { // eslint-disable-line
@@ -42,6 +50,18 @@ export const configureRoutes = ({ store }) => { // eslint-disable-line
             <IndexRoute component={TokensPage} />
             <Route path="create" component={TokenCreatePage} />
             <Route path=":id" component={TokenDetailsPage} />
+          </Route>
+
+          <Route path="users">
+            <IndexRoute component={UsersPage} />
+            <Route path="create" component={UserCreatePage} />
+            <Route path=":id" component={UserUpdatePage} />
+          </Route>
+
+          <Route path="clients">
+            <IndexRoute component={ClientsPage} />
+            <Route path="create" component={ClientCreatePage} />
+            <Route path=":id" component={ClientUpdatePage} />
           </Route>
 
           <Route path="*" component={NotFoundPage} />

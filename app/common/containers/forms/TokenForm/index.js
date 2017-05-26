@@ -65,12 +65,11 @@ export default class TokenForm extends React.Component {
     };
   }
   onSubmit(values, ...args) {
-    this.setState({
-      savedValues: values,
-    });
-
     return this.props.onSubmit(values, ...args).then((action) => {
       if (action.error) return action;
+      this.setState({
+        savedValues: values,
+      });
       return action;
     });
   }
@@ -196,9 +195,6 @@ export default class TokenForm extends React.Component {
           {
             create && (<ButtonsGroup>
               <Button type="submit" disabled={!is_changed}>
-                {
-                  console.log(submitFailed)
-                }
                 { submitting ? t('Saving...') : (is_changed ? t('Save New Token') : (submitFailed ? t('Failed') : t('Saved'))) }
               </Button>
             </ButtonsGroup>)

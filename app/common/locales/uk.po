@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: i18next-conv\n"
-"POT-Creation-Date: 2017-05-22 14:55+0300\n"
-"PO-Revision-Date: 2017-05-22 14:56+0300\n"
+"POT-Creation-Date: 2017-05-24 15:49+0300\n"
+"PO-Revision-Date: 2017-05-24 15:49+0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: uk\n"
@@ -67,14 +67,20 @@ msgstr "У вас є незбережені зміни"
 msgid "Are you sure want to leave this page?"
 msgstr "Ви впевнені, що хочете залишити цю сторінку?"
 
+msgid "Tokens"
+msgstr "Токени"
+
+msgid "Users"
+msgstr "Користувачі"
+
 msgid "Roles"
 msgstr "Ролі"
 
 msgid "Client Types"
 msgstr "Типи клієнтів"
 
-msgid "Tokens"
-msgstr "Токени"
+msgid "Clients"
+msgstr "Клієнти"
 
 msgid "Documentation"
 msgstr "Документація"
@@ -82,32 +88,62 @@ msgstr "Документація"
 msgid "app:authorize"
 msgstr ""
 
-msgid "Client Type name"
-msgstr "Назва типу клінєнта"
+msgid "Client name"
+msgstr "Ім’я клієнта"
 
-msgid "Choose scopes"
-msgstr "Оберіть доступні дії"
+msgid "eHealth portal"
+msgstr ""
+
+msgid "Redirect uri"
+msgstr "Адреса зворотнього виклику"
+
+msgid "User ID"
+msgstr "Ідентифікатор користувача"
+
+msgid "Client type id"
+msgstr "Ідентифіктор типу клієнта"
 
 msgid "Saving..."
 msgstr "Збереження…"
 
-msgid "Update Client Type"
-msgstr "Оновити тип клієнта"
+msgid "Create New Client"
+msgstr "Створити нового клієнта"
+
+msgid "Failed"
+msgstr "Невдало"
 
 msgid "Saved"
 msgstr "Збережено"
 
+msgid "Update Client"
+msgstr "Редагувати клієнта"
+
 msgid "Deleting..."
 msgstr "Видалення"
+
+msgid "Delete client"
+msgstr "Видалити клієнта"
+
+msgid "Are you sure?"
+msgstr "Ви впевнені?"
+
+msgid "Are you sure want to delete this client?"
+msgstr "Ви впевнені, що хочете видалити цього клієнта?"
+
+msgid "Client Type name"
+msgstr "Назва типу клієнта"
+
+msgid "Choose scopes"
+msgstr "Оберіть доступні дії"
+
+msgid "Update Client Type"
+msgstr "Оновити тип клієнта"
 
 msgid "Delete Client Type"
 msgstr "Видалити тип клієнта"
 
 msgid "Save New Client Type"
 msgstr "Зберерегти тип клієнта"
-
-msgid "Are you sure?"
-msgstr "Ви впевнені?"
 
 msgid "Are you sure want to delete this client type?"
 msgstr "Ви впевнені, що хочете видалити тип клієнта?"
@@ -157,14 +193,8 @@ msgstr "Тип авторизаційного токену"
 msgid "password"
 msgstr ""
 
-msgid "Redirect uri"
-msgstr "Адреса зворотнього виклику"
-
 msgid "http://example.com/resource"
 msgstr ""
-
-msgid "User ID"
-msgstr "Ідентифікатор користувача"
 
 msgid "8d3c0349-353e-48ef"
 msgstr ""
@@ -175,17 +205,47 @@ msgstr "Видалити токен"
 msgid "Save New Token"
 msgstr "Зберегти новий токен"
 
-msgid "Failed"
-msgstr "Невдало"
-
 msgid "Are you sure want to delete this token?"
 msgstr "Ви впевненні, що хочете видалити цей токен?"
 
-msgid "Create client type"
-msgstr "Створити тип клієнта"
+msgid "User email"
+msgstr "Електронна пошта користувача"
+
+msgid "example@gmail.com"
+msgstr ""
+
+msgid "Password"
+msgstr "Пароль"
+
+msgid "Create New User"
+msgstr "Створити нового користувача"
+
+msgid "Update User"
+msgstr "Оновити користувача"
+
+msgid "Delete user"
+msgstr "Видалити користувача"
+
+msgid "Are you sure want to delete this user?"
+msgstr "Ви впевнені, що хочете видалити цього користувача?"
+
+msgid "Create client"
+msgstr "Створити клієнта"
 
 msgid "Id"
 msgstr "Ідентифікатор"
+
+msgid "Details"
+msgstr "Деталі"
+
+msgid "Show client details"
+msgstr "Показати деталі клієнта"
+
+msgid "Create new client"
+msgstr "Створити нового клієнта"
+
+msgid "Create client type"
+msgstr "Створити тип клієнта"
 
 msgid "Action"
 msgstr "Дії"
@@ -198,6 +258,9 @@ msgstr "Cтворити новий тип клієнта"
 
 msgid "Edit client type: {{name}}"
 msgstr "Редагувати тип клієнта: {{name}}"
+
+msgid "Update client"
+msgstr "Редагувати клієнта"
 
 msgid "Page Not Found"
 msgstr "Сторінка не знайдена"
@@ -232,6 +295,24 @@ msgstr "Показати деталі токена"
 msgid "Create new token"
 msgstr "Створити новий токен"
 
+msgid "Create user"
+msgstr "Створити користувача"
+
+msgid "Email"
+msgstr "Електронна пошта"
+
+msgid "Settings"
+msgstr "Налаштування"
+
+msgid "Show user details"
+msgstr "Деталі користувача"
+
+msgid "Create new user"
+msgstr "Створити нового користувача"
+
+msgid "Update user"
+msgstr "Оновити користувача"
+
 msgctxt "api:read"
 msgid "some"
 msgstr ""
@@ -259,18 +340,3 @@ msgstr ""
 msgctxt "at"
 msgid "Expires"
 msgstr "Дійсний до"
-
-#~ msgid "Expires at"
-#~ msgstr "Дійсний до"
-
-#~ msgid "scope"
-#~ msgstr "доступні дії"
-
-#~ msgid "grant type"
-#~ msgstr "тип авторизаційного токену"
-
-#~ msgid "redirect uri"
-#~ msgstr "адреса зворотнього виклику"
-
-#~ msgid "Token Name"
-#~ msgstr "Назва токена"
