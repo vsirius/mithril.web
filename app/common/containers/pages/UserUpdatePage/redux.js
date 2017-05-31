@@ -5,5 +5,6 @@ export const onDeleteUser = body => dispatch =>
   dispatch(fromUsers.deleteUser(body))
     .then((action) => {
       if (action.error) throw action;
-      return dispatch(push('/users'));
+      dispatch(push('/users'));
+      return action;
     });

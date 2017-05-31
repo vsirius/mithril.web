@@ -1,5 +1,6 @@
 import React from 'react';
 import classnames from 'classnames';
+import { translate } from 'react-i18next';
 import withStyles from 'nebo15-isomorphic-style-loader/lib/withStyles';
 
 import { H2 } from '../Title';
@@ -7,8 +8,6 @@ import Button from '../Button';
 
 import styles from './styles.scss';
 
-const DEFAULT_CONFIRM_BTN_TEXT = 'Confirm';
-const DEFAULT_CANCEL_BTN_TEXT = 'Cancel';
 const DEFAULT_ALERT_BTN_TEXT = 'Done';
 
 const THEMES_COLOR = {
@@ -79,26 +78,23 @@ AlertComponent.defaultProps = {
   ok: DEFAULT_ALERT_BTN_TEXT,
 };
 
-const ConfirmComponent = (props) => {
-  const {
-    confirm = DEFAULT_CONFIRM_BTN_TEXT,
-    cancel = DEFAULT_CANCEL_BTN_TEXT,
-    title, theme, active, children,
-    onCancel, onConfirm, id,
-  } = props;
-
-  return (
-    <Popup id={id} active={active} title={title} theme={theme} bgCloser={false}>
-      <article>
-        {children}
-      </article>
-      <footer>
-        <Button name="popup-confirm-cancel" theme="border" onClick={onCancel}>{cancel}</Button>
-        <Button name="popup-confirm-ok" onClick={onConfirm}>{confirm}</Button>
-      </footer>
-    </Popup>
-  );
-};
+const ConfirmComponent = ({
+  t,
+  confirm = t('Confirm'),
+  cancel = t('Cancel'),
+  title, theme, active, children,
+  onCancel, onConfirm, id,
+}) => (
+  <Popup id={id} active={active} title={title} theme={theme} bgCloser={false}>
+    <article>
+      {children}
+    </article>
+    <footer>
+      <Button name="popup-confirm-cancel" theme="border" onClick={onCancel}>{cancel}</Button>
+      <Button name="popup-confirm-ok" onClick={onConfirm}>{confirm}</Button>
+    </footer>
+  </Popup>
+);
 
 ConfirmComponent.propTypes = {
   title: React.PropTypes.string,
@@ -112,10 +108,8 @@ ConfirmComponent.propTypes = {
 
 ConfirmComponent.defaultProps = {
   active: false,
-  confirm: DEFAULT_CONFIRM_BTN_TEXT,
-  cancel: DEFAULT_CANCEL_BTN_TEXT,
 };
 
 export const Popup = withStyles(styles)(PopupComponent);
 export const Alert = withStyles(styles)(AlertComponent);
-export const Confirm = withStyles(styles)(ConfirmComponent);
+export const Confirm = translate()(withStyles(styles)(ConfirmComponent));

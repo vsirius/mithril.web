@@ -8,7 +8,8 @@ export const fetchClients = () => dispatch =>
   dispatch(fromClients.fetchClients())
   .then((action) => {
     if (action.error) throw action;
-    return dispatch(getClients(action.payload.result));
+    dispatch(getClients(action.payload.result));
+    return action;
   });
 
 const clients = handleAction(getClients, (state, action) => action.payload, []);

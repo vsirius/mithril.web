@@ -8,7 +8,8 @@ export const fetchTokens = () => dispatch =>
   dispatch(fromTokens.fetchTokens())
   .then((action) => {
     if (action.error) throw action;
-    return dispatch(getTokens(action.payload.result));
+    dispatch(getTokens(action.payload.result));
+    return action;
   });
 
 const tokens = handleAction(getTokens, (state, action) => action.payload, []);

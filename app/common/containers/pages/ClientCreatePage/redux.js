@@ -5,5 +5,6 @@ export const onCreateClient = body => dispatch =>
   dispatch(fromClients.createClient(body))
     .then((action) => {
       if (action.error) throw new Error();
-      return dispatch(push(`/clients/${action.payload.result}`));
+      dispatch(push(`/clients/${action.payload.result}`));
+      return action;
     });

@@ -5,5 +5,6 @@ export const deleteClientType = id => dispatch =>
   dispatch(fromClientTypes.deleteClientType(id))
     .then((action) => {
       if (action.error) throw action;
-      return dispatch(push('/client_types'));
+      dispatch(push('/client_types'));
+      return action;
     });

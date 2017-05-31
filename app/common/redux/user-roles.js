@@ -12,6 +12,7 @@ export const fetchUserRoles = id => invoke({
   },
   types: ['userRoles/FETCH_USER_ROLES_REQUEST', {
     type: 'userRoles/FETCH_USER_ROLES_SUCCESS',
+    meta: { userId: id },
     payload: (action, state, res) => res.json().then(
       json => normalize(json.data, [userRole])
     ),
@@ -30,17 +31,26 @@ export const createUserRole = (id, body) => invoke({
       json => normalize(json.data, userRole)
     ),
   }, 'userRoles/CREATE_USER_ROLE_FAILURE'],
-  body,
+  body: {
+    user_role: {
+      user_id: id,
+      ...body,
+    },
+  },
 });
 
-export const deleteUserRole = (user_id, role_id) => invoke({
-  endpoint: `${API_URL}/admin/users/${user_id}/roles${role_id}`,
+export const deleteUserRole = (user_id, id) => invoke({
+  endpoint: `${API_URL}/admin/users/${user_id}/roles/${id}`,
   method: 'DELETE',
   headers: {
     'content-type': 'application/json',
   },
   types: ['userRoles/DELETE_USER_ROLE_REQUEST', {
     type: 'userRoles/DELETE_USER_ROLE_SUCCESS',
+    meta: {
+      userId: user_id,
+      userRoleId: id,
+    },
     payload: (action, state, res) => res.json().then(
       json => normalize(json.data, userRole)
     ),

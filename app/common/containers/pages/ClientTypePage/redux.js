@@ -8,7 +8,8 @@ export const fetchClientsTypes = () => dispatch =>
   dispatch(fromClientTypes.fetchClientsTypes())
   .then((action) => {
     if (action.error) throw action;
-    return dispatch(getClientTypes(action.payload.result));
+    dispatch(getClientTypes(action.payload.result));
+    return action;
   });
 
 const clientTypes = handleAction(getClientTypes, (state, action) => action.payload, []);

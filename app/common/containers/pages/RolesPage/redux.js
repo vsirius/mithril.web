@@ -8,7 +8,8 @@ export const fetchRoles = () => dispatch =>
   dispatch(fromRoles.fetchRoles())
   .then((action) => {
     if (action.error) throw action;
-    return dispatch(getRoles(action.payload.result));
+    dispatch(getRoles(action.payload.result));
+    return action;
   });
 
 const roles = handleAction(getRoles, (state, action) => action.payload, []);

@@ -4,12 +4,13 @@ import { normalize } from 'normalizr';
 import { role } from 'schemas';
 import { invoke } from './api';
 
-export const fetchRoles = () => invoke({
+export const fetchRoles = (options, { useCache = false } = {}) => invoke({
   endpoint: `${API_URL}/admin/roles`,
   method: 'GET',
   headers: {
     'content-type': 'application/json',
   },
+  bailout: state => useCache && state.data.roles,
   types: ['roles/FETCH_ROLES_REQUEST', {
     type: 'roles/FETCH_ROLES_SUCCESS',
     payload: (action, state, res) => res.json().then(
@@ -92,5 +93,5 @@ export default handleAction(
     ...state,
     ...action.payload.entities.roles,
   }),
-  {}
+  null
 );

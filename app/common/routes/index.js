@@ -21,9 +21,15 @@ import UsersPage from 'containers/pages/UsersPage';
 import UserCreatePage from 'containers/pages/UserCreatePage';
 import UserUpdatePage from 'containers/pages/UserUpdatePage';
 
+import UserRoleCreatePage from 'containers/pages/UserRoleCreatePage';
+
 import ClientsPage from 'containers/pages/ClientsPage';
 import ClientCreatePage from 'containers/pages/ClientCreatePage';
 import ClientUpdatePage from 'containers/pages/ClientUpdatePage';
+
+import ApprovalsPage from 'containers/pages/ApprovalsPage';
+import ApprovalCreatePage from 'containers/pages/ApprovalCreatePage';
+import ApprovalUpdatePage from 'containers/pages/ApprovalUpdatePage';
 
 import NotFoundPage from 'containers/pages/NotFoundPage';
 
@@ -56,12 +62,19 @@ export const configureRoutes = ({ store }) => { // eslint-disable-line
             <IndexRoute component={UsersPage} />
             <Route path="create" component={UserCreatePage} />
             <Route path=":id" component={UserUpdatePage} />
+            <Route path=":id/roles/create" component={UserRoleCreatePage} />
           </Route>
 
           <Route path="clients">
             <IndexRoute component={ClientsPage} />
             <Route path="create" component={ClientCreatePage} />
             <Route path=":id" component={ClientUpdatePage} />
+          </Route>
+
+          <Route path="approvals">
+            <IndexRoute component={ApprovalsPage} />
+            <Route path="create" component={ApprovalCreatePage} />
+            <Route path=":id" component={ApprovalUpdatePage} />
           </Route>
 
           <Route path="*" component={NotFoundPage} />

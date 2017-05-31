@@ -10,7 +10,6 @@ import Form, { FormRow, FormBlock, FormButtons, FormColumn } from 'components/Fo
 import FieldInput from 'components/reduxForm/FieldInput';
 import Button, { ButtonsGroup } from 'components/Button';
 import ConfirmFormChanges from 'containers/blocks/ConfirmFormChanges';
-import ScopeCheckboxes from 'containers/blocks/ScopeCheckboxes';
 
 import styles from './styles.scss';
 
@@ -69,14 +68,17 @@ export default class ClientTypesForm extends React.Component {
                 name="name"
                 component={FieldInput}
                 labelText={t('Client Type name')}
-                placeholder={t('Client Type name')}
+                placeholder="some_api:write some_api:read"
               />
             </FormColumn>
           </FormRow>
           <FormRow>
             <FormColumn>
-              <div className={styles.row}>{t('Choose scopes')}</div>
-              <ScopeCheckboxes />
+              <Field
+                name="scope"
+                component={FieldInput}
+                labelText={t('Enter scopes')}
+              />
             </FormColumn>
           </FormRow>
         </FormBlock>

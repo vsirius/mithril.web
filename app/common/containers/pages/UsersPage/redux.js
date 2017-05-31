@@ -8,7 +8,8 @@ export const fetchUsersList = () => dispatch =>
   dispatch(fromUsers.fetchUsersList())
   .then((action) => {
     if (action.error) throw action;
-    return dispatch(getUsers(action.payload.result));
+    dispatch(getUsers(action.payload.result));
+    return action;
   });
 
 const users = handleAction(getUsers, (state, action) => action.payload, []);

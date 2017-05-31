@@ -10,7 +10,9 @@ import roles from 'redux/roles';
 import clientTypes from 'redux/client-types';
 import tokens from 'redux/tokens';
 import users from 'redux/users';
+import userRoles from 'redux/user-roles';
 import clients from 'redux/clients';
+import approvals from 'redux/approvals';
 
 import Aside from 'containers/blocks/Aside/redux';
 
@@ -19,6 +21,7 @@ import ClientTypePage from 'containers/pages/ClientTypePage/redux';
 import TokensPage from 'containers/pages/TokensPage/redux';
 import UsersPage from 'containers/pages/UsersPage/redux';
 import ClientsPage from 'containers/pages/ClientsPage/redux';
+import ApprovalsPage from 'containers/pages/ApprovalsPage/redux';
 
 const blocks = combineReducers({
   Aside,
@@ -30,6 +33,7 @@ const pages = combineReducers({
   TokensPage,
   UsersPage,
   ClientsPage,
+  ApprovalsPage,
 });
 
 const data = combineReducers({
@@ -37,7 +41,9 @@ const data = combineReducers({
   clientTypes,
   tokens,
   users,
+  userRoles,
   clients,
+  approvals,
 });
 
 export default combineReducers({
@@ -69,6 +75,11 @@ export const getUsers = (state, ids) => denormalize(ids, [schemas.user], state.d
 export const getAllUsers = state => getUsers(state, Object.keys(state.data.users));
 export const getUser = (state, id) => denormalize(id, schemas.user, state.data);
 
-
 export const getClients = (state, ids) => denormalize(ids, [schemas.client], state.data);
+export const getAllClients = state => getClients(state, Object.keys(state.data.clients));
 export const getClient = (state, id) => denormalize(id, schemas.client, state.data);
+
+export const getApprovals = (state, ids) => denormalize(ids, [schemas.approval], state.data);
+export const getApproval = (state, id) => denormalize(id, schemas.approval, state.data);
+
+export const getUserRoles = (state, id) => denormalize(id, [schemas.userRole], state.data);

@@ -1,5 +1,6 @@
 import React from 'react';
-import { connect } from 'react-redux';
+import { provideHooks } from 'redial';
+
 import withStyles from 'nebo15-isomorphic-style-loader/lib/withStyles';
 
 import Icon from 'components/Icon';
@@ -8,18 +9,20 @@ import Aside from 'containers/blocks/Aside';
 import { fetchUsersList } from 'redux/users';
 import { fetchRoles } from 'redux/roles';
 import { fetchClientsTypes } from 'redux/client-types';
+import { fetchClients } from 'redux/clients';
 
 import styles from './styles.scss';
 
 @withStyles(styles)
-@connect(null, { fetchUsersList, fetchClientsTypes, fetchRoles })
+@provideHooks({
+  fetch: ({ dispatch }) => Promise.all([
+    dispatch(fetchClients({}, { useCache: true })),
+    dispatch(fetchRoles({}, { useCache: true })),
+    dispatch(fetchUsersList({}, { useCache: true })),
+    dispatch(fetchClientsTypes({}, { useCache: true })),
+  ]),
+})
 export default class App extends React.Component {
-  componentDidMount() {
-    this.props.fetchUsersList();
-    this.props.fetchClientsTypes();
-    this.props.fetchRoles();
-  }
-
   render() {
     const { children } = this.props;
     return (

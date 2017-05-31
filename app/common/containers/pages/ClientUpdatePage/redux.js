@@ -5,5 +5,6 @@ export const onDeleteClient = id => dispatch =>
   dispatch(fromClients.deleteClient(id))
     .then((action) => {
       if (action.error) throw action;
-      return dispatch(push('/clients'));
+      dispatch(push('/clients'));
+      return action;
     });

@@ -5,5 +5,6 @@ export const onCreateUser = body => dispatch =>
   dispatch(fromUsers.createUser(body))
     .then((action) => {
       if (action.error) throw new Error();
-      return dispatch(push(`/users/${action.payload.result}`));
+      dispatch(push(`/users/${action.payload.result}`));
+      return action;
     });

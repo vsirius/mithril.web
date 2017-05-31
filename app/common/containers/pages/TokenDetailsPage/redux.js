@@ -5,5 +5,6 @@ export const onDeleteToken = body => dispatch =>
   dispatch(fromTokens.deleteToken(body))
     .then((action) => {
       if (action.error) throw action;
-      return dispatch(push('/tokens'));
+      dispatch(push('/tokens'));
+      return action;
     });

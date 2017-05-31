@@ -1,4 +1,3 @@
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: i18next-conv\n"
@@ -6,11 +5,8 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1)\n"
-"POT-Creation-Date: 2017-05-24 15:48+0300\n"
-"PO-Revision-Date: 2017-05-24T12:48:48.877Z\n"
-"Last-Translator: \n"
-"Language-Team: \n"
-"X-Generator: Poedit 1.8.11\n"
+"POT-Creation-Date: 2017-05-31T11:13:30.709Z\n"
+"PO-Revision-Date: 2017-05-31T11:13:30.709Z\n"
 
 msgid "Required field"
 msgstr ""
@@ -42,6 +38,15 @@ msgstr ""
 msgid "Maximum value is <%= params %>"
 msgstr ""
 
+msgid "Confirm"
+msgstr ""
+
+msgid "Cancel"
+msgstr ""
+
+msgid "No data"
+msgstr ""
+
 msgid "Yes"
 msgstr ""
 
@@ -69,6 +74,9 @@ msgstr ""
 msgid "Tokens"
 msgstr ""
 
+msgid "Approvals"
+msgstr ""
+
 msgid "Users"
 msgstr ""
 
@@ -87,6 +95,72 @@ msgstr ""
 msgid "app:authorize"
 msgstr ""
 
+msgid "User roles"
+msgstr ""
+
+msgid "Client"
+msgstr ""
+
+msgid "Role"
+msgstr ""
+
+msgid "Actions"
+msgstr ""
+
+msgid "Delete user role"
+msgstr ""
+
+msgid "Create new user role"
+msgstr ""
+
+msgid "Are you sure?"
+msgstr ""
+
+msgid "Are you sure want to delete this user role?"
+msgstr ""
+
+msgid "User ID"
+msgstr ""
+
+msgid "Client id"
+msgstr ""
+
+msgid "Enter scopes"
+msgstr ""
+
+msgid "Saving..."
+msgstr ""
+
+msgid "Update Role"
+msgstr ""
+
+msgid "Saved"
+msgstr ""
+
+msgid "Deleting..."
+msgstr ""
+
+msgid "Delete Role"
+msgstr ""
+
+msgid "Save New Role"
+msgstr ""
+
+msgid "Are you sure want to delete this role?"
+msgstr ""
+
+msgid "Approval ID"
+msgstr ""
+
+msgid "Update approval"
+msgstr ""
+
+msgid "Delete Approval"
+msgstr ""
+
+msgid "Are you sure want to delete this approval?"
+msgstr ""
+
 msgid "Client name"
 msgstr ""
 
@@ -96,43 +170,22 @@ msgstr ""
 msgid "Redirect uri"
 msgstr ""
 
-msgid "User ID"
-msgstr ""
-
 msgid "Client type id"
-msgstr ""
-
-msgid "Saving..."
 msgstr ""
 
 msgid "Create New Client"
 msgstr ""
 
-msgid "Failed"
-msgstr ""
-
-msgid "Saved"
-msgstr ""
-
 msgid "Update Client"
 msgstr ""
 
-msgid "Deleting..."
-msgstr ""
-
 msgid "Delete client"
-msgstr ""
-
-msgid "Are you sure?"
 msgstr ""
 
 msgid "Are you sure want to delete this client?"
 msgstr ""
 
 msgid "Client Type name"
-msgstr ""
-
-msgid "Choose scopes"
 msgstr ""
 
 msgid "Update Client Type"
@@ -148,18 +201,6 @@ msgid "Are you sure want to delete this client type?"
 msgstr ""
 
 msgid "Role name"
-msgstr ""
-
-msgid "Update Role"
-msgstr ""
-
-msgid "Delete Role"
-msgstr ""
-
-msgid "Save New Role"
-msgstr ""
-
-msgid "Are you sure want to delete this role?"
 msgstr ""
 
 msgid "ID"
@@ -204,6 +245,9 @@ msgstr ""
 msgid "Save New Token"
 msgstr ""
 
+msgid "Failed"
+msgstr ""
+
 msgid "Are you sure want to delete this token?"
 msgstr ""
 
@@ -228,10 +272,28 @@ msgstr ""
 msgid "Are you sure want to delete this user?"
 msgstr ""
 
-msgid "Create client"
+msgid "Role id"
+msgstr ""
+
+msgid "Create User Role"
+msgstr ""
+
+msgid "Create approval"
 msgstr ""
 
 msgid "Id"
+msgstr ""
+
+msgid "Action"
+msgstr ""
+
+msgid "Edit approval"
+msgstr ""
+
+msgid "Create new approval"
+msgstr ""
+
+msgid "Create client"
 msgstr ""
 
 msgid "Details"
@@ -244,9 +306,6 @@ msgid "Create new client"
 msgstr ""
 
 msgid "Create client type"
-msgstr ""
-
-msgid "Action"
 msgstr ""
 
 msgid "Edit client type"
@@ -297,10 +356,10 @@ msgstr ""
 msgid "Create user"
 msgstr ""
 
-msgid "Email"
+msgid "Create user role"
 msgstr ""
 
-msgid "Settings"
+msgid "Email"
 msgstr ""
 
 msgid "Show user details"
@@ -309,7 +368,7 @@ msgstr ""
 msgid "Create new user"
 msgstr ""
 
-msgid "Update user"
+msgid "User details"
 msgstr ""
 
 msgctxt "api:read"

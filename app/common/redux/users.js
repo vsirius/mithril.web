@@ -1,4 +1,4 @@
-import { handleAction, combineActions } from 'redux-actions';
+import { handleActions, combineActions } from 'redux-actions';
 import { API_URL } from 'config';
 import { normalize } from 'normalizr';
 import { user } from 'schemas';
@@ -95,15 +95,34 @@ export const deleteUser = id => invoke({
     'users/DELETE_USER_FAILURE'],
 });
 
-export default handleAction(
-  combineActions(
+export default handleActions({
+  [combineActions(
     'users/FETCH_USERS_LIST_SUCCESS',
     'users/CREATE_USER_SUCCESS',
     'users/UPDATE_USER_SUCCESS',
-  ),
-  (state, action) => ({
+    'users/FETCH_USER_BY_ID_SUCCESS'
+  )]: (state, action) =>
+    Object.entries(action.payload.entities.users)
+      .reduce((prev, [key, value]) => ({
+        ...prev,
+        [key]: {
+          roles: [],
+          ...state[key],
+          ...value,
+        },
+      }), state),
+  'userRoles/FETCH_USER_ROLES_SUCCESS': (state, action) => ({
     ...state,
-    ...action.payload.entities.users,
+    [action.meta.userId]: {
+      ...state[action.meta.userId],
+      roles: action.payload.result,
+    },
   }),
-  {}
-);
+  'userRoles/DELETE_USER_ROLE_SUCCESS': (state, action) => ({
+    ...state,
+    [action.meta.userId]: {
+      ...state[action.meta.userId],
+      roles: state[action.meta.userId].roles.filter(i => i !== action.meta.userRoleId),
+    },
+  }),
+}, {});

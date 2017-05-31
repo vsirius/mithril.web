@@ -5,6 +5,7 @@ export const onCreateClientType = body => dispatch =>
   dispatch(fromClientTypes.createClientType(body))
     .then((action) => {
       if (action.error) throw action;
-      return dispatch(push(`/client_types/${action.payload.result}`));
+      dispatch(push(`/client_types/${action.payload.result}`));
+      return action;
     });
 

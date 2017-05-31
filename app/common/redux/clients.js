@@ -7,12 +7,13 @@ import { client } from 'schemas';
 
 import { invoke } from './api';
 
-export const fetchClients = options => invoke({
+export const fetchClients = (options, { useCache = false } = {}) => invoke({
   endpoint: createUrl(`${API_URL}/admin/clients`, options),
   method: 'GET',
   headers: {
     'content-type': 'application/json',
   },
+  bailout: state => useCache && state.data.clients,
   types: ['clients/FETCH_CLIENTS_REQUEST', {
     type: 'clients/FETCH_CLIENTS_SUCCESS',
     payload: (action, state, res) => res.json().then(
@@ -94,5 +95,5 @@ export default handleAction(
     ...state,
     ...action.payload.entities.clients,
   }),
-  {}
+  null
 );

@@ -5,5 +5,6 @@ export const deleteRole = id => dispatch =>
   dispatch(fromRoles.deleteRole(id))
     .then((action) => {
       if (action.error) throw action;
-      return dispatch(push('/roles'));
+      dispatch(push('/roles'));
+      return action;
     });

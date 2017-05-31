@@ -13,14 +13,17 @@ import ConfirmFormChanges from 'containers/blocks/ConfirmFormChanges';
 
 import styles from './styles.scss';
 
-const getValues = getFormValues('role-form');
+const getValues = getFormValues('approval-update-form');
 
 @translate()
 @withStyles(styles)
 @reduxForm({
-  form: 'role-form',
+  form: 'approval-update-form',
   validate: reduxFormValidate({
-    name: {
+    id: {
+      required: true,
+    },
+    scope: {
       required: true,
     },
   }),
@@ -31,7 +34,7 @@ const getValues = getFormValues('role-form');
 @connect(state => ({
   values: getValues(state),
 }))
-export default class RoleForm extends React.Component {
+export default class ApprovalUpdateForm extends React.Component {
   constructor(props) {
     super(props);
     this.onSubmit = this.onSubmit.bind(this);
@@ -58,17 +61,17 @@ export default class RoleForm extends React.Component {
     return JSON.stringify(values) !== JSON.stringify(this.state.savedValues);
   }
   render() {
-    const { handleSubmit, submitting, onDelete, edit, t } = this.props;
+    const { handleSubmit, submitting, onDelete, t } = this.props;
     return (
       <Form onSubmit={handleSubmit(this.onSubmit)}>
         <FormBlock>
           <FormRow>
             <FormColumn>
               <Field
-                name="name"
+                name="id"
                 component={FieldInput}
-                labelText={t('Role name')}
-                placeholder={t('Role name')}
+                labelText={t('Approval ID')}
+                placeholder="some_api:write some_api:read"
               />
             </FormColumn>
           </FormRow>
@@ -78,28 +81,19 @@ export default class RoleForm extends React.Component {
                 name="scope"
                 component={FieldInput}
                 labelText={t('Enter scopes')}
-                placeholder="some_api:write some_api:read"
+                disabled
               />
             </FormColumn>
           </FormRow>
         </FormBlock>
         <FormButtons>
-          {
-            edit && (<ButtonsGroup>
-              <Button type="submit" disabled={!this.isChanged}>{
-                submitting ? t('Saving...') : (this.isChanged ? t('Update Role') : t('Saved'))
-              }</Button>
-              <Button color="red" onClick={() => this.setState({ onDelete: true })}>{submitting ? t('Deleting...') : t('Delete Role')
-              }</Button>
-            </ButtonsGroup>)
-          }
-          {
-            !edit && (<ButtonsGroup>
-              <Button type="submit" disabled={!this.isChanged}>{
-                submitting ? t('Saving...') : (this.isChanged ? t('Save New Role') : t('Saved'))
-              }</Button>
-            </ButtonsGroup>)
-          }
+          <ButtonsGroup>
+            <Button type="submit" disabled={!this.isChanged}>{
+              submitting ? t('Saving...') : (this.isChanged ? t('Update approval') : t('Saved'))
+            }</Button>
+            <Button color="red" onClick={() => this.setState({ onDelete: true })}>{submitting ? t('Deleting...') : t('Delete Approval')
+            }</Button>
+          </ButtonsGroup>
         </FormButtons>
         <ConfirmFormChanges submitting={submitting} isChanged={this.isChanged} />
         <Confirm
@@ -110,7 +104,7 @@ export default class RoleForm extends React.Component {
           id="confirm-delete"
           onCancel={() => this.setState({ onDelete: false })}
           onConfirm={() => onDelete(this.state.savedValues.id)}
-        >{ t('Are you sure want to delete this role?') }</Confirm>
+        >{ t('Are you sure want to delete this approval?') }</Confirm>
       </Form>
     );
   }

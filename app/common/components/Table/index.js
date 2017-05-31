@@ -1,10 +1,9 @@
 import React, { PropTypes, Children } from 'react';
 import classnames from 'classnames';
+import { translate } from 'react-i18next';
 import withStyles from 'nebo15-isomorphic-style-loader/lib/withStyles';
 
 import styles from './styles.scss';
-
-const DEFAULT_PLACEHOLDER = 'No data';
 
 const TableRowComponent = ({ columns = [], data = {}, ...rest }) => (
   <tr {...rest}>
@@ -41,21 +40,20 @@ const TablePlaceholder = withStyles(styles)(({ colSpan, placeholder }) => (
 export const TableRow = withStyles(styles)(TableRowComponent);
 export const TableHead = withStyles(styles)(TableHeadComponent);
 
-const Table = (props) => {
-  const {
-    columns = [],
-    data = [],
-    placeholder = DEFAULT_PLACEHOLDER,
-    zebra = true,
-    responsive = true,
-    hovered = true,
-    head = true,
-    tbody = true,
-    keyColumn,
-    rowComponent, headComponent,
-    children = [],
-  } = props;
-
+const Table = ({
+  columns = [],
+  data = [],
+  t,
+  placeholder = t('No data'),
+  zebra = true,
+  responsive = true,
+  hovered = true,
+  head = true,
+  tbody = true,
+  keyColumn,
+  rowComponent, headComponent,
+  children = [],
+}) => {
   const Head = headComponent || TableHead;
   const Row = rowComponent || TableRow;
 
@@ -123,4 +121,4 @@ TableRowComponent.propTypes = {
   data: PropTypes.objectOf(PropTypes.any),
 };
 
-export default withStyles(styles)(Table);
+export default translate()(withStyles(styles)(Table));

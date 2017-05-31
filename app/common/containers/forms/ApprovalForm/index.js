@@ -4,23 +4,30 @@ import { connect } from 'react-redux';
 import { translate } from 'react-i18next';
 import { reduxForm, Field, getFormValues } from 'redux-form';
 import { reduxFormValidate } from 'react-nebo15-validate';
+import FieldInput from 'components/reduxForm/FieldInput';
 
 import { Confirm } from 'components/Popup';
 import Form, { FormRow, FormBlock, FormButtons, FormColumn } from 'components/Form';
-import FieldInput from 'components/reduxForm/FieldInput';
 import Button, { ButtonsGroup } from 'components/Button';
 import ConfirmFormChanges from 'containers/blocks/ConfirmFormChanges';
+import FiledSelect from 'components/reduxForm/FieldSelect';
 
 import styles from './styles.scss';
 
-const getValues = getFormValues('role-form');
+const getValues = getFormValues('approval-form');
 
 @translate()
 @withStyles(styles)
 @reduxForm({
-  form: 'role-form',
+  form: 'approval-form',
   validate: reduxFormValidate({
-    name: {
+    scope: {
+      required: true,
+    },
+    user_id: {
+      required: true,
+    },
+    client_id: {
       required: true,
     },
   }),
@@ -31,7 +38,7 @@ const getValues = getFormValues('role-form');
 @connect(state => ({
   values: getValues(state),
 }))
-export default class RoleForm extends React.Component {
+export default class ApprovalForm extends React.Component {
   constructor(props) {
     super(props);
     this.onSubmit = this.onSubmit.bind(this);
@@ -42,11 +49,12 @@ export default class RoleForm extends React.Component {
     };
   }
   onSubmit(values, ...args) {
+    this.setState({
+      savedValues: values,
+    });
+
     return this.props.onSubmit(values, ...args).then((action) => {
       if (action.error) return action;
-      this.setState({
-        savedValues: values,
-      });
       return action;
     });
   }
@@ -58,17 +66,31 @@ export default class RoleForm extends React.Component {
     return JSON.stringify(values) !== JSON.stringify(this.state.savedValues);
   }
   render() {
-    const { handleSubmit, submitting, onDelete, edit, t } = this.props;
+    const { handleSubmit, submitting, onDelete, edit, t, data } = this.props;
     return (
       <Form onSubmit={handleSubmit(this.onSubmit)}>
         <FormBlock>
           <FormRow>
             <FormColumn>
               <Field
-                name="name"
-                component={FieldInput}
-                labelText={t('Role name')}
-                placeholder={t('Role name')}
+                name="user_id"
+                labelText={t('User ID')}
+                component={FiledSelect}
+                options={data.users.map(i => ({
+                  name: i.id,
+                  title: i.email,
+                }))}
+              />
+            </FormColumn>
+            <FormColumn>
+              <Field
+                labelText={t('Client id')}
+                name="client_id"
+                component={FiledSelect}
+                options={data.clients.map(i => ({
+                  name: i.id,
+                  title: i.name,
+                }))}
               />
             </FormColumn>
           </FormRow>
