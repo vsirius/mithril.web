@@ -3,16 +3,14 @@ services:
 - docker
 cache:
   directories:
-  - ~/.nvm
+  - "~/.nvm"
   - node_modules
 env:
   global:
   - RELEASE_BRANCH="master"
   - DOCKER_HUB_ACCOUNT="nebo15"
   - MAIN_BRANCHES="master develop"
-  - secure: VyMOhpVN3I7Qrwn73UiK6QFwJGDmikIhU+rg+UOAaldyVTLyV6m+oMiHXpSK21LvAwjsW/hcscz4qHqf60NYEBqbbD68ulKVyews5chf40E37nV9xLFwi1Z9v4r5gKsx+T60MtEIL2p4HKKtkX/3m6/BsUfdA8ofDrvDK/K0BnuvzDVkJX1xhoUnc1yrwkHB7E+0B0SimkH99wkOpi6IdHBM4AOyzA+SY2YWJyT0Ixzi6AKhs6L5eQJScucMyIAQdxl+f/hAB0esnC4EEsMuQwDVH8U/7extE0GFD2Lg+m+fmlrh5fOjqmM7s/F/XImZDR4tL4JMw2HKf/r+DPlwSxa6otG3mbtRF2V4KIIug6Y2TelMuXB+19a9OOyjvUCgSMVVKc1iU6lnIIi52oZA4HfZcPxKVStiB5ekn+tKqkjMJJzol9FxkGn0AnzGzTtPJ15TvWkYvn41bBSeFYFus9gJbRv2C1ZOHu4P0KcLBJCB4DftG6V/eaWUw2/Fqb7s8MYVdFj2H6k4asB/6BfWrFPOSu5AFG2nN52jGrtr9OyLmklugX2/7lVPqtbXp5bzfPtjoz81SnRBJaO3wfr+HDBBJf38Snn+EltbvX7i+tYfzgLoOu2UU/O5493lNOXVaha/mxv3EpKZM5KKXvzKMxMYYLqc25+PvayxS1ZY91I=
-  - secure: NTY0E9X8TIDWIIR0/DzZhutKIsee7gnp5bNxUD/DRusmH7ZSO/4IBpppbnLf9TW4Xl3zooSVD/Gp0tCJgSLdsCrkQzzGeXFzlWfOnuVbTlhvTS6J7Pm0x1zEz7HxijNIc4BmM3BHXIZYqS7KFe5nzSGt8Ae7dVbylcr4EzxOvYrrjVQixzHfjaivS5zs2VQ5EHFLwNDYfSRBhhpfSUDx+CvIpX1SV+cYptT1MhqaVxjMXlVHRQPRDyvDN37F0DHHxIvQNEqxkSIQegPP2kSt5J75zCvSe9DEzBTViV4jJMPhBsRYbEUIj1A3j3QB0E/0iyoKY+tSAPy1QCtNrwS85UUpnbOoyNOQ7MB8ShrzNsI7SZ2pwL3I3riHJT12s+E0f6350O+EVzgB7o79zlhExzdnE824+AF8nMOiznhY0qLoP0JvZxRaotXPNegiNusNIPUUpY2IwkCxUAz1zKUxro7fvsJYc1Jp5Q2yPT4AkUxwRHp0LHPQQDR+ukBZ7Tl7DkHbqyQvj6XdPaVsGtvI6oz66j3KkY7F1bMD5/dSPx/nV9sw/kY432UNC2bcMdsig8YcS9aJ4tRLB6ulwNPxeaHoMDJZ+rGW60HEhhMrlB5BcHjGL3cPNOsFxrbpwOveCQLj384thEltYHqImTtC7XDpfvUpbd9BbEaDIbY0VBc=
-  - secure: JXBLTnV3etCMK+EeDothQdI1NgXKUEE81wesxuws15UF6Xf/5OgSBneqLEWg38GFMNsXRGqLEeS8ea+++EnhhJfiovUXeTYkbfbiOKDBIHdOgbsLG/8OdiSApA3Sc5bFNbZMa5S/AbSPLCWD1hprZXjoIP0jCQBVpln3xbb6qhiA5qPJDVugmL/0Q4s1M40ZUGL4aeO6hBZn0T1Nney5cLDrFfVlxBYk+c5A5XuQUYBt1gQ1XupUUv9AS9QUrgkaizKdSGNbk8ztg00nWRTIvjCBiu5ssbAuIXZEFXs77UiS0pI3x+sEwVpbyhhjc0ggfmJLQhR4uid2Bmzd95gWorQhAs2I29AOsHlIIzdmfTA9JBItZmNP6DWXHJ1iLl+S/szEMdj+U1IGlY9U08WJ/PnZx8o9JYxw1se1I+fa5podS92Sq8Zoboa3yI94Gc07pUe6VKS5uh28hSQHJS/Cu8FYgRsgVEy5uoao6GZZ96nRR5bmsBddNsCVlsB3z2/XWfvh8l3muUp9jFNNhHWQ5vq1h2av8WRw5twZoYM3sOYBcOwYo/4pO8HkhiUVzo/NtKfokFghhHS1tFRn6WZ3JObp5PZm+n+NcyiAwvk3FUehkJAOJU5w/W+S3O1b2qohbmSfl25CUkyrNaeO0jNhgfIX97C4zkS391KBVsrkEnc=
+  - secure: uJA+Mz+ZA/uVazqdpzT6Nm4EdIqky0fhRbw2i2rFOj/t61LpE7j/87MpAbotvnsF/wzVp2H6NTDPQRbwOTZaGW5Wyp3ia7fratjT/0z1SSA1Ln7RMNWXPUdx+VEJ2iLP4N1D/2SEaI34qF6rPynWN+Dg1xGoiUHm/09eiwH4AZqIJdEhixZuJM/J5GjG56dXG1hXgHNttnYSPHdajGQmaPvs93ND2RgmcBJ25rwa2HIxzXqUd0axCZ3Gu6ckjmk/3ubt3zgsNOky6uCNUdDlL4kI8Mppuz0M4r7vkfgWVjFhy0Ql3fWeqbf96AMhBhMb+VB/Abu8cOHRghv8SmyL+ICK9qabggjdKoOUqSApapBodV1u5U7eRt14+L2ZPmFUGy6MuWiCdewsGwnbMn496zhN7R7Z6VFrAr3r7bvktVtllYimrVyHQMQKDnKXydiDneMr/v4NTKE9sVgxHJZaH0MDfhusnSP8VC8O9UTRqQTrjleuZhQy40DCJVbmAkOrWnnYpi0lqt18RW4uf4vChKK8uswcJzL7Sm6BoSbAOAo6gUOdso/R3sUX7wvM4rh/kqF3/E28TDB65vLjrRP32C9/H5gzBXv7GnLJJMQRQr3uJA8jFXRCWoAE8+2L9iTAMb9G3JNZvZ+YtzpSNs9W5eZWkCUJIHtPz2XZBjn7Iew=
 node_js:
 - 7.5.0
 before_install:
@@ -21,9 +19,9 @@ before_install:
 script:
 - npm run test
 - npm run lint
-- ./bin/version-increment.sh
-- ./bin/build.sh
-- ./bin/start.sh
+- "./bin/version-increment.sh"
+- "./bin/build.sh"
+- "./bin/start.sh"
 - sleep 5
 - docker ps
 - RUNNING_CONTAINERS=`docker ps | wc -l`; if [ "${RUNNING_CONTAINERS//[[:space:]]/}"
@@ -34,4 +32,4 @@ script:
 after_failure:
 - docker logs mithril.web
 after_success:
-- ./bin/ci/push.sh
+- "./bin/ci/push.sh"
