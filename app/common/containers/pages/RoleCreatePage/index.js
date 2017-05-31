@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { translate } from 'react-i18next';
+import Helmet from 'react-helmet';
 import withStyles from 'nebo15-isomorphic-style-loader/lib/withStyles';
 
 import FormPageWrapper from 'containers/blocks/FormPageWrapper';
@@ -19,6 +20,7 @@ export default class RoleCreatePage extends React.Component {
 
     return (
       <FormPageWrapper id="create-roles-page" title={t('Create role')} back="/roles">
+        <Helmet title={t('Create role')} />
         <RoleForm onSubmit={onCreateRole} />
       </FormPageWrapper>
     );

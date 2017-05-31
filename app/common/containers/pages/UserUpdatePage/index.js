@@ -3,6 +3,7 @@ import withStyles from 'nebo15-isomorphic-style-loader/lib/withStyles';
 import { connect } from 'react-redux';
 import { translate } from 'react-i18next';
 import { provideHooks } from 'redial';
+import Helmet from 'react-helmet';
 
 import FormPageWrapper from 'containers/blocks/FormPageWrapper';
 import UserForm from 'containers/forms/UserForm';
@@ -31,6 +32,7 @@ export default class UserUpdatePage extends React.Component {
     const { onDeleteUser, deleteUserRole, user, updateUser, t, params } = this.props;
     return (
       <FormPageWrapper id="user-update-page" title={t('User details')} back="/users">
+        <Helmet title={t('User details')} />
         <UserForm
           initialValues={user}
           update

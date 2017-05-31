@@ -2,6 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { translate } from 'react-i18next';
 import { provideHooks } from 'redial';
+import Helmet from 'react-helmet';
 import withStyles from 'nebo15-isomorphic-style-loader/lib/withStyles';
 
 import { H1 } from 'components/Title';
@@ -26,6 +27,7 @@ export default class UsersPage extends React.Component {
     const { users = [], t } = this.props;
     return (
       <div id="users-page">
+        <Helmet title={t('Users')} />
         <H1>{ t('Users') }</H1>
         <div id="users-table" className={styles.table}>
           <Table

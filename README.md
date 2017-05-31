@@ -1,4 +1,4 @@
-# Mán Dashboard
+# Mithril
 
 [![Greenkeeper badge](https://badges.greenkeeper.io/Nebo15/mithril.web.svg)](https://greenkeeper.io/)
 [![Build Status](https://travis-ci.org/Nebo15/mithril.web.svg?branch=master)](https://travis-ci.org/Nebo15/mithril.web)
@@ -30,9 +30,8 @@ Application supports these environment variables:
 | Environment Variable  | Default Value           | Description |
 | --------------------- | ----------------------- | ----------- |
 | `PORT`                | `8080`                  | Node.js server port. |
-| `API_ENDPOINT`        |   `https://mithril-api.herokuapp.com` | Mithril API endpoint. |
+| `API_ENDPOINT`        |   `https://mithril-api-dev.herokuapp.com` | Mithril API endpoint. |
 | `SITEMAP_HOSTNAME`    | `http://localhost:8080` | URL will be used in sitemap generated urls |
-| `LANG_COOKIE_NAME`    | `lang`                  | Name of the cookie, where storing language variable |
 
 ## Docs
 
@@ -65,3 +64,7 @@ To contribute to the repository be ready to write some tests.
 ### PR
 
 Every task finishes with PR. Eslint, Stylelint, and tests are blocking PRs. To simplify PR review, we deploy every PR's branch automatically on Heroku.
+
+## License
+
+See [LICENSE.md](LICENSE.md).

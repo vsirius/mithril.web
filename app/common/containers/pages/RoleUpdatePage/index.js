@@ -2,6 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { translate } from 'react-i18next';
 import { provideHooks } from 'redial';
+import Helmet from 'react-helmet';
 import withStyles from 'nebo15-isomorphic-style-loader/lib/withStyles';
 
 import FormPageWrapper from 'containers/blocks/FormPageWrapper';
@@ -27,6 +28,7 @@ export default class RoleUpdatePage extends React.Component {
 
     return (
       <FormPageWrapper id="update-roles-page" title={t('Edit role: {{name}}', { name: role.name })} back="/roles">
+        <Helmet title={t('Edit role: {{name}}', { name: role.name })} />
         <div className={styles.block}>
           <RoleForm
             initialValues={role}

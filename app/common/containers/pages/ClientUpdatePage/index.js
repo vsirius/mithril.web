@@ -2,6 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { translate } from 'react-i18next';
 import { provideHooks } from 'redial';
+import Helmet from 'react-helmet';
 import withStyles from 'nebo15-isomorphic-style-loader/lib/withStyles';
 
 import FormPageWrapper from 'containers/blocks/FormPageWrapper';
@@ -36,6 +37,7 @@ export default class ClientUpdatePage extends React.Component {
     } = this.props;
     return (
       <FormPageWrapper id="client-update-page" title={t('Update client')} back="/clients">
+        <Helmet title={t('Update client')} />
         <ClientForm
           onSubmit={values => updateClient(this.props.params.id, values)}
           data={{ users, clientTypes }}

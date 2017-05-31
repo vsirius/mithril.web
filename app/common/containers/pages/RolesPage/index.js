@@ -2,6 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { translate } from 'react-i18next';
 import { provideHooks } from 'redial';
+import Helmet from 'react-helmet';
 import withStyles from 'nebo15-isomorphic-style-loader/lib/withStyles';
 
 import { H1 } from 'components/Title';
@@ -27,6 +28,7 @@ export default class RolesPage extends React.Component {
 
     return (
       <div id="roles-page">
+        <Helmet title={t('Roles')} />
         <H1>{ t('Roles') }</H1>
         <div id="roles-table" className={styles.table}>
           <Table

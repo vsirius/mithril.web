@@ -2,6 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { translate } from 'react-i18next';
 import { provideHooks } from 'redial';
+import Helmet from 'react-helmet';
 import withStyles from 'nebo15-isomorphic-style-loader/lib/withStyles';
 import { format } from 'helpers/date';
 
@@ -28,6 +29,7 @@ export default class TokensPage extends React.Component {
 
     return (
       <div id="tokens-page">
+        <Helmet title={t('Tokens')} />
         <H1>{ t('Tokens') }</H1>
         <div id="tokens-table" className={styles.table}>
           <Table

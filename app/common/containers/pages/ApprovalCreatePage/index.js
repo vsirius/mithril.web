@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { translate } from 'react-i18next';
+import Helmet from 'react-helmet';
 import withStyles from 'nebo15-isomorphic-style-loader/lib/withStyles';
 
 import FormPageWrapper from 'containers/blocks/FormPageWrapper';
@@ -23,6 +24,7 @@ export default class ApprovalCreatePage extends React.Component {
 
     return (
       <FormPageWrapper id="create-approvals-page" title={t('Create approval')} back="/approvals">
+        <Helmet title={t('Create approval')} />
         <ApprovalForm
           onSubmit={onCreateApproval}
           data={{ users, clients }}

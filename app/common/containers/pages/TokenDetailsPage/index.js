@@ -3,6 +3,7 @@ import withStyles from 'nebo15-isomorphic-style-loader/lib/withStyles';
 import { connect } from 'react-redux';
 import { translate } from 'react-i18next';
 import { provideHooks } from 'redial';
+import Helmet from 'react-helmet';
 
 import FormPageWrapper from 'containers/blocks/FormPageWrapper';
 import TokenForm from 'containers/forms/TokenForm';
@@ -27,6 +28,7 @@ export default class TokenDetailsPage extends React.Component {
 
     return (
       <FormPageWrapper id="token-details-page" title={t('Token details')} back="/tokens">
+        <Helmet title={t('Token details')} />
         <TokenForm
           initialValues={token}
           onDelete={onDeleteToken}

@@ -2,6 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { translate } from 'react-i18next';
 import { provideHooks } from 'redial';
+import Helmet from 'react-helmet';
 import withStyles from 'nebo15-isomorphic-style-loader/lib/withStyles';
 
 import FormPageWrapper from 'containers/blocks/FormPageWrapper';
@@ -27,6 +28,7 @@ export default class ClientTypeUpdatePage extends React.Component {
 
     return (
       <FormPageWrapper id="update-client-type-page" title={t('Edit client type: {{name}}', { name: clientType.name })} back="/client_types">
+        <Helmet title={t('Edit client type: {{name}}', { name: clientType.name })} />
         <div className={styles.block}>
           <ClientTypesForm
             initialValues={clientType}

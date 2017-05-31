@@ -5,8 +5,8 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1)\n"
-"POT-Creation-Date: 2017-05-31T11:13:30.709Z\n"
-"PO-Revision-Date: 2017-05-31T11:13:30.709Z\n"
+"POT-Creation-Date: 2017-05-31T13:17:08.654Z\n"
+"PO-Revision-Date: 2017-05-31T13:17:08.654Z\n"
 
 msgid "Required field"
 msgstr ""
@@ -276,6 +276,14 @@ msgid "Role id"
 msgstr ""
 
 msgid "Create User Role"
+msgstr ""
+
+msgid "OAuth2 flow, validation, proxy"
+msgstr ""
+
+msgid ""
+"Authentication, client and role management service. Token verification "
+"service."
 msgstr ""
 
 msgid "Create approval"

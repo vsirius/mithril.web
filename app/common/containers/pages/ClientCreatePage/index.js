@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { translate } from 'react-i18next';
+import Helmet from 'react-helmet';
 import withStyles from 'nebo15-isomorphic-style-loader/lib/withStyles';
 
 import FormPageWrapper from 'containers/blocks/FormPageWrapper';
@@ -23,6 +24,7 @@ export default class ClientCreatePage extends React.Component {
     const { users = [], clientTypes = [], onCreateClient, t } = this.props;
     return (
       <FormPageWrapper id="create-client-page" title={t('Create client')} back="/clients">
+        <Helmet title={t('Create client')} />
         <ClientForm
           onSubmit={onCreateClient}
           data={{ users, clientTypes }}

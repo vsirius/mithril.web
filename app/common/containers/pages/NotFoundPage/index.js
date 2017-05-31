@@ -1,6 +1,6 @@
 import React from 'react';
 import { translate } from 'react-i18next';
-
+import Helmet from 'react-helmet';
 import { H1 } from 'components/Title';
 import Button from 'components/Button';
 
@@ -11,6 +11,7 @@ export default class NotFoundPage extends React.Component {
 
     return (
       <div id="not-found-page">
+        <Helmet title={t('Page Not Found')} />
         <H1>{ t('Page Not Found') }</H1>
         <p>
           { t('Requested page not found. Maybe you are looking for') }
