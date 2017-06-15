@@ -4,13 +4,13 @@ import { connect } from 'react-redux';
 import { translate } from 'react-i18next';
 import { reduxForm, Field, getFormValues } from 'redux-form';
 import { reduxFormValidate } from 'react-nebo15-validate';
-import FieldInput from 'components/reduxForm/FieldInput';
+import FieldInput from '@components/reduxForm/FieldInput';
 
-import { Confirm } from 'components/Popup';
-import Form, { FormRow, FormBlock, FormButtons, FormColumn } from 'components/Form';
-import Button, { ButtonsGroup } from 'components/Button';
+import { Confirm } from '@components/Popup';
+import Form, { FormRow, FormBlock, FormButtons, FormColumn } from '@components/Form';
+import Button, { ButtonsGroup } from '@components/Button';
 import ConfirmFormChanges from 'containers/blocks/ConfirmFormChanges';
-import FiledSelect from 'components/reduxForm/FieldSelect';
+import FiledSelect from '@components/reduxForm/FieldSelect';
 
 import styles from './styles.scss';
 

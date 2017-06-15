@@ -1,8 +1,8 @@
 import React from 'react';
 import withStyles from 'nebo15-isomorphic-style-loader/lib/withStyles';
 
-import { H1 } from 'components/Title';
-import Line from 'components/Line';
+import { H1 } from '@components/Title';
+import Line from '@components/Line';
 
 import styles from './styles.scss';
 

@@ -3,7 +3,7 @@ import classnames from 'classnames';
 import { connect } from 'react-redux';
 import withStyles from 'nebo15-isomorphic-style-loader/lib/withStyles';
 
-import OuterClick from 'components/OuterClick';
+import OuterClick from '@components/OuterClick';
 
 import { open, close } from './redux';
 import styles from './styles.scss';

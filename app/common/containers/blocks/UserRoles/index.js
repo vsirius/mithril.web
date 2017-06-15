@@ -2,10 +2,10 @@ import React from 'react';
 import { translate } from 'react-i18next';
 import withStyles from 'nebo15-isomorphic-style-loader/lib/withStyles';
 
-import { H1 } from 'components/Title';
-import Table from 'components/Table';
-import Button from 'components/Button';
-import { Confirm } from 'components/Popup';
+import { H1 } from '@components/Title';
+import Table from '@components/Table';
+import Button from '@components/Button';
+import { Confirm } from '@components/Popup';
 
 import styles from './styles.scss';
 

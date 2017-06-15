@@ -104,11 +104,11 @@
     "precss": "1.4.0",
     "proxy-middleware": "0.15.0",
     "react": "15.2.1",
-    "react-datepicker": "0.44.0",
     "react-dom": "15.2.1",
     "react-helmet": "4.0.0",
     "react-hot-loader": "3.0.0-beta.6",
     "react-i18next": "2.2.0",
+    "react-nebo15-components": "~0.0.5",
     "react-nebo15-mask": "~1.0.7",
     "react-nebo15-validate": "0.1.12",
     "react-nl2br": "0.2.0",
@@ -132,8 +132,9 @@
     "svg-inline-loader": "0.7.0",
     "svg-inline-react": "1.0.2",
     "webfonts-loader": "1.0.2",
-    "webpack": "2.3.3",
-    "webpack-merge": "4.1.0"
+    "webpack": "2.6.1",
+    "webpack-merge": "4.1.0",
+    "webpack-node-externals": "^1.6.0"
   },
   "devDependencies": {
     "babel-eslint": "6.1.2",

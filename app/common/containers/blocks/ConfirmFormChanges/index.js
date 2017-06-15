@@ -2,7 +2,7 @@ import React from 'react';
 import { withRouter } from 'react-router';
 import { translate } from 'react-i18next';
 
-import { Confirm } from 'components/Popup';
+import { Confirm } from '@components/Popup';
 
 @translate()
 @withRouter

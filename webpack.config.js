@@ -3,6 +3,8 @@ require('dotenv').config({ silent: true });
 const path = require('path');
 const webpack = require('webpack');
 const webpackMerge = require('webpack-merge');
+const nodeExternals = require('webpack-node-externals');
+
 const AssetsPlugin = require('assets-webpack-plugin');
 
 const parts = require('./webpack/parts');
@@ -76,7 +78,11 @@ const serverConfig = webpackMerge(
       }),
     ],
     externals: [
-      /^[a-z\/\-0-9]+$/i,
+      nodeExternals({
+        whitelist: [
+          /^(react-nebo15-components)/,
+        ],
+      }),
     ],
   },
   parts.setupCssCritical(),

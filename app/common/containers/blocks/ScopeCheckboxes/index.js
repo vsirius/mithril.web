@@ -1,6 +1,6 @@
 import React from 'react';
 import { translate } from 'react-i18next';
-import { CheckboxGroup } from 'components/reduxForm/FieldCheckboxGroup';
+import { CheckboxGroup } from '@components/reduxForm/FieldCheckboxGroup';
 
 export default translate()(({ name = 'scope', t }) => (
   <CheckboxGroup

@@ -3,7 +3,7 @@ import { provideHooks } from 'redial';
 
 import withStyles from 'nebo15-isomorphic-style-loader/lib/withStyles';
 
-import Icon from 'components/Icon';
+import Icon from '@components/Icon';
 import Aside from 'containers/blocks/Aside';
 
 import { fetchUsersList } from 'redux/users';

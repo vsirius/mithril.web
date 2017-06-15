@@ -69,6 +69,7 @@ module.exports = (config) => {
       'app/**/*.spec.js': ['webpack'],
     },
 
+    failOnEmptyTestSuite: false,
     browserNoActivityTimeout: 30000,
     browserDisconnectTimeout: 10000,
     webpack: webpackTestConfig,

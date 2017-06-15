@@ -5,9 +5,9 @@ import { provideHooks } from 'redial';
 import Helmet from 'react-helmet';
 import withStyles from 'nebo15-isomorphic-style-loader/lib/withStyles';
 
-import { H1 } from 'components/Title';
-import Table from 'components/Table';
-import Button from 'components/Button';
+import { H1 } from '@components/Title';
+import Table from '@components/Table';
+import Button from '@components/Button';
 
 import { getClients } from 'reducers';
 import { fetchClients } from './redux';

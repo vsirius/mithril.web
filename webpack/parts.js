@@ -1,6 +1,8 @@
 const webpack = require('webpack');
 const webpackMerge = require('webpack-merge');
 
+const path = require('path');
+
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 const DEBUG = process.env.NODE_ENV !== 'production';
@@ -13,7 +15,10 @@ exports.setupJs = () => ({
       {
         test: /\.js$/,
         use: ['babel-loader'],
-        exclude: /node_modules/,
+        include: [
+          path.resolve(__dirname, '../app'),
+          path.resolve(__dirname, '../node_modules/react-nebo15-components'),
+        ],
       },
     ],
   },

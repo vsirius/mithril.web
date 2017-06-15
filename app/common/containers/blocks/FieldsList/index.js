@@ -1,8 +1,8 @@
 import React from 'react';
 import withStyles from 'nebo15-isomorphic-style-loader/lib/withStyles';
 
-import Button from 'components/Button';
-import Icon from 'components/Icon';
+import Button from '@components/Button';
+import Icon from '@components/Icon';
 
 import styles from './styles.scss';
 

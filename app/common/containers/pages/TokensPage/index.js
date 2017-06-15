@@ -1,4 +1,5 @@
 import React from 'react';
+
 import { connect } from 'react-redux';
 import { translate } from 'react-i18next';
 import { provideHooks } from 'redial';
@@ -6,9 +7,9 @@ import Helmet from 'react-helmet';
 import withStyles from 'nebo15-isomorphic-style-loader/lib/withStyles';
 import { format } from 'helpers/date';
 
-import { H1 } from 'components/Title';
-import Table from 'components/Table';
-import Button from 'components/Button';
+import { H1 } from '@components/Title';
+import Table from '@components/Table';
+import Button from '@components/Button';
 
 import { getTokens } from 'reducers';
 import { fetchTokens } from './redux';

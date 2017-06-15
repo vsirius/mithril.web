@@ -5,6 +5,7 @@ require('babel-register')({
     'react',
     'stage-0',
   ],
+  ignore: /node_modules\/(?!(react-nebo15-components))/,
   plugins: [
     'transform-runtime',
     'transform-decorators-legacy',
