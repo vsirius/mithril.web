@@ -10,7 +10,7 @@ import { Confirm } from '@components/Popup';
 import Form, { FormRow, FormBlock, FormButtons, FormColumn } from '@components/Form';
 import Button, { ButtonsGroup } from '@components/Button';
 import ConfirmFormChanges from 'containers/blocks/ConfirmFormChanges';
-import FiledSelect from '@components/reduxForm/FieldSelect';
+import FieldSelect from '@components/reduxForm/FieldSelect';
 
 import styles from './styles.scss';
 
@@ -75,7 +75,7 @@ export default class ApprovalForm extends React.Component {
               <Field
                 name="user_id"
                 labelText={t('User ID')}
-                component={FiledSelect}
+                component={FieldSelect}
                 options={data.users.map(i => ({
                   name: i.id,
                   title: i.email,
@@ -86,7 +86,7 @@ export default class ApprovalForm extends React.Component {
               <Field
                 labelText={t('Client id')}
                 name="client_id"
-                component={FiledSelect}
+                component={FieldSelect}
                 options={data.clients.map(i => ({
                   name: i.id,
                   title: i.name,

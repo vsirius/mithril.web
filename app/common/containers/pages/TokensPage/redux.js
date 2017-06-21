@@ -4,8 +4,8 @@ import * as fromTokens from 'redux/tokens';
 
 export const getTokens = createAction('tokensPage/GET_TOKENS');
 
-export const fetchTokens = () => dispatch =>
-  dispatch(fromTokens.fetchTokens())
+export const fetchTokens = options => dispatch =>
+  dispatch(fromTokens.fetchTokens(options))
   .then((action) => {
     if (action.error) throw action;
     dispatch(getTokens(action.payload.result));

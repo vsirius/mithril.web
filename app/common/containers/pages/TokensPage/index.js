@@ -1,4 +1,5 @@
 import React from 'react';
+import { withRouter } from 'react-router';
 
 import { connect } from 'react-redux';
 import { translate } from 'react-i18next';
@@ -10,21 +11,44 @@ import { format } from 'helpers/date';
 import { H1 } from '@components/Title';
 import Table from '@components/Table';
 import Button from '@components/Button';
+import Select from '@components/Select';
 
 import { getTokens } from 'reducers';
 import { fetchTokens } from './redux';
 
 import styles from './styles.scss';
 
+@withRouter
 @withStyles(styles)
 @translate()
 @provideHooks({
-  fetch: ({ dispatch }) => dispatch(fetchTokens()),
+  fetch: ({ dispatch, location: { query } }) =>
+    dispatch(fetchTokens(query)),
 })
 @connect(state => ({
   tokens: getTokens(state, state.pages.TokensPage.tokens),
 }))
 export default class TokensPage extends React.Component {
+  filterTokens(filter) {
+    const newFilter = {
+      ...this.props.location.query,
+      ...filter,
+    };
+
+    const query = Object.keys(newFilter).reduce((target, key) => {
+      if (newFilter[key]) {
+        target[key] = newFilter[key]; // eslint-disable-line
+      }
+
+      return target;
+    }, { });
+
+    this.props.router.push({
+      ...this.props.location,
+      query,
+    });
+  }
+
   render() {
     const { tokens = [], t } = this.props;
 
@@ -32,6 +56,20 @@ export default class TokensPage extends React.Component {
       <div id="tokens-page">
         <Helmet title={t('Tokens')} />
         <H1>{ t('Tokens') }</H1>
+        <div className={styles.filter}>
+          <div>
+            <Select
+              placeholder={t('Filter by name')}
+              // active={location.query.name}
+              options={[
+                { title: t('All'), name: null },
+                { title: t('refresh_token'), name: 'refresh_token' },
+                { title: t('access_token'), name: 'access_token' },
+              ]}
+              onChange={name => this.filterTokens({ name })}
+            />
+          </div>
+        </div>
         <div id="tokens-table" className={styles.table}>
           <Table
             columns={[
