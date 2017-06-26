@@ -2,12 +2,11 @@ import { handleAction, combineActions } from 'redux-actions';
 import { API_URL } from 'config';
 import { normalize } from 'normalizr';
 import { createUrl } from 'helpers/url';
-
 import { token } from 'schemas';
 
 import { invoke } from './api';
 
-export const fetchTokens = (options, limit = 10) => invoke({
+export const fetchTokens = ({ limit = 10, ...options }) => invoke({
   endpoint: createUrl(`${API_URL}/admin/tokens`, { ...options, limit }),
   method: 'GET',
   headers: {

@@ -9,10 +9,10 @@ export const fetchUsersList = options => dispatch =>
   dispatch(fromUsers.fetchUsersList(options))
   .then((action) => {
     if (action.error) throw action;
-    return [
-      dispatch(getUsers(action.payload.result)),
-      dispatch(pagingUsers(action.meta)),
-    ];
+    dispatch(getUsers(action.payload.result));
+    dispatch(pagingUsers(action.meta));
+
+    return action;
   });
 
 const users = handleAction(getUsers, (state, action) => action.payload, []);

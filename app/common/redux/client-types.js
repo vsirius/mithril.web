@@ -7,7 +7,7 @@ import { clientType } from 'schemas';
 
 import { invoke } from './api';
 
-export const fetchClientsTypes = (options, { useCache = false } = {}, limit = 10) => invoke({
+export const fetchClientsTypes = ({ limit = 10, ...options }, { useCache = false } = {}) => invoke({
   endpoint: createUrl(`${API_URL}/admin/client_types`, { ...options, limit }),
   method: 'GET',
   headers: {

@@ -1,13 +1,17 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import { withRouter } from 'react-router';
 import { translate } from 'react-i18next';
 import { provideHooks } from 'redial';
 import Helmet from 'react-helmet';
+import { filterParams } from 'helpers/url';
 import withStyles from 'nebo15-isomorphic-style-loader/lib/withStyles';
 
 import { H1 } from '@components/Title';
 import Table from '@components/Table';
 import Button from '@components/Button';
+
+import FieldFilterForm from 'containers/forms/FieldFilterForm';
 import Pagination from 'components/CursorPagination';
 
 import { getRoles } from 'reducers';
@@ -15,6 +19,7 @@ import { fetchRoles } from './redux';
 
 import styles from './styles.scss';
 
+@withRouter
 @withStyles(styles)
 @translate()
 @provideHooks({
@@ -33,6 +38,14 @@ export default class RolesPage extends React.Component {
       <div id="roles-page">
         <Helmet title={t('Roles')} />
         <H1>{ t('Roles') }</H1>
+        <div>
+          <FieldFilterForm
+            name="name"
+            value={location.query.name}
+            submitBtn
+            onSubmit={name => filterParams(name, this.props)}
+          />
+        </div>
         <div id="roles-table" className={styles.table}>
           <Table
             columns={[

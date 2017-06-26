@@ -5,7 +5,7 @@ import { user } from 'schemas';
 import { createUrl } from 'helpers/url';
 import { invoke } from './api';
 
-export const fetchUsersList = (options, limit = 10) => invoke({
+export const fetchUsersList = ({ limit = 10, ...options }) => invoke({
   endpoint: createUrl(`${API_URL}/admin/users/`, { ...options, limit }),
   method: 'GET',
   headers: {
@@ -104,7 +104,7 @@ export default handleActions({
     'users/UPDATE_USER_SUCCESS',
     'users/FETCH_USER_BY_ID_SUCCESS'
   )]: (state, action) =>
-    Object.entries(action.payload.entities.users)
+    Object.entries(action.payload.entities.users || {})
       .reduce((prev, [key, value]) => ({
         ...prev,
         [key]: {

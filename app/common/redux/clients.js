@@ -7,7 +7,7 @@ import { client } from 'schemas';
 
 import { invoke } from './api';
 
-export const fetchClients = (options, { useCache = false } = {}, limit = 10) => invoke({
+export const fetchClients = ({ limit = 10, ...options }, { useCache = false } = {}) => invoke({
   endpoint: createUrl(`${API_URL}/admin/clients`, { ...options, limit }),
   method: 'GET',
   headers: {

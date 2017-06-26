@@ -1,11 +1,12 @@
 import { handleAction, combineActions } from 'redux-actions';
 import { API_URL } from 'config';
-import { normalize } from 'normalizr';
 import { createUrl } from 'helpers/url';
+import { normalize } from 'normalizr';
 import { role } from 'schemas';
+
 import { invoke } from './api';
 
-export const fetchRoles = (options, { useCache = false } = {}, limit = 10) => invoke({
+export const fetchRoles = ({ ...options, limit = 10 }, { useCache = false } = {}) => invoke({
   endpoint: createUrl(`${API_URL}/admin/roles`, { ...options, limit }),
   method: 'GET',
   headers: {

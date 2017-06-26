@@ -1,20 +1,25 @@
 import React from 'react';
+import withStyles from 'nebo15-isomorphic-style-loader/lib/withStyles';
 import { connect } from 'react-redux';
 import { translate } from 'react-i18next';
+import { withRouter } from 'react-router';
 import { provideHooks } from 'redial';
 import Helmet from 'react-helmet';
-import withStyles from 'nebo15-isomorphic-style-loader/lib/withStyles';
 
 import { H1 } from '@components/Title';
 import Table from '@components/Table';
 import Button from '@components/Button';
+import FieldFilterForm from 'containers/forms/FieldFilterForm';
 import Pagination from 'components/CursorPagination';
+
+import { filterParams } from 'helpers/url';
 
 import { getUsers } from 'reducers';
 import { fetchUsersList } from './redux';
 
 import styles from './styles.scss';
 
+@withRouter
 @withStyles(styles)
 @translate()
 @provideHooks({
@@ -27,11 +32,20 @@ import styles from './styles.scss';
 }))
 export default class UsersPage extends React.Component {
   render() {
-    const { users = [], t, location, paging } = this.props;
+    const { users = [], t, router, location, paging } = this.props;
+
     return (
       <div id="users-page">
         <Helmet title={t('Users')} />
         <H1>{ t('Users') }</H1>
+        <div>
+          <FieldFilterForm
+            name="email"
+            initialValues={location.query}
+            submitBtn
+            onSubmit={values => filterParams(values, { router, location })}
+          />
+        </div>
         <div id="users-table" className={styles.table}>
           <Table
             columns={[
