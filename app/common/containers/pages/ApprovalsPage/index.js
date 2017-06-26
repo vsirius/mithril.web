@@ -8,6 +8,7 @@ import withStyles from 'nebo15-isomorphic-style-loader/lib/withStyles';
 import { H1 } from '@components/Title';
 import Table from '@components/Table';
 import Button from '@components/Button';
+import Pagination from 'components/CursorPagination';
 
 import { getApprovals } from 'reducers';
 import { fetchApprovals } from './redux';
@@ -17,14 +18,16 @@ import styles from './styles.scss';
 @withStyles(styles)
 @translate()
 @provideHooks({
-  fetch: ({ dispatch }) => dispatch(fetchApprovals()),
+  fetch: ({ dispatch, location: { query } }) =>
+    dispatch(fetchApprovals(query)),
 })
 @connect(state => ({
+  ...state.pages.ApprovalsPage,
   approvals: getApprovals(state, state.pages.ApprovalsPage.approvals),
 }))
 export default class ApprovalsPage extends React.Component {
   render() {
-    const { approvals = [], t } = this.props;
+    const { approvals = [], t, location, paging } = this.props;
 
     return (
       <div id="approvals-page">
@@ -53,6 +56,16 @@ export default class ApprovalsPage extends React.Component {
         <div className={styles.block}>
           <Button to="/approvals/create">{t('Create new approval')}</Button>
         </div>
+
+        <div className={styles.pagination}>
+          <Pagination
+            location={location}
+            more={paging.has_more}
+            after={paging.cursors.starting_after}
+            before={paging.cursors.ending_before}
+          />
+        </div>
+
       </div>
     );
   }

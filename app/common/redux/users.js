@@ -5,17 +5,19 @@ import { user } from 'schemas';
 import { createUrl } from 'helpers/url';
 import { invoke } from './api';
 
-export const fetchUsersList = params => invoke({
-  endpoint: createUrl(`${API_URL}/admin/users/`, params),
+export const fetchUsersList = (options, limit = 10) => invoke({
+  endpoint: createUrl(`${API_URL}/admin/users/`, { ...options, limit }),
   method: 'GET',
   headers: {
     'content-type': 'application/json',
   },
   types: ['users/FETCH_USERS_LIST_REQUEST', {
     type: 'users/FETCH_USERS_LIST_SUCCESS',
-    payload: (action, state, res) => res.json().then(
+    payload: (action, state, res) => res.clone().json().then(
       json => normalize(json.data, [user])
     ),
+    meta: (action, state, res) =>
+      res.clone().json().then(json => json.paging),
   }, 'users/FETCH_USER_LIST_FAILURE'],
 });
 

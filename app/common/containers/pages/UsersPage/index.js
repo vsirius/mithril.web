@@ -8,6 +8,7 @@ import withStyles from 'nebo15-isomorphic-style-loader/lib/withStyles';
 import { H1 } from '@components/Title';
 import Table from '@components/Table';
 import Button from '@components/Button';
+import Pagination from 'components/CursorPagination';
 
 import { getUsers } from 'reducers';
 import { fetchUsersList } from './redux';
@@ -17,14 +18,16 @@ import styles from './styles.scss';
 @withStyles(styles)
 @translate()
 @provideHooks({
-  fetch: ({ dispatch }) => dispatch(fetchUsersList()),
+  fetch: ({ dispatch, location: { query } }) =>
+    dispatch(fetchUsersList(query)),
 })
 @connect(state => ({
+  ...state.pages.UsersPage,
   users: getUsers(state, state.pages.UsersPage.users),
 }))
 export default class UsersPage extends React.Component {
   render() {
-    const { users = [], t } = this.props;
+    const { users = [], t, location, paging } = this.props;
     return (
       <div id="users-page">
         <Helmet title={t('Users')} />
@@ -54,6 +57,16 @@ export default class UsersPage extends React.Component {
         <div className={styles.block}>
           <Button to="/users/create">{t('Create new user')}</Button>
         </div>
+
+        <div className={styles.pagination}>
+          <Pagination
+            location={location}
+            more={paging.has_more}
+            after={paging.cursors.starting_after}
+            before={paging.cursors.ending_before}
+          />
+        </div>
+
       </div>
     );
   }

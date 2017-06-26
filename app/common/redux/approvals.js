@@ -5,17 +5,19 @@ import { approval } from 'schemas';
 import { createUrl } from 'helpers/url';
 import { invoke } from './api';
 
-export const fetchApprovals = options => invoke({
-  endpoint: createUrl(`${API_URL}/admin/apps`, options),
+export const fetchApprovals = (options, limit = 10) => invoke({
+  endpoint: createUrl(`${API_URL}/admin/apps`, { ...options, limit }),
   method: 'GET',
   headers: {
     'content-type': 'application/json',
   },
   types: ['apps/FETCH_APPROVALS_REQUEST', {
     type: 'apps/FETCH_APPROVALS_SUCCESS',
-    payload: (action, state, res) => res.json().then(
+    payload: (action, state, res) => res.clone().json().then(
       json => normalize(json.data, [approval])
     ),
+    meta: (action, state, res) =>
+      res.clone().json().then(json => json.paging),
   }, 'apps/FETCH_APPROVALS_FAILURE'],
 });
 
