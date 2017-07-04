@@ -10,7 +10,7 @@ import Form, { FormRow, FormBlock, FormButtons, FormColumn } from '@components/F
 import FieldInput from '@components/reduxForm/FieldInput';
 import Button, { ButtonsGroup } from '@components/Button';
 import ConfirmFormChanges from 'containers/blocks/ConfirmFormChanges';
-import FiledSelect from '@components/reduxForm/FieldSelect';
+import { Select } from '@components/Select';
 
 import styles from './styles.scss';
 
@@ -96,7 +96,7 @@ export default class ClientForm extends React.Component {
             <FormColumn>
               <Field
                 name="redirect_uri"
-                placeholder="example.com.ua"
+                placeholder="https://example.com.ua"
                 component={FieldInput}
                 labelText={t('Redirect uri')}
               />
@@ -107,7 +107,7 @@ export default class ClientForm extends React.Component {
               <Field
                 name="user_id"
                 labelText={t('User ID')}
-                component={FiledSelect}
+                component={Select}
                 options={data.users.map(i => ({
                   name: i.id,
                   title: i.email,
@@ -118,7 +118,7 @@ export default class ClientForm extends React.Component {
               <Field
                 labelText={t('Client type id')}
                 name="client_type_id"
-                component={FiledSelect}
+                component={Select}
                 options={data.clientTypes.map(i => ({
                   name: i.id,
                   title: i.name,
