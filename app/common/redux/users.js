@@ -5,17 +5,19 @@ import { user } from 'schemas';
 import { createUrl } from 'helpers/url';
 import { invoke } from './api';
 
-export const fetchUsersList = params => invoke({
-  endpoint: createUrl(`${API_URL}/admin/users/`, params),
+export const fetchUsersList = ({ limit = 10, ...options }) => invoke({
+  endpoint: createUrl(`${API_URL}/admin/users/`, { ...options, limit }),
   method: 'GET',
   headers: {
     'content-type': 'application/json',
   },
   types: ['users/FETCH_USERS_LIST_REQUEST', {
     type: 'users/FETCH_USERS_LIST_SUCCESS',
-    payload: (action, state, res) => res.json().then(
+    payload: (action, state, res) => res.clone().json().then(
       json => normalize(json.data, [user])
     ),
+    meta: (action, state, res) =>
+      res.clone().json().then(json => json.paging),
   }, 'users/FETCH_USER_LIST_FAILURE'],
 });
 
@@ -102,7 +104,7 @@ export default handleActions({
     'users/UPDATE_USER_SUCCESS',
     'users/FETCH_USER_BY_ID_SUCCESS'
   )]: (state, action) =>
-    Object.entries(action.payload.entities.users)
+    Object.entries(action.payload.entities.users || {})
       .reduce((prev, [key, value]) => ({
         ...prev,
         [key]: {

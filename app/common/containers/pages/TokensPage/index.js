@@ -11,7 +11,8 @@ import { format } from 'helpers/date';
 import { H1 } from '@components/Title';
 import Table from '@components/Table';
 import Button from '@components/Button';
-import Select from '@components/Select';
+import { Select } from '@components/Select';
+import Pagination from 'components/CursorPagination';
 
 import { getTokens } from 'reducers';
 import { fetchTokens } from './redux';
@@ -26,6 +27,7 @@ import styles from './styles.scss';
     dispatch(fetchTokens(query)),
 })
 @connect(state => ({
+  ...state.pages.TokensPage,
   tokens: getTokens(state, state.pages.TokensPage.tokens),
 }))
 export default class TokensPage extends React.Component {
@@ -50,7 +52,7 @@ export default class TokensPage extends React.Component {
   }
 
   render() {
-    const { tokens = [], t } = this.props;
+    const { tokens = [], t, location, paging } = this.props;
 
     return (
       <div id="tokens-page">
@@ -60,7 +62,6 @@ export default class TokensPage extends React.Component {
           <div>
             <Select
               placeholder={t('Filter by name')}
-              // active={location.query.name}
               options={[
                 { title: t('All'), name: null },
                 { title: t('refresh_token'), name: 'refresh_token' },
@@ -103,6 +104,16 @@ export default class TokensPage extends React.Component {
         <div className={styles.block}>
           <Button to="/tokens/create">{t('Create new token')}</Button>
         </div>
+
+        <div className={styles.pagination}>
+          <Pagination
+            location={location}
+            more={paging.has_more}
+            after={paging.cursors.starting_after}
+            before={paging.cursors.ending_before}
+          />
+        </div>
+
       </div>
     );
   }

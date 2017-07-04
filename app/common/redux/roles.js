@@ -1,11 +1,13 @@
 import { handleAction, combineActions } from 'redux-actions';
 import { API_URL } from 'config';
+import { createUrl } from 'helpers/url';
 import { normalize } from 'normalizr';
 import { role } from 'schemas';
+
 import { invoke } from './api';
 
-export const fetchRoles = (options, { useCache = false } = {}) => invoke({
-  endpoint: `${API_URL}/admin/roles`,
+export const fetchRoles = ({ ...options, limit = 10 }, { useCache = false } = {}) => invoke({
+  endpoint: createUrl(`${API_URL}/admin/roles`, { ...options, limit }),
   method: 'GET',
   headers: {
     'content-type': 'application/json',
@@ -13,9 +15,11 @@ export const fetchRoles = (options, { useCache = false } = {}) => invoke({
   bailout: state => useCache && state.data.roles,
   types: ['roles/FETCH_ROLES_REQUEST', {
     type: 'roles/FETCH_ROLES_SUCCESS',
-    payload: (action, state, res) => res.json().then(
+    payload: (action, state, res) => res.clone().json().then(
       json => normalize(json.data, [role])
     ),
+    meta: (action, state, res) =>
+      res.clone().json().then(json => json.paging),
   }, 'roles/FETCH_ROLES_FAILURE'],
 });
 

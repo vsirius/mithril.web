@@ -2,22 +2,23 @@ import { handleAction, combineActions } from 'redux-actions';
 import { API_URL } from 'config';
 import { normalize } from 'normalizr';
 import { createUrl } from 'helpers/url';
-
 import { token } from 'schemas';
 
 import { invoke } from './api';
 
-export const fetchTokens = options => invoke({
-  endpoint: createUrl(`${API_URL}/admin/tokens`, options),
+export const fetchTokens = ({ limit = 10, ...options }) => invoke({
+  endpoint: createUrl(`${API_URL}/admin/tokens`, { ...options, limit }),
   method: 'GET',
   headers: {
     'content-type': 'application/json',
   },
   types: ['tokens/FETCH_TOKENS_REQUEST', {
     type: 'tokens/FETCH_TOKENS_SUCCESS',
-    payload: (action, state, res) => res.json().then(
+    payload: (action, state, res) => res.clone().json().then(
       json => normalize(json.data, [token])
     ),
+    meta: (action, state, res) =>
+      res.clone().json().then(json => json.paging),
   }, 'tokens/FETCH_TOKENS_FAILURE'],
 });
 

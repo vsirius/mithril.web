@@ -7,8 +7,8 @@ import { client } from 'schemas';
 
 import { invoke } from './api';
 
-export const fetchClients = (options, { useCache = false } = {}) => invoke({
-  endpoint: createUrl(`${API_URL}/admin/clients`, options),
+export const fetchClients = ({ limit = 10, ...options }, { useCache = false } = {}) => invoke({
+  endpoint: createUrl(`${API_URL}/admin/clients`, { ...options, limit }),
   method: 'GET',
   headers: {
     'content-type': 'application/json',
@@ -16,9 +16,11 @@ export const fetchClients = (options, { useCache = false } = {}) => invoke({
   bailout: state => useCache && state.data.clients,
   types: ['clients/FETCH_CLIENTS_REQUEST', {
     type: 'clients/FETCH_CLIENTS_SUCCESS',
-    payload: (action, state, res) => res.json().then(
+    payload: (action, state, res) => res.clone().json().then(
       json => normalize(json.data, [client])
     ),
+    meta: (action, state, res) =>
+      res.clone().json().then(json => json.paging),
   }, 'clients/FETCH_CLIENTS_FAILURE'],
 });
 

@@ -8,7 +8,7 @@ import { reduxFormValidate } from 'react-nebo15-validate';
 import Form, { FormRow, FormBlock, FormButtons, FormColumn } from '@components/Form';
 import Button from '@components/Button';
 import ConfirmFormChanges from 'containers/blocks/ConfirmFormChanges';
-import FiledSelect from '@components/reduxForm/FieldSelect';
+import { Select } from '@components/Select';
 
 import styles from './styles.scss';
 
@@ -64,7 +64,7 @@ export default class UserRoleCreateForm extends React.Component {
               <Field
                 labelText={t('Role id')}
                 name="role_id"
-                component={FiledSelect}
+                component={Select}
                 options={data.roles.map(i => ({
                   name: i.id,
                   title: i.name,
@@ -75,7 +75,7 @@ export default class UserRoleCreateForm extends React.Component {
               <Field
                 labelText={t('Client id')}
                 name="client_id"
-                component={FiledSelect}
+                component={Select}
                 options={data.clients.map(i => ({
                   name: i.id,
                   title: i.name,

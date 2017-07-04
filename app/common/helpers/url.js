@@ -10,3 +10,13 @@ export const createUrl = (endpoint, options) => {
   });
   return Url.format(url);
 };
+
+export const filterParams = (filter, { router, location }) => router.push({
+  ...location,
+  query: Object.entries(filter)
+    .filter(([value]) => value)
+    .reduce((target, [key, value]) => ({
+      ...target,
+      [key]: value,
+    }), {}),
+});

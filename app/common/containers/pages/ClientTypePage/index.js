@@ -8,6 +8,7 @@ import withStyles from 'nebo15-isomorphic-style-loader/lib/withStyles';
 import { H1 } from '@components/Title';
 import Table from '@components/Table';
 import Button from '@components/Button';
+import Pagination from 'components/CursorPagination';
 
 import { getClientTypes } from 'reducers';
 import { fetchClientsTypes } from './redux';
@@ -17,14 +18,16 @@ import styles from './styles.scss';
 @withStyles(styles)
 @translate()
 @provideHooks({
-  fetch: ({ dispatch }) => dispatch(fetchClientsTypes()),
+  fetch: ({ dispatch, location: { query } }) =>
+    dispatch(fetchClientsTypes(query)),
 })
 @connect(state => ({
+  ...state.pages.ClientTypePage,
   clientTypes: getClientTypes(state, state.pages.ClientTypePage.clientTypes),
 }))
 export default class ClientTypePage extends React.Component {
   render() {
-    const { clientTypes = [], t } = this.props;
+    const { clientTypes = [], t, location, paging } = this.props;
 
     return (
       <div id="client-types-page">
@@ -57,6 +60,16 @@ export default class ClientTypePage extends React.Component {
         <div className={styles.block}>
           <Button to="/client_types/create">{t('Create new client type')}</Button>
         </div>
+
+        <div className={styles.pagination}>
+          <Pagination
+            location={location}
+            more={paging.has_more}
+            after={paging.cursors.starting_after}
+            before={paging.cursors.ending_before}
+          />
+        </div>
+
       </div>
     );
   }
