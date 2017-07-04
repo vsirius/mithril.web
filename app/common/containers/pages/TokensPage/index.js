@@ -7,11 +7,13 @@ import { provideHooks } from 'redial';
 import Helmet from 'react-helmet';
 import withStyles from 'nebo15-isomorphic-style-loader/lib/withStyles';
 import { format } from 'helpers/date';
+import { filterParams } from 'helpers/url';
 
 import { H1 } from '@components/Title';
 import Table from '@components/Table';
 import Button from '@components/Button';
-import { Select } from '@components/Select';
+import { FormRow, FormColumn } from '@components/Form';
+import FieldFilterForm from 'containers/forms/FieldFilterForm';
 import Pagination from 'components/CursorPagination';
 
 import { getTokens } from 'reducers';
@@ -58,19 +60,42 @@ export default class TokensPage extends React.Component {
       <div id="tokens-page">
         <Helmet title={t('Tokens')} />
         <H1>{ t('Tokens') }</H1>
-        <div className={styles.filter}>
-          <div>
-            <Select
-              placeholder={t('Filter by name')}
-              options={[
-                { title: t('All'), name: null },
-                { title: t('refresh_token'), name: 'refresh_token' },
-                { title: t('access_token'), name: 'access_token' },
-              ]}
-              onChange={name => this.filterTokens({ name })}
+        <FormRow>
+          <FormColumn>
+            <FieldFilterForm
+              name="name"
+              initialValues={{
+                name: location.query.name,
+              }}
+              submitBtn
+              onSubmit={name => filterParams(name, this.props)}
             />
-          </div>
-        </div>
+          </FormColumn>
+          <FormColumn>
+            <FieldFilterForm
+              name="value"
+              initialValues={{
+                value: location.query.value,
+              }}
+              submitBtn
+              onSubmit={value => filterParams(value, this.props)}
+            />
+          </FormColumn>
+        </FormRow>
+        <FormRow>
+          <FormColumn>
+            <FieldFilterForm
+              name="user_id"
+              initialValues={{
+                user_id: location.query.user_id,
+              }}
+              value={location.query.user_id}
+              submitBtn
+              onSubmit={user_id => filterParams(user_id, this.props)}
+            />
+          </FormColumn>
+          <FormColumn />
+        </FormRow>
         <div id="tokens-table" className={styles.table}>
           <Table
             columns={[
