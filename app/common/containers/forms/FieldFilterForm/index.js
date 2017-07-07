@@ -10,7 +10,7 @@ import styles from './styles.scss';
 @withStyles(styles)
 @translate()
 @reduxForm({
-  form: 'field-filter-form',
+  enableReinitialize: true,
 })
 export default class FieldFilterForm extends React.Component {
   render() {

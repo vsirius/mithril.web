@@ -10,6 +10,7 @@ import withStyles from 'nebo15-isomorphic-style-loader/lib/withStyles';
 import { H1 } from '@components/Title';
 import Table from '@components/Table';
 import Button from '@components/Button';
+import { FormRow, FormColumn } from '@components/Form';
 
 import FieldFilterForm from 'containers/forms/FieldFilterForm';
 import Pagination from 'components/CursorPagination';
@@ -38,14 +39,20 @@ export default class RolesPage extends React.Component {
       <div id="roles-page">
         <Helmet title={t('Roles')} />
         <H1>{ t('Roles') }</H1>
-        <div>
-          <FieldFilterForm
-            name="name"
-            value={location.query.name}
-            submitBtn
-            onSubmit={name => filterParams(name, this.props)}
-          />
-        </div>
+        <FormRow>
+          <FormColumn>
+            <FieldFilterForm
+              name="name"
+              form="roles_name_form"
+              submitBtn
+              initialValues={{
+                name: location.query.name,
+              }}
+              onSubmit={name => filterParams(name, this.props)}
+            />
+          </FormColumn>
+          <FormColumn />
+        </FormRow>
         <div id="roles-table" className={styles.table}>
           <Table
             columns={[

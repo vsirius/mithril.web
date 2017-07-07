@@ -9,6 +9,7 @@ import Helmet from 'react-helmet';
 import { H1 } from '@components/Title';
 import Table from '@components/Table';
 import Button from '@components/Button';
+import { FormRow, FormColumn } from '@components/Form';
 import FieldFilterForm from 'containers/forms/FieldFilterForm';
 import Pagination from 'components/CursorPagination';
 
@@ -38,14 +39,20 @@ export default class UsersPage extends React.Component {
       <div id="users-page">
         <Helmet title={t('Users')} />
         <H1>{ t('Users') }</H1>
-        <div>
-          <FieldFilterForm
-            name="email"
-            initialValues={location.query}
-            submitBtn
-            onSubmit={values => filterParams(values, { router, location })}
-          />
-        </div>
+        <FormRow>
+          <FormColumn>
+            <FieldFilterForm
+              name="email"
+              form="roles_email_form"
+              submitBtn
+              initialValues={{
+                email: location.query.email,
+              }}
+              onSubmit={values => filterParams(values, { router, location })}
+            />
+          </FormColumn>
+          <FormColumn />
+        </FormRow>
         <div id="users-table" className={styles.table}>
           <Table
             columns={[
