@@ -1,20 +1,25 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { translate } from 'react-i18next';
+import { withRouter } from 'react-router';
 import { provideHooks } from 'redial';
 import Helmet from 'react-helmet';
+import { filterParams } from 'helpers/url';
 import withStyles from 'nebo15-isomorphic-style-loader/lib/withStyles';
 
 import { H1 } from '@components/Title';
 import Table from '@components/Table';
 import Button from '@components/Button';
 import Pagination from 'components/CursorPagination';
+import FieldFilterForm from 'containers/forms/FieldFilterForm';
+import { FormRow, FormColumn } from '@components/Form';
 
 import { getApprovals } from 'reducers';
 import { fetchApprovals } from './redux';
 
 import styles from './styles.scss';
 
+@withRouter
 @withStyles(styles)
 @translate()
 @provideHooks({
@@ -33,6 +38,26 @@ export default class ApprovalsPage extends React.Component {
       <div id="approvals-page">
         <Helmet title={t('Approvals')} />
         <H1>{ t('Approvals') }</H1>
+        <FormRow>
+          <FormColumn>
+            <FieldFilterForm
+              submitBtn
+              form="app_client_id_form"
+              name="client_id"
+              initialValues={location.query}
+              onSubmit={client_id => filterParams(client_id, this.props)}
+            />
+          </FormColumn>
+          <FormColumn>
+            <FieldFilterForm
+              name="user_id"
+              form="app_user_id_form"
+              submitBtn
+              initialValues={location.query}
+              onSubmit={user_id => filterParams(user_id, this.props)}
+            />
+          </FormColumn>
+        </FormRow>
         <div id="roles-table" className={styles.table}>
           <Table
             columns={[
@@ -65,7 +90,6 @@ export default class ApprovalsPage extends React.Component {
             before={paging.cursors.ending_before}
           />
         </div>
-
       </div>
     );
   }

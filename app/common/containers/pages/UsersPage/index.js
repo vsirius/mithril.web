@@ -43,11 +43,9 @@ export default class UsersPage extends React.Component {
           <FormColumn>
             <FieldFilterForm
               name="email"
-              form="roles_email_form"
+              initialValues={location.query}
+              form="user_email_form"
               submitBtn
-              initialValues={{
-                email: location.query.email,
-              }}
               onSubmit={values => filterParams(values, { router, location })}
             />
           </FormColumn>

@@ -44,10 +44,8 @@ export default class RolesPage extends React.Component {
             <FieldFilterForm
               name="name"
               form="roles_name_form"
+              initialValues={location.query}
               submitBtn
-              initialValues={{
-                name: location.query.name,
-              }}
               onSubmit={name => filterParams(name, this.props)}
             />
           </FormColumn>

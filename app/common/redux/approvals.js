@@ -50,6 +50,8 @@ export const createApproval = body => invoke({
   body: {
     app: {
       ...body,
+      client_id: body.client_id.name,
+      user_id: body.user_id.name,
     },
   },
 });
