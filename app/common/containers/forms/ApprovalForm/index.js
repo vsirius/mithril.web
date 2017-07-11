@@ -46,6 +46,7 @@ export default class ApprovalForm extends React.Component {
     this.state = {
       savedValues: props.initialValues,
       onDelete: false,
+      search: '',
     };
   }
   onSubmit(values, ...args) {
@@ -73,13 +74,22 @@ export default class ApprovalForm extends React.Component {
           <FormRow>
             <FormColumn>
               <Field
+                searchable
                 name="user_id"
                 labelText={t('User ID')}
                 component={Select}
-                options={data.users.map(i => ({
-                  name: i.id,
-                  title: i.email,
-                }))}
+                emptyText={t('Not found')}
+                placeholder={t('Enter email')}
+                allowAddItem
+                onChangeSearch={val => this.setState({ search: val })}
+                options={
+                  data.users
+                    .filter(i => new RegExp(this.state.search).test(i.email) === true)
+                    .map(i => ({
+                      name: i.id,
+                      title: i.email,
+                    }))
+                }
               />
             </FormColumn>
             <FormColumn>
@@ -87,6 +97,7 @@ export default class ApprovalForm extends React.Component {
                 labelText={t('Client id')}
                 name="client_id"
                 component={Select}
+                placeholder={t('Select client')}
                 options={data.clients.map(i => ({
                   name: i.id,
                   title: i.name,
@@ -126,9 +137,10 @@ export default class ApprovalForm extends React.Component {
         <ConfirmFormChanges submitting={submitting} isChanged={this.isChanged} />
         <Confirm
           title={t('Are you sure?')}
+          confirm={t('Yes')}
+          cancel={t('No')}
           active={this.state.onDelete}
           theme="error"
-          confirm="Ok"
           id="confirm-delete"
           onCancel={() => this.setState({ onDelete: false })}
           onConfirm={() => onDelete(this.state.savedValues.id)}
@@ -137,4 +149,3 @@ export default class ApprovalForm extends React.Component {
     );
   }
 }
-

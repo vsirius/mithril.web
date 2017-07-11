@@ -170,6 +170,7 @@
     "lint-staged": "3.0.3",
     "mocha": "3.2.0",
     "nightwatch": "0.9.14",
+    "prop-types": "^15.5.10",
     "react-addons-test-utils": "15.2.1",
     "selenium-download": "2.0.6",
     "selenium-server-standalone-jar": "2.53.1",

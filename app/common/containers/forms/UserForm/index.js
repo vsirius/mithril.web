@@ -112,7 +112,8 @@ export default class UserForm extends React.Component {
           title={t('Are you sure?')}
           active={this.state.onDelete}
           theme="error"
-          confirm="Ok"
+          confirm={t('Yes')}
+          cancel={t('No')}
           id="confirm-delete"
           onCancel={() => this.setState({ onDelete: false })}
           onConfirm={() => onDelete(this.state.savedValues.id)}

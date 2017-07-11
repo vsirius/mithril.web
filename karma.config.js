@@ -60,7 +60,7 @@ module.exports = (config) => {
     plugins,
 
     files: [
-      'app/common/components/Icon/index.spec.js',
+      'app/**/*.spec.js',
     ],
 
     frameworks: ['mocha'],

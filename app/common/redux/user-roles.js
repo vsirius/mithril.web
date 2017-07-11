@@ -35,6 +35,8 @@ export const createUserRole = (id, body) => invoke({
     user_role: {
       user_id: id,
       ...body,
+      role_id: body.role_id.name,
+      client_id: body.client_id.name,
     },
   },
 });

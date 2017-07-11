@@ -53,6 +53,8 @@ export const createClient = body => invoke({
   body: {
     client: {
       ...body,
+      client_type_id: body.client_type_id.name,
+      user_id: body.user_id.name,
     },
   },
 });
@@ -72,6 +74,8 @@ export const updateClient = (id, body) => invoke({
   body: {
     client: {
       ...body,
+      client_type_id: body.client_type_id.name,
+      user_id: body.user_id.name,
     },
   },
 });
