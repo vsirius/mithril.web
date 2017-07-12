@@ -94,7 +94,7 @@ export default class TokenForm extends React.Component {
                 name="id"
                 component={FieldInput}
                 labelText={t('ID')}
-                placeholder={t('b5e3318e-2192-4676')}
+                placeholder="b5e3318e-2192-4676"
                 disabled={disabled}
               />
             </FormColumn>
@@ -114,7 +114,7 @@ export default class TokenForm extends React.Component {
                 name="value"
                 component={FieldInput}
                 labelText={t('Value')}
-                placeholder={t('bkZ2b3BsND')}
+                placeholder="bkZ2b3BsND"
                 disabled={disabled}
               />
             </FormColumn>
@@ -123,7 +123,7 @@ export default class TokenForm extends React.Component {
                 name="expires_at"
                 component={FieldDate}
                 labelText={t('Expires_at')}
-                placeholder={t('22/01/2018')}
+                placeholder="22/01/2018"
                 dateModelFormat="X"
                 disabled={disabled}
                 dateFormat="DD/MM/YY"

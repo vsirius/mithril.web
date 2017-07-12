@@ -43,14 +43,14 @@ export default class ApprovalsPage extends React.Component {
             <FieldFilterForm
               submitBtn
               form="app_client_id_form"
-              name="client_id"
+              name="Client ID"
               initialValues={location.query}
               onSubmit={client_id => filterParams(client_id, this.props)}
             />
           </FormColumn>
           <FormColumn>
             <FieldFilterForm
-              name="user_id"
+              name="User ID"
               form="app_user_id_form"
               submitBtn
               initialValues={location.query}

@@ -42,7 +42,7 @@ export default class UsersPage extends React.Component {
         <FormRow>
           <FormColumn>
             <FieldFilterForm
-              name="email"
+              name={t('email')}
               initialValues={location.query}
               form="user_email_form"
               submitBtn

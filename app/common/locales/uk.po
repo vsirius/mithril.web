@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: i18next-conv\n"
-"POT-Creation-Date: 2017-06-12 13:35+0300\n"
-"PO-Revision-Date: 2017-07-07 15:50+0300\n"
+"POT-Creation-Date: 2017-07-10 12:53+0300\n"
+"PO-Revision-Date: 2017-07-10 12:53+0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: uk\n"
@@ -207,26 +207,23 @@ msgstr "Зберерегти тип клієнта"
 msgid "Are you sure want to delete this client type?"
 msgstr "Ви впевнені, що хочете видалити тип клієнта?"
 
+msgid "Enter {{name}}"
+msgstr "Введіть  {{name}}"
+
+msgid "Search"
+msgstr "Пошук"
+
 msgid "Role name"
 msgstr "Назва ролі"
 
 msgid "ID"
 msgstr "Ідентифікатор"
 
-msgid "b5e3318e-2192-4676"
-msgstr ""
-
 msgid "Name"
 msgstr "Назва"
 
 msgid "Value"
 msgstr "Значення"
-
-msgid "bkZ2b3BsND"
-msgstr ""
-
-msgid "22/01/2018"
-msgstr ""
 
 msgid "Scope"
 msgstr "Доступні дії"
@@ -312,6 +309,9 @@ msgstr "Створити нове підтвердження"
 msgid "Create client"
 msgstr "Створити клієнта"
 
+msgid "field name"
+msgstr "назву"
+
 msgid "Details"
 msgstr "Деталі"
 
@@ -363,6 +363,9 @@ msgstr "Створити токен"
 msgid "Token details"
 msgstr "Деталі токена"
 
+msgid "value"
+msgstr "значення"
+
 msgid "Show token details"
 msgstr "Показати деталі токена"
 
@@ -374,6 +377,9 @@ msgstr "Створити користувача"
 
 msgid "Create user role"
 msgstr "Створити роль для користувача"
+
+msgid "email"
+msgstr "електронну пошту"
 
 msgid "Email"
 msgstr "Електронна пошта"

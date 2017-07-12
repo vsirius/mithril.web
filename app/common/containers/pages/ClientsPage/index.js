@@ -9,6 +9,7 @@ import withStyles from 'nebo15-isomorphic-style-loader/lib/withStyles';
 
 import { H1 } from '@components/Title';
 import Table from '@components/Table';
+import { FormRow, FormColumn } from '@components/Form';
 import Button from '@components/Button';
 import Pagination from 'components/CursorPagination';
 import FieldFilterForm from 'containers/forms/FieldFilterForm';
@@ -37,16 +38,18 @@ export default class ClientsPage extends React.Component {
       <div id="clients-page">
         <Helmet title={t('Clients')} />
         <H1>{ t('Clients') }</H1>
-        <div>
-          <FieldFilterForm
-            name="name"
-            initialValues={{
-              name: location.query.name,
-            }}
-            submitBtn
-            onSubmit={name => filterParams(name, this.props)}
-          />
-        </div>
+        <FormRow>
+          <FormColumn>
+            <FieldFilterForm
+              name={t('field name')}
+              form="clients_name_form"
+              initialValues={location.query}
+              submitBtn
+              onSubmit={name => filterParams(name, this.props)}
+            />
+          </FormColumn>
+          <FormColumn />
+        </FormRow>
         <div id="client-table" className={styles.table}>
           <Table
             columns={[
@@ -91,7 +94,6 @@ export default class ClientsPage extends React.Component {
             before={paging.cursors.ending_before}
           />
         </div>
-
       </div>
     );
   }

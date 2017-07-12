@@ -42,7 +42,7 @@ export default class RolesPage extends React.Component {
         <FormRow>
           <FormColumn>
             <FieldFilterForm
-              name="name"
+              name={t('field name')}
               form="roles_name_form"
               initialValues={location.query}
               submitBtn

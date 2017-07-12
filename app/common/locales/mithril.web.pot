@@ -210,25 +210,22 @@ msgstr ""
 msgid "Are you sure want to delete this client type?"
 msgstr ""
 
+msgid "Enter {{name}}"
+msgstr ""
+
+msgid "Search"
+msgstr ""
+
 msgid "Role name"
 msgstr ""
 
 msgid "ID"
 msgstr ""
 
-msgid "b5e3318e-2192-4676"
-msgstr ""
-
 msgid "Name"
 msgstr ""
 
 msgid "Value"
-msgstr ""
-
-msgid "bkZ2b3BsND"
-msgstr ""
-
-msgid "22/01/2018"
 msgstr ""
 
 msgid "Scope"
@@ -314,6 +311,9 @@ msgstr ""
 msgid "Create client"
 msgstr ""
 
+msgid "field name"
+msgstr ""
+
 msgid "Details"
 msgstr ""
 
@@ -365,6 +365,9 @@ msgstr ""
 msgid "Token details"
 msgstr ""
 
+msgid "value"
+msgstr ""
+
 msgid "Show token details"
 msgstr ""
 
@@ -375,6 +378,9 @@ msgid "Create user"
 msgstr ""
 
 msgid "Create user role"
+msgstr ""
+
+msgid "email"
 msgstr ""
 
 msgid "Email"
