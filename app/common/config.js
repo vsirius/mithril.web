@@ -20,7 +20,7 @@ export const CLIENT_ID = config.CLIENT_ID || process.env.CLIENT_ID || '62c19cb9-
 export const SCOPES = config.SCOPES || process.env.SCOPES || 'app:read app:write app:delete token:read token:write token:delete user:read user:write user:delete role:read role:write role:delete client_type:read client_type:write client_type:delete client:read client:write client:delete'; // eslint-disable-line
 export const OAUTH_URL = config.OAUTH_URL || process.env.OAUTH_URL || 'http://auth.dev.ehealth.world/sign-in';
 export const OAUTH_REDIRECT_PATH = config.OAUTH_REDIRECT_PATH || process.env.OAUTH_REDIRECT_PATH || '/auth/redirect';
-export const OAUTH_REDIRECT_URL = config.OAUTH_REDIRECT_URL || `${HOSTNAME}${OAUTH_REDIRECT_PATH}`;
+export const OAUTH_REDIRECT_URL = config.OAUTH_REDIRECT_URL || process.env.OAUTH_REDIRECT_URL || `${HOSTNAME}${OAUTH_REDIRECT_PATH}`;
 
 export const PUBLIC_INDEX_ROUTE = '/sign-in';
 
