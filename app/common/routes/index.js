@@ -110,11 +110,10 @@ export const configureRoutes = ({ store }) => { // eslint-disable-line
             </Route>
           </Route>
         </Route>
+        <Route path="*" component={NotFoundPage} />
         <IndexRedirect to="sign-in" />
       </Route>
       <Route path="sign-in" component={SignInPage} />
-
-      <Route path="*" component={NotFoundPage} />
     </Route>
   );
 };

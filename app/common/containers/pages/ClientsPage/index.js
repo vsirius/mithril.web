@@ -41,7 +41,7 @@ export default class ClientsPage extends React.Component {
         <FormRow>
           <FormColumn>
             <FieldFilterForm
-              name={t('field name')}
+              name="name"
               form="clients_name_form"
               initialValues={location.query}
               submitBtn

@@ -43,7 +43,7 @@ export default class TokensPage extends React.Component {
           <FormColumn>
             <FieldFilterForm
               form="token_name_form"
-              name={t('field name')}
+              name="name"
               initialValues={location.query}
               submitBtn
               onSubmit={({ name }) => filterParams({ name }, this.props)}
@@ -52,7 +52,7 @@ export default class TokensPage extends React.Component {
           <FormColumn>
             <FieldFilterForm
               form="token_value_form"
-              name={t('value')}
+              name="value"
               initialValues={location.query}
               submitBtn
               onSubmit={({ value }) => filterParams({ value }, this.props)}
@@ -63,7 +63,7 @@ export default class TokensPage extends React.Component {
           <FormColumn>
             <FieldFilterForm
               form="token_user_id_form"
-              name="User ID"
+              name="user_id"
               initialValues={location.query}
               submitBtn
               onSubmit={({ user_id }) => filterParams({ user_id }, this.props)}
