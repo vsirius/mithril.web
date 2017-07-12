@@ -13,6 +13,7 @@ import users from 'redux/users';
 import userRoles from 'redux/user-roles';
 import clients from 'redux/clients';
 import approvals from 'redux/approvals';
+import session from 'redux/session';
 
 import Aside from 'containers/blocks/Aside/redux';
 
@@ -49,12 +50,17 @@ const data = combineReducers({
 export default combineReducers({
   blocks,
   pages,
+  session,
   data,
   // external libraries
   form,
   routing,
   loading,
 });
+
+export const getOAuthToken = state => state.session.token;
+export const getOAuthUser = state => state.data.user;
+
 
 export const getLocation = state => state.routing.locationBeforeTransitions;
 export const getForm = (state, formName) => state.form[formName];

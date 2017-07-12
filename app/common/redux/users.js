@@ -4,6 +4,19 @@ import { normalize } from 'normalizr';
 import { user } from 'schemas';
 import { createUrl } from 'helpers/url';
 import { invoke } from './api';
+import { fetchSessionToken } from './auth';
+
+export const fetchUserData = token => dispatch =>
+  dispatch(fetchSessionToken(token)).then((action) => {
+    if (action.error) return action;
+    if (new Date(action.payload.expires_at * 1000) < new Date()) {
+      return {
+        ...action,
+        error: true,
+      };
+    }
+    return dispatch(getUserByID(action.payload.user_id));
+  });
 
 export const fetchUsersList = ({ limit = 10, ...options }) => invoke({
   endpoint: createUrl(`${API_URL}/admin/users/`, { ...options, limit }),

@@ -31,55 +31,90 @@ import ApprovalsPage from 'containers/pages/ApprovalsPage';
 import ApprovalCreatePage from 'containers/pages/ApprovalCreatePage';
 import ApprovalUpdatePage from 'containers/pages/ApprovalUpdatePage';
 
+import SignInPage from 'containers/pages/SignInPage';
+
 import NotFoundPage from 'containers/pages/NotFoundPage';
 
+import { getOAuthUser } from 'reducers';
+
+import { isLoginned, logout } from 'redux/session';
+import { fetchClients } from 'redux/clients';
+
+import { PUBLIC_INDEX_ROUTE } from 'config';
+
 export const configureRoutes = ({ store }) => { // eslint-disable-line
+  const requireAuth = (nextState, replace, next) =>
+    store.dispatch(isLoginned()).then((loginned) => {
+      if (!loginned) {
+        replace({ pathname: PUBLIC_INDEX_ROUTE });
+        return next();
+      }
+
+      const currentState = store.getState();
+      const person = getOAuthUser(currentState);
+
+      if (person) return next();
+
+      return store.dispatch(fetchClients()).then((action) => {
+        if (action.error) {
+          store.dispatch(logout());
+          replace({ pathname: PUBLIC_INDEX_ROUTE });
+        }
+
+        return next();
+      });
+    });
+
   return (
     <Route component={App}>
       <Route component={Main}>
         <Route path="/">
-          <IndexRedirect to="/roles" />
+          <Route onEnter={requireAuth}>
+            <IndexRedirect to="/roles" />
 
-          <Route path="roles">
-            <IndexRoute component={RolesPage} />
-            <Route path="create" component={RoleCreatePage} />
-            <Route path=":id" component={RoleUpdatePage} />
+            <Route path="roles">
+              <IndexRoute component={RolesPage} />
+              <Route path="create" component={RoleCreatePage} />
+              <Route path=":id" component={RoleUpdatePage} />
+            </Route>
+
+            <Route path="client_types">
+              <IndexRoute component={ClientTypePage} />
+              <Route path="create" component={ClientTypeCreatePage} />
+              <Route path=":id" component={ClientTypeUpdatePage} />
+            </Route>
+
+            <Route path="tokens">
+              <IndexRoute component={TokensPage} />
+              <Route path="create" component={TokenCreatePage} />
+              <Route path=":id" component={TokenDetailsPage} />
+            </Route>
+
+            <Route path="users">
+              <IndexRoute component={UsersPage} />
+              <Route path="create" component={UserCreatePage} />
+              <Route path=":id" component={UserUpdatePage} />
+              <Route path=":id/roles/create" component={UserRoleCreatePage} />
+            </Route>
+
+            <Route path="clients">
+              <IndexRoute component={ClientsPage} />
+              <Route path="create" component={ClientCreatePage} />
+              <Route path=":id" component={ClientUpdatePage} />
+            </Route>
+
+            <Route path="approvals">
+              <IndexRoute component={ApprovalsPage} />
+              <Route path="create" component={ApprovalCreatePage} />
+              <Route path=":id" component={ApprovalUpdatePage} />
+            </Route>
           </Route>
-
-          <Route path="client_types">
-            <IndexRoute component={ClientTypePage} />
-            <Route path="create" component={ClientTypeCreatePage} />
-            <Route path=":id" component={ClientTypeUpdatePage} />
-          </Route>
-
-          <Route path="tokens">
-            <IndexRoute component={TokensPage} />
-            <Route path="create" component={TokenCreatePage} />
-            <Route path=":id" component={TokenDetailsPage} />
-          </Route>
-
-          <Route path="users">
-            <IndexRoute component={UsersPage} />
-            <Route path="create" component={UserCreatePage} />
-            <Route path=":id" component={UserUpdatePage} />
-            <Route path=":id/roles/create" component={UserRoleCreatePage} />
-          </Route>
-
-          <Route path="clients">
-            <IndexRoute component={ClientsPage} />
-            <Route path="create" component={ClientCreatePage} />
-            <Route path=":id" component={ClientUpdatePage} />
-          </Route>
-
-          <Route path="approvals">
-            <IndexRoute component={ApprovalsPage} />
-            <Route path="create" component={ApprovalCreatePage} />
-            <Route path=":id" component={ApprovalUpdatePage} />
-          </Route>
-
-          <Route path="*" component={NotFoundPage} />
         </Route>
+        <IndexRedirect to="sign-in" />
       </Route>
+      <Route path="sign-in" component={SignInPage} />
+
+      <Route path="*" component={NotFoundPage} />
     </Route>
   );
 };

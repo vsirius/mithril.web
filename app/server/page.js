@@ -89,7 +89,7 @@ export default () => (req, res, next) => {
           </I18nextProvider>
         );
       } catch (e) {
-        console.error(e.stack);
+        console.error('render error', e.stack);
         html = null;
       }
 
@@ -103,6 +103,9 @@ export default () => (req, res, next) => {
         inlineCss: arrayFrom(css).join(''),
       });
     })
-    .catch(err => next(err));
+    .catch((err) => {
+      console.log('fetch user data error', err);
+      return next(err);
+    });
   });
 };

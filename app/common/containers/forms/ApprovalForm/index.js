@@ -80,7 +80,6 @@ export default class ApprovalForm extends React.Component {
                 component={Select}
                 emptyText={t('Not found')}
                 placeholder={t('Enter email')}
-                allowAddItem
                 onChangeSearch={val => this.setState({ search: val })}
                 options={
                   data.users

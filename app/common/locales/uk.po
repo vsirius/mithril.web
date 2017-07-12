@@ -1,64 +1,20 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: i18next-conv\n"
-"POT-Creation-Date: 2017-07-10 12:53+0300\n"
-"PO-Revision-Date: 2017-07-10 12:53+0300\n"
+"POT-Creation-Date: 2017-07-12 15:57+0200\n"
+"PO-Revision-Date: 2017-07-12 15:58+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: uk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
-"X-Generator: Poedit 2.0.2\n"
-
-msgid "Required field"
-msgstr "Обов'язкове поле"
-
-msgid "Invalid email format"
-msgstr "Невірний формат Email"
-
-msgid "Invalid surname"
-msgstr "Невірне прізвище"
-
-msgid "Length must be less than <%= params %>"
-msgstr "Довжина має бути менше ніж <%= params %>"
-
-msgid "Invalid card number"
-msgstr "Невірний номер карти"
-
-msgid "Card with such names already exist"
-msgstr "Карта з такою назвою вже існує"
-
-msgid "Card with such number already exist"
-msgstr "Карта з таким номером вже існує"
-
-msgid "Support only {{types}} cards"
-msgstr "Ми підтримуємо тільки картки {{types}}"
-
-msgid "Minimal value is <%= params %>"
-msgstr "Мінімальне значення <%= params %>"
-
-msgid "Maximum value is <%= params %>"
-msgstr "Максимальне значення <%= params %>"
-
-msgid "Confirm"
-msgstr "Підтвердити"
-
-msgid "Cancel"
-msgstr "Відмінити"
-
-msgid "No data"
-msgstr "Дані вітсутні"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Generator: Poedit 1.8.1\n"
 
 msgid "ap."
 msgstr "вул."
-
-msgid "Yes"
-msgstr "Так"
-
-msgid "No"
-msgstr "Ні"
 
 msgid "Area"
 msgstr "Зона"
@@ -71,6 +27,12 @@ msgstr ""
 
 msgid "You have unsaved changes"
 msgstr "У вас є незбережені зміни"
+
+msgid "Yes"
+msgstr "Так"
+
+msgid "No"
+msgstr "Ні"
 
 msgid "Are you sure want to leave this page?"
 msgstr "Ви впевнені, що хочете залишити цю сторінку?"
@@ -95,6 +57,9 @@ msgstr "Клієнти"
 
 msgid "Documentation"
 msgstr "Документація"
+
+msgid "Logout"
+msgstr "Вийти"
 
 msgid "app:authorize"
 msgstr ""
@@ -126,11 +91,17 @@ msgstr "Ви впевнені, що хочете видалити роль ць�
 msgid "User ID"
 msgstr "Ідентифікатор користувача"
 
-msgid "Enter your email"
-msgstr "Введіть вашу електронну пошту"
+msgid "Not found"
+msgstr "Не знайдено"
+
+msgid "Enter email"
+msgstr "Введіть email"
 
 msgid "Client id"
 msgstr "Ідентифікатор клієнта"
+
+msgid "Select client"
+msgstr "Оберіть клієнта"
 
 msgid "Enter scopes"
 msgstr "Введіть доступні дії"
@@ -172,7 +143,7 @@ msgid "Client name"
 msgstr "Ім’я клієнта"
 
 msgid "eHealth portal"
-msgstr ""
+msgstr "Портал eHealth"
 
 msgid "Redirect uri"
 msgstr "Адреса зворотнього виклику"
@@ -231,11 +202,14 @@ msgstr "Доступні дії"
 msgid "Client ID"
 msgstr "Ідентифікатор кліента"
 
+msgid "b5e3318e-2192-4676"
+msgstr ""
+
 msgid "Grant type"
 msgstr "Тип авторизаційного токену"
 
 msgid "password"
-msgstr ""
+msgstr "пароль"
 
 msgid "http://example.com/resource"
 msgstr ""
@@ -285,8 +259,12 @@ msgstr "Створити роль для користувача"
 msgid "OAuth2 flow, validation, proxy"
 msgstr "OAuth2 потік, сервій валідації, проксі"
 
-msgid "Authentication, client and role management service. Token verification service."
-msgstr "Сервіси управління аутентифікацією, клієнтами та ролями. Сервіс перевірки токенів."
+msgid ""
+"Authentication, client and role management service. Token verification "
+"service."
+msgstr ""
+"Сервіси управління аутентифікацією, клієнтами та ролями. Сервіс перевірки "
+"токенів."
 
 msgid "Create approval"
 msgstr "Створити підвердження"
@@ -299,9 +277,6 @@ msgstr "Дії"
 
 msgid "Edit approval"
 msgstr "Редагувати підтвердження"
-
-msgid "Not found"
-msgstr "Не знайдено"
 
 msgid "Create new approval"
 msgstr "Створити нове підтвердження"
@@ -356,6 +331,15 @@ msgstr "створити нову"
 
 msgid "Edit role: {{name}}"
 msgstr "Редагування ролі  {{name}}"
+
+msgid "Sign in"
+msgstr "Вхід"
+
+msgid "Auth error {{code}}"
+msgstr "Помилка входу. Код помилки {{code}}"
+
+msgid "Enter with EHEALTH"
+msgstr "Увійти за допомоги eHealth"
 
 msgid "Create token"
 msgstr "Створити токен"
@@ -420,3 +404,45 @@ msgstr ""
 msgctxt "at"
 msgid "Expires"
 msgstr "Дійсний до"
+
+#~ msgid "Required field"
+#~ msgstr "Обов'язкове поле"
+
+#~ msgid "Invalid email format"
+#~ msgstr "Невірний формат Email"
+
+#~ msgid "Invalid surname"
+#~ msgstr "Невірне прізвище"
+
+#~ msgid "Length must be less than <%= params %>"
+#~ msgstr "Довжина має бути менше ніж <%= params %>"
+
+#~ msgid "Invalid card number"
+#~ msgstr "Невірний номер карти"
+
+#~ msgid "Card with such names already exist"
+#~ msgstr "Карта з такою назвою вже існує"
+
+#~ msgid "Card with such number already exist"
+#~ msgstr "Карта з таким номером вже існує"
+
+#~ msgid "Support only {{types}} cards"
+#~ msgstr "Ми підтримуємо тільки картки {{types}}"
+
+#~ msgid "Minimal value is <%= params %>"
+#~ msgstr "Мінімальне значення <%= params %>"
+
+#~ msgid "Maximum value is <%= params %>"
+#~ msgstr "Максимальне значення <%= params %>"
+
+#~ msgid "Confirm"
+#~ msgstr "Підтвердити"
+
+#~ msgid "Cancel"
+#~ msgstr "Відмінити"
+
+#~ msgid "No data"
+#~ msgstr "Дані вітсутні"
+
+#~ msgid "Enter your email"
+#~ msgstr "Введіть вашу електронну пошту"
