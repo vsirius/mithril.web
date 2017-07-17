@@ -141,6 +141,17 @@ export default class ClientForm extends React.Component {
               />
             </FormColumn>
           </FormRow>
+          <FormRow>
+            <FormColumn>
+              <Field
+                name="secret"
+                component={FieldInput}
+                readOnly
+                disabled
+                labelText={t('Client secret')}
+              />
+            </FormColumn>
+          </FormRow>
         </FormBlock>
         <FormButtons>
           {
@@ -179,4 +190,3 @@ export default class ClientForm extends React.Component {
     );
   }
 }
-

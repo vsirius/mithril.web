@@ -5,11 +5,8 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1)\n"
-"POT-Creation-Date: 2017-07-13 16:30+0300\n"
-"PO-Revision-Date: 2017-07-13T13:29:00.507Z\n"
-"Last-Translator: \n"
-"Language-Team: \n"
-"X-Generator: Poedit 2.0.2\n"
+"POT-Creation-Date: 2017-07-17T13:29:23.679Z\n"
+"PO-Revision-Date: 2017-07-17T13:29:23.679Z\n"
 
 msgid "ap."
 msgstr ""
@@ -86,13 +83,13 @@ msgstr ""
 msgid "Are you sure want to delete this user role?"
 msgstr ""
 
-msgid "User ID"
-msgstr ""
-
 msgid "Not found"
 msgstr ""
 
 msgid "Enter email"
+msgstr ""
+
+msgid "User ID"
 msgstr ""
 
 msgid "Client id"
@@ -153,6 +150,9 @@ msgid "Client type id"
 msgstr ""
 
 msgid "Select client type"
+msgstr ""
+
+msgid "Client secret"
 msgstr ""
 
 msgid "Create New Client"
@@ -289,9 +289,6 @@ msgstr ""
 msgid "Create client"
 msgstr ""
 
-msgid "field name"
-msgstr ""
-
 msgid "Details"
 msgstr ""
 
@@ -322,7 +319,7 @@ msgstr ""
 msgid "Requested page not found. Maybe you are looking for"
 msgstr ""
 
-msgid "Go to dashboard"
+msgid "Go to main page"
 msgstr ""
 
 msgid "Create role"
@@ -352,9 +349,6 @@ msgstr ""
 msgid "Token details"
 msgstr ""
 
-msgid "value"
-msgstr ""
-
 msgid "Show token details"
 msgstr ""
 
@@ -365,9 +359,6 @@ msgid "Create user"
 msgstr ""
 
 msgid "Create user role"
-msgstr ""
-
-msgid "email"
 msgstr ""
 
 msgid "Email"

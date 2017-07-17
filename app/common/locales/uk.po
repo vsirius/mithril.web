@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: i18next-conv\n"
-"POT-Creation-Date: 2017-07-13 16:30+0300\n"
-"PO-Revision-Date: 2017-07-13 16:31+0300\n"
+"POT-Creation-Date: 2017-07-17 16:29+0200\n"
+"PO-Revision-Date: 2017-07-17 16:31+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: uk\n"
@@ -11,7 +11,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
-"X-Generator: Poedit 2.0.2\n"
+"X-Generator: Poedit 1.8.1\n"
 
 msgid "ap."
 msgstr "вул."
@@ -88,14 +88,14 @@ msgstr "Ви впевнені?"
 msgid "Are you sure want to delete this user role?"
 msgstr "Ви впевнені, що хочете видалити роль цього користувача?"
 
-msgid "User ID"
-msgstr "Ідентифікатор користувача"
-
 msgid "Not found"
 msgstr "Не знайдено"
 
 msgid "Enter email"
 msgstr "Введіть email"
+
+msgid "User ID"
+msgstr "Ідентифікатор користувача"
 
 msgid "Client id"
 msgstr "Ідентифікатор клієнта"
@@ -156,6 +156,9 @@ msgstr "Ідентифіктор типу клієнта"
 
 msgid "Select client type"
 msgstr "Оберіть тип клієнта"
+
+msgid "Client secret"
+msgstr "Секретний ключ клієнта"
 
 msgid "Create New Client"
 msgstr "Створити нового клієнта"
@@ -293,9 +296,6 @@ msgstr "Створити нове підтвердження"
 msgid "Create client"
 msgstr "Створити клієнта"
 
-msgid "field name"
-msgstr "назву"
-
 msgid "Details"
 msgstr "Деталі"
 
@@ -326,8 +326,8 @@ msgstr "Сторінка не знайдена"
 msgid "Requested page not found. Maybe you are looking for"
 msgstr "Запитувана сторінка не знайдена."
 
-msgid "Go to dashboard"
-msgstr "Перейти на головну"
+msgid "Go to main page"
+msgstr "На головну"
 
 msgid "Create role"
 msgstr "Створити роль"
@@ -356,9 +356,6 @@ msgstr "Створити токен"
 msgid "Token details"
 msgstr "Деталі токена"
 
-msgid "value"
-msgstr "значення"
-
 msgid "Show token details"
 msgstr "Показати деталі токена"
 
@@ -370,9 +367,6 @@ msgstr "Створити користувача"
 
 msgid "Create user role"
 msgstr "Створити роль для користувача"
-
-msgid "email"
-msgstr "електронну пошту"
 
 msgid "Email"
 msgstr "Електронна пошта"
@@ -413,6 +407,18 @@ msgstr ""
 msgctxt "at"
 msgid "Expires"
 msgstr "Дійсний до"
+
+#~ msgid "field name"
+#~ msgstr "назву"
+
+#~ msgid "Go to dashboard"
+#~ msgstr "Перейти на головну"
+
+#~ msgid "value"
+#~ msgstr "значення"
+
+#~ msgid "email"
+#~ msgstr "електронну пошту"
 
 #~ msgid "Required field"
 #~ msgstr "Обов'язкове поле"
