@@ -38,6 +38,8 @@ export default class UserRoleCreateForm extends React.Component {
     this.state = {
       savedValues: props.initialValues,
       onDelete: false,
+      roles_search: '',
+      client_id_search: '',
     };
   }
   onSubmit(values) {
@@ -62,24 +64,38 @@ export default class UserRoleCreateForm extends React.Component {
           <FormRow>
             <FormColumn>
               <Field
-                labelText={t('Role id')}
                 name="role_id"
+                searchable
                 component={Select}
-                options={data.roles.map(i => ({
-                  name: i.id,
-                  title: i.name,
-                }))}
+                labelText={t('Role id')}
+                emptyText={t('Not found')}
+                placeholder={t('Select role')}
+                onChangeSearch={val => this.setState({ roles_search: val })}
+                options={data.roles
+                  .filter(i => new RegExp(this.state.roles_search).test(i.name) === true)
+                  .map(i => ({
+                    name: i.id,
+                    title: i.name,
+                  }))
+                }
               />
             </FormColumn>
             <FormColumn>
               <Field
-                labelText={t('Client id')}
                 name="client_id"
                 component={Select}
-                options={data.clients.map(i => ({
-                  name: i.id,
-                  title: i.name,
-                }))}
+                searchable
+                labelText={t('Client id')}
+                emptyText={t('Not found')}
+                placeholder={t('Select client')}
+                onChangeSearch={val => this.setState({ client_id_search: val })}
+                options={data.clients
+                  .filter(i => new RegExp(this.state.client_id_search).test(i.name) === true)
+                  .map(i => ({
+                    name: i.id,
+                    title: i.name,
+                  }))
+                }
               />
             </FormColumn>
           </FormRow>

@@ -33,8 +33,8 @@ export default class UserRoles extends React.Component {
               { key: 'actions', title: t('Actions') },
             ]}
             data={roles.map(item => ({
-              client: item.client_id.name,
-              role: item.role_id.name,
+              client: item.client_id ? item.client_id.name : '-',
+              role: item.role_id ? item.role_id.name : '-',
               actions: (<Button
                 id={`user-roles-delete-button-${item.id}`}
                 theme="link"

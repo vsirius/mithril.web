@@ -51,6 +51,8 @@ export default class ClientForm extends React.Component {
     this.state = {
       savedValues: props.initialValues,
       onDelete: false,
+      user_search: '',
+      client_type_search: '',
     };
   }
   onSubmit(values, ...args) {
@@ -106,23 +108,36 @@ export default class ClientForm extends React.Component {
             <FormColumn>
               <Field
                 name="user_id"
-                labelText={t('User ID')}
                 component={Select}
-                options={data.users.map(i => ({
-                  name: i.id,
-                  title: i.email,
-                }))}
+                searchable
+                labelText={t('User ID')}
+                emptyText={t('Not found')}
+                placeholder={t('Select user')}
+                onChangeSearch={val => this.setState({ user_search: val })}
+                options={data.users
+                  .filter(i => new RegExp(this.state.user_search).test(i.email) === true)
+                  .map(i => ({
+                    name: i.id,
+                    title: i.email,
+                  }))
+                }
               />
             </FormColumn>
             <FormColumn>
               <Field
-                labelText={t('Client type id')}
                 name="client_type_id"
                 component={Select}
-                options={data.clientTypes.map(i => ({
-                  name: i.id,
-                  title: i.name,
-                }))}
+                searchable
+                labelText={t('Client type id')}
+                placeholder={t('Select client type')}
+                onChangeSearch={val => this.setState({ client_type_search: val })}
+                options={data.clientTypes
+                  .filter(i => new RegExp(this.state.client_type_search).test(i.name) === true)
+                  .map(i => ({
+                    name: i.id,
+                    title: i.name,
+                  }))
+                }
               />
             </FormColumn>
           </FormRow>

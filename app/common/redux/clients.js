@@ -13,7 +13,7 @@ export const fetchClients = ({ limit = 10, ...options } = {}, { useCache = false
   headers: {
     'content-type': 'application/json',
   },
-  bailout: state => useCache && state.data.clients,
+  bailout: state => useCache && state.data.clients && state.data.clients.length,
   types: ['clients/FETCH_CLIENTS_REQUEST', {
     type: 'clients/FETCH_CLIENTS_SUCCESS',
     payload: (action, state, res) => res.clone().json().then(

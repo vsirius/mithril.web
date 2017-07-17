@@ -10,7 +10,7 @@ import styles from './styles.scss';
 export default withStyles(styles)(({ location, after = null, before = null, more }) => (
   <div className={styles.paging}>
     <div
-      className={classnames(styles.paging__item, !more && before && styles.paging__item_disabled)}
+      className={classnames(styles.paging__item, !before && styles.paging__item_disabled)}
     >
       <Link
         to={{
@@ -22,7 +22,7 @@ export default withStyles(styles)(({ location, after = null, before = null, more
       </Link>
     </div>
     <div
-      className={classnames(styles.paging__item, !more && after && styles.paging__item_disabled)}
+      className={classnames(styles.paging__item, (!more || !after) && styles.paging__item_disabled)}
     >
       <Link
         to={{

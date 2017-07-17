@@ -5,8 +5,11 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1)\n"
-"POT-Creation-Date: 2017-07-12T12:56:44.585Z\n"
-"PO-Revision-Date: 2017-07-12T12:56:44.585Z\n"
+"POT-Creation-Date: 2017-07-13 16:30+0300\n"
+"PO-Revision-Date: 2017-07-13T13:29:00.507Z\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"X-Generator: Poedit 2.0.2\n"
 
 msgid "ap."
 msgstr ""
@@ -143,7 +146,13 @@ msgstr ""
 msgid "Redirect uri"
 msgstr ""
 
+msgid "Select user"
+msgstr ""
+
 msgid "Client type id"
+msgstr ""
+
+msgid "Select client type"
 msgstr ""
 
 msgid "Create New Client"
@@ -246,6 +255,9 @@ msgid "Are you sure want to delete this user?"
 msgstr ""
 
 msgid "Role id"
+msgstr ""
+
+msgid "Select role"
 msgstr ""
 
 msgid "Create User Role"

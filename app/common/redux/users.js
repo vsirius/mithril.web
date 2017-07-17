@@ -18,12 +18,14 @@ export const fetchUserData = token => dispatch =>
     return dispatch(getUserByID(action.payload.user_id));
   });
 
-export const fetchUsersList = ({ limit = 10, ...options }) => invoke({
+export const fetchUsersList = ({ limit = 10, ...options } = {}, { useCache = false } = {}) =>
+invoke({
   endpoint: createUrl(`${API_URL}/admin/users/`, { ...options, limit }),
   method: 'GET',
   headers: {
     'content-type': 'application/json',
   },
+  bailout: state => useCache && state.data.users,
   types: ['users/FETCH_USERS_LIST_REQUEST', {
     type: 'users/FETCH_USERS_LIST_SUCCESS',
     payload: (action, state, res) => res.clone().json().then(

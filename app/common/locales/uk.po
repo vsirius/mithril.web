@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: i18next-conv\n"
-"POT-Creation-Date: 2017-07-12 15:57+0200\n"
-"PO-Revision-Date: 2017-07-12 15:58+0200\n"
+"POT-Creation-Date: 2017-07-13 16:30+0300\n"
+"PO-Revision-Date: 2017-07-13 16:31+0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: uk\n"
@@ -11,7 +11,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
-"X-Generator: Poedit 1.8.1\n"
+"X-Generator: Poedit 2.0.2\n"
 
 msgid "ap."
 msgstr "вул."
@@ -148,8 +148,14 @@ msgstr "Портал eHealth"
 msgid "Redirect uri"
 msgstr "Адреса зворотнього виклику"
 
+msgid "Select user"
+msgstr "Оберіть користувача"
+
 msgid "Client type id"
 msgstr "Ідентифіктор типу клієнта"
+
+msgid "Select client type"
+msgstr "Оберіть тип клієнта"
 
 msgid "Create New Client"
 msgstr "Створити нового клієнта"
@@ -252,6 +258,9 @@ msgstr "Ви впевнені, що хочете видалити цього к�
 
 msgid "Role id"
 msgstr "Ідентифікатор ролі"
+
+msgid "Select role"
+msgstr "Оберіть роль"
 
 msgid "Create User Role"
 msgstr "Створити роль для користувача"

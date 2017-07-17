@@ -46,7 +46,8 @@ export default class ApprovalForm extends React.Component {
     this.state = {
       savedValues: props.initialValues,
       onDelete: false,
-      search: '',
+      user_id_search: '',
+      client_id_search: '',
     };
   }
   onSubmit(values, ...args) {
@@ -76,14 +77,14 @@ export default class ApprovalForm extends React.Component {
               <Field
                 searchable
                 name="user_id"
-                labelText={t('User ID')}
-                component={Select}
                 emptyText={t('Not found')}
                 placeholder={t('Enter email')}
-                onChangeSearch={val => this.setState({ search: val })}
+                labelText={t('User ID')}
+                component={Select}
+                onChangeSearch={val => this.setState({ user_id_search: val })}
                 options={
                   data.users
-                    .filter(i => new RegExp(this.state.search).test(i.email) === true)
+                    .filter(i => new RegExp(this.state.user_id_search).test(i.email) === true)
                     .map(i => ({
                       name: i.id,
                       title: i.email,
@@ -93,14 +94,20 @@ export default class ApprovalForm extends React.Component {
             </FormColumn>
             <FormColumn>
               <Field
-                labelText={t('Client id')}
                 name="client_id"
+                searchable
                 component={Select}
+                labelText={t('Client id')}
                 placeholder={t('Select client')}
-                options={data.clients.map(i => ({
-                  name: i.id,
-                  title: i.name,
-                }))}
+                emptyText={t('Not found')}
+                onChangeSearch={val => this.setState({ client_id_search: val })}
+                options={data.clients
+                  .filter(i => new RegExp(this.state.client_id_search).test(i.name) === true)
+                  .map(i => ({
+                    name: i.id,
+                    title: i.name,
+                  }))
+                }
               />
             </FormColumn>
           </FormRow>
