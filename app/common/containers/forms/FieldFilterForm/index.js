@@ -14,7 +14,7 @@ import styles from './styles.scss';
 })
 export default class FieldFilterForm extends React.Component {
   render() {
-    const { handleSubmit, submitting, t, name, submitBtn, label } = this.props;
+    const { handleSubmit, submitting, t, name, submitBtn, label, ...props } = this.props;
     return (
       <form className={styles.main} onSubmit={handleSubmit}>
         <div>
@@ -24,6 +24,7 @@ export default class FieldFilterForm extends React.Component {
             placeholder={t('Enter {{name}}', { name: t(name) })}
             name={name}
             component={FieldInput}
+            {...props}
           />
         </div>
         {

@@ -44,6 +44,7 @@ export default class TokensPage extends React.Component {
             <FieldFilterForm
               form="token_name_form"
               name="name"
+              placeholder={t('Enter {{name}}', { name: t('name') })}
               initialValues={location.query}
               submitBtn
               onSubmit={({ name }) => filterParams({ name }, this.props)}
@@ -53,6 +54,7 @@ export default class TokensPage extends React.Component {
             <FieldFilterForm
               form="token_value_form"
               name="value"
+              placeholder={t('Enter {{name}}', { name: t('value') })}
               initialValues={location.query}
               submitBtn
               onSubmit={({ value }) => filterParams({ value }, this.props)}
@@ -63,7 +65,7 @@ export default class TokensPage extends React.Component {
           <FormColumn>
             <FieldFilterForm
               form="token_user_id_form"
-              name="user_id"
+              name="User ID"
               initialValues={location.query}
               submitBtn
               onSubmit={({ user_id }) => filterParams({ user_id }, this.props)}

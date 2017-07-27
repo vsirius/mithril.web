@@ -14,6 +14,7 @@ import { FormRow, FormColumn } from '@components/Form';
 import Pagination from 'components/CursorPagination';
 
 import FieldFilterForm from 'containers/forms/FieldFilterForm';
+import FieldScopeFilterForm from 'containers/forms/FieldScopeFilterForm';
 import { getClientTypes } from 'reducers';
 import { fetchClientsTypes } from './redux';
 
@@ -42,13 +43,26 @@ export default class ClientTypePage extends React.Component {
           <FormColumn>
             <FieldFilterForm
               name="name"
+              label={t('Name')}
               form="client-types_name_form"
               initialValues={location.query}
               submitBtn
               onSubmit={name => filterParams(name, this.props)}
             />
           </FormColumn>
-          <FormColumn />
+          <FormColumn>
+            <FieldScopeFilterForm
+              form="roles_scope_form"
+              name="scope"
+              onChange={({ scope }) => {
+                const field = scope.reduce((acc, cur) => {
+                  if (acc.indexOf(cur.title)) acc.push(cur.title);
+                  return acc;
+                }, []).join(',');
+                return filterParams({ scope: field }, this.props);
+              }}
+            />
+          </FormColumn>
         </FormRow>
         <div id="client-types-table" className={styles.table}>
           <Table

@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: i18next-conv\n"
-"POT-Creation-Date: 2017-07-17 16:29+0200\n"
-"PO-Revision-Date: 2017-07-17 16:31+0200\n"
+"POT-Creation-Date: 2017-07-26 18:07+0300\n"
+"PO-Revision-Date: 2017-07-26 18:08+0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: uk\n"
@@ -11,7 +11,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
-"X-Generator: Poedit 1.8.1\n"
+"X-Generator: Poedit 2.0.2\n"
 
 msgid "ap."
 msgstr "вул."
@@ -193,6 +193,12 @@ msgstr "Введіть  {{name}}"
 msgid "Search"
 msgstr "Пошук"
 
+msgid "Choose or enter scopes"
+msgstr "Оберіть або введіть доступні дії"
+
+msgid "Enter"
+msgstr "Введіть"
+
 msgid "Role name"
 msgstr "Назва ролі"
 
@@ -356,6 +362,12 @@ msgstr "Створити токен"
 msgid "Token details"
 msgstr "Деталі токена"
 
+msgid "name"
+msgstr "назву"
+
+msgid "value"
+msgstr "значення"
+
 msgid "Show token details"
 msgstr "Показати деталі токена"
 
@@ -408,14 +420,16 @@ msgctxt "at"
 msgid "Expires"
 msgstr "Дійсний до"
 
+#, fuzzy
+#~| msgid "Enter email"
+#~ msgid "Enter value"
+#~ msgstr "Введіть email"
+
 #~ msgid "field name"
 #~ msgstr "назву"
 
 #~ msgid "Go to dashboard"
 #~ msgstr "Перейти на головну"
-
-#~ msgid "value"
-#~ msgstr "значення"
 
 #~ msgid "email"
 #~ msgstr "електронну пошту"

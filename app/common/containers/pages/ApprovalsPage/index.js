@@ -44,6 +44,7 @@ export default class ApprovalsPage extends React.Component {
               submitBtn
               form="app_client_id_form"
               name="client_id"
+              placeholder={t('Enter {{name}}', { name: t('Client ID') })}
               initialValues={location.query}
               onSubmit={client_id => filterParams(client_id, this.props)}
             />
@@ -53,6 +54,7 @@ export default class ApprovalsPage extends React.Component {
               name="user_id"
               form="app_user_id_form"
               submitBtn
+              placeholder={t('Enter {{name}}', { name: t('User ID') })}
               initialValues={location.query}
               onSubmit={user_id => filterParams(user_id, this.props)}
             />

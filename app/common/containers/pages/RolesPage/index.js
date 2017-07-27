@@ -12,6 +12,7 @@ import Table from '@components/Table';
 import Button from '@components/Button';
 import { FormRow, FormColumn } from '@components/Form';
 
+import FieldScopeFilterForm from 'containers/forms/FieldScopeFilterForm';
 import FieldFilterForm from 'containers/forms/FieldFilterForm';
 import Pagination from 'components/CursorPagination';
 
@@ -43,13 +44,26 @@ export default class RolesPage extends React.Component {
           <FormColumn>
             <FieldFilterForm
               name="name"
+              label={t('Name')}
               form="roles_name_form"
               initialValues={location.query}
               submitBtn
               onSubmit={name => filterParams(name, this.props)}
             />
           </FormColumn>
-          <FormColumn />
+          <FormColumn>
+            <FieldScopeFilterForm
+              form="roles_scope_form"
+              name="scope"
+              onChange={({ scope }) => {
+                const field = scope.reduce((acc, cur) => {
+                  if (acc.indexOf(cur.title)) acc.push(cur.title);
+                  return acc;
+                }, []).join(',');
+                return filterParams({ scope: field }, this.props);
+              }}
+            />
+          </FormColumn>
         </FormRow>
         <div id="roles-table" className={styles.table}>
           <Table
@@ -87,7 +101,6 @@ export default class RolesPage extends React.Component {
             before={paging.cursors.ending_before}
           />
         </div>
-
       </div>
     );
   }
